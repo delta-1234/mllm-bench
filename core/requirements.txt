@@ -1,0 +1,14 @@
+accelerate
+asposestorage==1.0.2
+datasets==3.2.0
+Flask==3.1.0
+mlcommons_loadgen==4.1.23
+numpy==2.2.1
+psutil==5.9.8
+Requests==2.32.3
+torch
+tqdm==4.66.5
+transformers
+Pillow
+SentencePiece
+protobuf

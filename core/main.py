@@ -38,9 +38,9 @@ SUPPORTED_BACKEND = {"hf": "pytorch", "vllm": "vllm", "trtllm": "trtllm"}
 
 SUPPORTED_PROFILES = {
     "hf": {
-        "dataset": "mmlu",
+        "dataset": "SEED-Bench-2",
         "backend": "pytorch",
-        "model-name": "llama3.2-3b",
+        "model-name": "llava-1.5-7b-hf",
     },
     "vllm": {
         "dataset": "mmlu",
@@ -48,25 +48,6 @@ SUPPORTED_PROFILES = {
         "model-name": "llama3.2-3b",
     },
 }
-
-'''
-SUPPORTED_MODELS = {
-    "llama2-7b": "meta-llama/Llama-2-7b-hf",
-    "llama2-70b": "meta-llama/Llama-2-70b-hf",
-    "llama3.1-8b": "meta-llama/Llama-3.1-8B",
-    "llama3.2-1b": "meta-llama/Llama-3.2-1B",
-    "llama3.2-3b": "meta-llama/Llama-3.2-3B",
-}
-
-SUPPORTED_DATASETS = {
-    "mmlu": (
-        0,
-        0,
-        0,
-        0,
-    )
-}
-'''
 
 def get_temp_cache():
     beam_size = int(os.environ.get("GPTJ_BEAM_SIZE", "4"))
@@ -289,14 +270,10 @@ def show_support(args):
 
 
 def main():
-
     try:
         args = get_args()
-
         show_support(args)
-
         qsl = None
-
         if args.network == "sut":
             print("Run sut mode...")
 

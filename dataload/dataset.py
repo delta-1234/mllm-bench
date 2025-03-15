@@ -946,3 +946,58 @@ class MMMU(Dataset):
                 "image_paths": self.local_path_dict[str(idx)],
                 "answer": d['answer'],
                 "question": question,}
+
+
+class SEEDBench2(Dataset):
+    def __init__(self):
+        dataset_path = os.getenv('DATASET_PATH',default = None)
+        self.image_folder = dataset_path + "SEED-Bench-2/cc3m-image"
+        json_path = dataset_path + "SEED-Bench-2/tiny.json"
+        # 加载 JSON 数据
+        with open(json_path, "r", encoding="utf-8") as f:
+            self.data = json.load(f)["questions"]
+
+    def __len__(self):
+        return len(self.data)
+
+    def __getitem__(self, idx):
+        """
+        返回：
+        - image (PIL.Image or Tensor)
+        - question (str)
+        - answer (str)
+        """
+        d = self.data[idx]
+
+        images = []
+        # 加载图片
+        if isinstance(d['data_id'], list):
+            for data_id in d['data_id']:  # 可能最多 7 张图
+                image_path = os.path.join(self.image_folder, f"{data_id}")
+                try:
+                    images.append(PILImage.open(image_path).convert("RGB"))
+                except Exception as e:
+                    print(f"Error loading image: {image_path}, Error: {e}")
+                    images.append(PILImage.new("RGB", (224, 224)))   # 生成空白图像
+        else:
+            image_path = os.path.join(self.image_folder, f"{d['data_id']}")
+            try:
+                images.append(PILImage.open(image_path).convert("RGB"))
+            except Exception as e:
+                print(f"Error loading image: {image_path}, Error: {e}")
+                images.append(PILImage.new("RGB", (224, 224)))   # 生成空白图像
+
+        # 构造问题文本
+        question_images = "USER:\n"
+        for i in range(0, len(images)):
+            question_images = question_images + "<image>\n"
+        question_text = 'question:' + d["question"] + '\n'
+        choices = "choices:" + f"A.{d['choice_a']} " + f"B.{d['choice_b']} " + f"C.{d['choice_c']} " + f"D.{d['choice_d']} "
+        question = f"{question_images}{question_text}{choices}\nASSISTANT:"
+
+        return {
+            "images": images,
+            "question": question,
+            "answer": d["answer"],
+            "question_id": d['question_id'],
+        }

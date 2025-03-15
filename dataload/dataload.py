@@ -92,6 +92,8 @@ class DatasetLoader:
             return ChartQA()
         elif dataset_name == 'science_qa':
             return ScienceQA()
+        elif dataset_name == 'SEED-Bench-2':
+            return SEEDBench2()
         else:
             # If the dataset name doesn't match any known datasets, raise an error
             raise NotImplementedError(f"Dataset '{dataset_name}' is not supported.")

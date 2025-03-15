@@ -15,12 +15,8 @@ CFLAGS="-std=c++14" python setup.py develop
 ## 运行
 
 ```bash
-export CHECKPOINT_PATH="/root/xxx/model/"
-export DATASET_PATH="/root/xxx/dataset/"
+export CHECKPOINT_PATH="/home/dt/mllm-bench/model/"
+export DATASET_PATH="/home/dt/mllm-bench/data/"
 
-python -u main.py --scenario Offline \
-		--dataset mmlu or --dataset /root/xxxx/mmbench/examples/example_dataset.json
-		--model-name llama2-7b \
-		--total-sample-count 24576 \
-		--device cuda
+python -u main.py --scenario Offline --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 24576 --device cuda
 ```

@@ -670,10 +670,11 @@ class LLaVAModel(VLMBaseModel):
         The input text. Using <image> as the placeholder for the image.
     """
     def __init__(self, model_name, max_new_tokens, temperature, device, dtype):
+        model_path = os.environ.get("CHECKPOINT_PATH") + model_name
         super(LLaVAModel, self).__init__(model_name, max_new_tokens, temperature, device)
         from transformers import AutoProcessor, LlavaForConditionalGeneration
-        self.processor = AutoProcessor.from_pretrained(self.model_name, device_map=device, trust_remote_code=True)
-        self.model = LlavaForConditionalGeneration.from_pretrained(self.model_name, device_map=device)
+        self.processor = AutoProcessor.from_pretrained(model_path, device_map=device, trust_remote_code=True, use_fast=True)
+        self.model = LlavaForConditionalGeneration.from_pretrained(model_path, device_map=device, torch_dtype=dtype)
         self.enable_multiple_images = True
         self.placeholder = "<image>"  # a specialized placeholder of LLaVA model
 

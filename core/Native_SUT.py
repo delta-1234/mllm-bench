@@ -1,7 +1,10 @@
+import json
 import os
 import time
 import numpy as np
 import array
+
+import requests
 import torch
 from torch.nn.functional import pad
 from torch.utils.data import DataLoader
@@ -38,6 +41,8 @@ class SUT_native_base:
         use_cached_outputs=False,
     ):
         # load dataset
+        self.tokenizer = None
+        self.processor = None
         self.model_name = model_name
 
         self.device = device
@@ -64,18 +69,18 @@ class SUT_native_base:
             assert torch.cuda.is_available(), "torch gpu is not available, exiting..."
 
         self.dataset_name = dataset_name
-        print(self.dataset_name)
-        print(self.model_name)
+        print(f"Dataset Name: {self.dataset_name}")
+        print(f"Model Name:{self.model_name}")
 
         self.load_model()
 
         self.data_object = Datasets(
             model_name=self.model_name,
-            dataset=self.dataset_name,
+            dataset_name=self.dataset_name,
             batch_size=self.batch_size,
             total_sample_count=total_sample_count,
             device=self.device,
-            tokenizer=self.tokenizer,
+            processor=self.processor,
         )
 
         self.qsl = lg.ConstructQSL(
@@ -118,76 +123,57 @@ class SUT_native_base:
 
             query_ids = [q.index for q in qitem]
 
+            # 生成缓存文件名
             fname = "q" + "_".join([str(i) for i in query_ids])
             fname = f"run_outputs/{fname}.pkl"
             _p = Path(fname)
+
+            # 如果开启缓存，并且文件已存在，则读取缓存
             if self.use_cached_outputs and _p.exists():
                 # Read cache
                 with _p.open(mode="rb") as f:
                     d = pickle.load(f)
                 processed_output = d["outputs"]
-                tik1 = None
-                tik2 = None
-                tik3 = None
-                tok = None
+                tik1 = tik2 = tik3 = tok = None
             else:
-                # Construct / collate batch
-                max_seq_len = 1024
-
                 tik1 = time.time()
-
-                input_ids_tensor = []
-                input_masks_tensor = []
-                input_len = []
+                # TODO
+                questions = []
+                images_list = []
                 for q in qitem:
-                    input_ids_tensor.append(
-                        pad(
-                            self.data_object.input_ids[q.index],
-                            (
-                                max_seq_len - self.data_object.input_lens[q.index],
-                                0,
-                                0,
-                                0,
-                            ),
-                            value=self.tokenizer.pad_token_id,
-                        )
-                    )
-                    input_masks_tensor.append(
-                        pad(
-                            self.data_object.attention_masks[q.index],
-                            (
-                                max_seq_len - self.data_object.input_lens[q.index],
-                                0,
-                                0,
-                                0,
-                            ),
-                            value=0,
-                        )
-                    )
-                    input_len.append(self.data_object.input_lens[q.index])
-                input_ids_tensor = torch.cat(input_ids_tensor).to(self.device)
-                input_masks_tensor = torch.cat(input_masks_tensor).to(self.device)
+                    sample = self.data_object.dataset[q.index]
+                    questions.append(sample["question"])
 
-                assert input_ids_tensor.shape == input_masks_tensor.shape
-                assert input_ids_tensor.shape[0] <= self.batch_size
+                    # 获取所有图片
+                    images = []
+                    for i in range(1, 8):  # 假设最多支持7张图片
+                        image_key = f"image_{i}"
+                        if image_key in sample:
+                            images.append(sample[image_key])
+                    images_list.append(images)
+
+                # 使用 LLaVA 处理输入
+                inputs = self.processor(
+                    text=questions,
+                    images=images_list,
+                    return_tensors="pt",
+                    padding=True
+                ).to(self.device)
 
                 tik2 = time.time()
 
-                pred_output_tokens = self.model.generate(
-                    input_ids=input_ids_tensor,
-                    attention_mask=input_masks_tensor,
-                    pad_token_id=self.tokenizer.pad_token_id,
-                    **gen_kwargs,
-                )
+                # 生成模型输出
+                pred_output_tokens = self.model.generate(**inputs)
 
                 tik3 = time.time()
 
+                # 处理模型输出
                 processed_output = self.data_object.postProcess(
                     pred_output_tokens,
-                    input_seq_lens=input_len,
                     query_id_list=query_ids,
                 )
 
+                # 发送 LoadGen 响应
             for i in range(len(qitem)):
                 n_tokens = processed_output[i].shape[0]
                 response_array = array.array("B", processed_output[i].tobytes())
@@ -209,18 +195,9 @@ class SUT_native_base:
                     print(f"\tLoaded from cache: {_p}")
 
     def load_model(self):
-
-        print(self.model_name)
-
         self.modelx = ModelLoader.load_model(self.model_name)
 
         self.model = self.modelx.model
-        # self.model = LlamaForCausalLM.from_pretrained(
-        #     self.model_name,
-        #     device_map="auto",
-        #     low_cpu_mem_usage=True,
-        #     torch_dtype=self.amp_dtype,
-        # )
 
         self.device = torch.device(self.device)
         if self.device == "cpu":
@@ -234,16 +211,8 @@ class SUT_native_base:
         except BaseException:
             pass
 
-        self.tokenizer = self.modelx.tokenizer
-        # self.tokenizer = AutoTokenizer.from_pretrained(
-        #     self.model_path,
-        #     model_max_length=1024,
-        #     padding_side="left",
-        #     use_fast=False,
-        # )
-
-        self.tokenizer.pad_token = self.tokenizer.eos_token
-        print("Loaded tokenizer")
+        self.processor = self.modelx.processor
+        print("Loaded processor")
 
     def get_sut(self):
         self.sut = lg.ConstructSUT(self.issue_queries, self.flush_queries)
@@ -257,9 +226,6 @@ class SUT_native_base:
 
     def issue_queries(self, query_samples):
         """Receives samples from loadgen and adds them to queue. Users may choose to batch here"""
-
-        list_prompts_tokens = []
-        list_prompts_attn_masks = []
 
         print(f"IssueQuery started with {len(query_samples)} samples")
         while len(query_samples) > 0:

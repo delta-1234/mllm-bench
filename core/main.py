@@ -358,7 +358,6 @@ def main():
             log_settings.log_output = log_output_settings
             log_settings.enable_trace = args.enable_log_trace
 
-            sut = None
             if args.mode == "native":
                 sut = Get_Native_SUT(
                     model_name=args.model_name,

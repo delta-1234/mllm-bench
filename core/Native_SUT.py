@@ -114,8 +114,7 @@ class SUT_native_base:
             worker.join()
 
     def process_queries(self):
-        """Processor of the queued queries. User may choose to add batching logic"""
-
+        """排队查询的处理器。用户可以选择添加批处理逻辑"""
         while True:
             qitem = self.query_queue.get()
             if qitem is None:
@@ -137,22 +136,14 @@ class SUT_native_base:
                 tik1 = tik2 = tik3 = tok = None
             else:
                 tik1 = time.time()
-                # TODO
                 questions = []
                 images_list = []
                 for q in qitem:
                     sample = self.data_object.dataset[q.index]
                     questions.append(sample["question"])
+                    images_list.extend(sample["images"])
 
-                    # 获取所有图片
-                    images = []
-                    for i in range(1, 8):  # 假设最多支持7张图片
-                        image_key = f"image_{i}"
-                        if image_key in sample:
-                            images.append(sample[image_key])
-                    images_list.append(images)
-
-                # 使用 LLaVA 处理输入
+                # 批输入
                 inputs = self.processor(
                     text=questions,
                     images=images_list,
@@ -168,15 +159,17 @@ class SUT_native_base:
                 tik3 = time.time()
 
                 # 处理模型输出
-                processed_output = self.data_object.postProcess(
+                processed_output = self.processor.batch_decode(
                     pred_output_tokens,
-                    query_id_list=query_ids,
+                    skip_special_tokens=True
                 )
+                # print(processed_output)
 
-                # 发送 LoadGen 响应
+            # 发送 LoadGen 响应
             for i in range(len(qitem)):
-                n_tokens = processed_output[i].shape[0]
-                response_array = array.array("B", processed_output[i].tobytes())
+                output = processed_output[i]
+                n_tokens = len(output)
+                response_array = array.array("B", output.encode("utf-8"))
                 bi = response_array.buffer_info()
                 response = [lg.QuerySampleResponse(qitem[i].id, bi[0], bi[1], n_tokens)]
                 lg.QuerySamplesComplete(response)

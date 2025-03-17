@@ -346,9 +346,10 @@ def main():
             print("Run edge mode...")
             settings = lg.TestSettings()
             settings.scenario = SCENARIO_MAP[args.scenario]
-            settings.FromConfig(args.user_conf, args.model_name.title(), args.scenario)
+            settings.FromConfig(args.user_conf, args.model_name, args.scenario)
             settings.mode = lg.TestMode.PerformanceOnly
-
+            print(11111)
+            print(args.model_name)
             # set logs
             os.makedirs(args.output_log_dir, exist_ok=True)
             log_output_settings = lg.LogOutputSettings()

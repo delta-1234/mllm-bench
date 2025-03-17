@@ -80,14 +80,13 @@ class Datasets:
         else:
             self.processor = processor
 
-        self.source_encoded_input_ids, self.targets = self.encode_samples()
+        # self.source_encoded_input_ids, self.targets = self.encode_samples()
 
-        max_samples=min(total_sample_count, len(self.targets))
+        max_samples=min(total_sample_count, len(self.dataset))
 
         self.count = max_samples
         self.total_sample_count = max_samples
         self.perf_count = self.count
-        self.input_ids = self.source_encoded_input_ids
 
     def encode_samples(self):
         source_encoded_input_ids = []

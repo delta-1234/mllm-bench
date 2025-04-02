@@ -1,3 +1,4 @@
 /model/
 /data/
-/core/output-logs
+/openai
+**/__pycache__/

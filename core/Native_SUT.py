@@ -143,10 +143,10 @@ class SUT_native_base:
                     questions.append(sample["question"])
                     images_list.extend(sample["images"])
 
-                # 批输入
+                # 批输入,原本是tokenizier
                 inputs = self.processor(
                     text=questions,
-                    images=images_list,
+                    images=images_list, # 视频关键帧
                     return_tensors="pt",
                     padding=True
                 ).to(self.device)

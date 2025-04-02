@@ -62,7 +62,7 @@ class ModelLoader:
         elif model_name in MODEL_LIST_VLM[BLIP2Model]:
             return BLIP2Model(model_name)
         elif model_name in MODEL_LIST_VLM[LLaVAModel]:
-            return LLaVAModel(model_name, max_new_tokens=128, temperature=0.7, device='cuda', dtype='float16')
+            return LLaVAModel(model_name, max_new_tokens=128, temperature=0.7, device='cuda', dtype='float16') # 新加入的
         elif model_name in MODEL_LIST_VLM[GeminiVisionModel]:
             return GeminiVisionModel(model_name)
         elif model_name in MODEL_LIST_VLM[OpenAIVisionModel]:

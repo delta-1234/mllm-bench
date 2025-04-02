@@ -9,6 +9,11 @@ import sys
 from pathlib import Path
 from pprint import pprint
 
+import time
+from multiprocessing import Event
+
+from gpu_monitor import GPUMonitorProcess
+
 try:
     project_root = Path(__file__).parent.parent.resolve()
     if not project_root.exists():
@@ -348,8 +353,7 @@ def main():
             settings.scenario = SCENARIO_MAP[args.scenario]
             settings.FromConfig(args.user_conf, args.model_name, args.scenario)
             settings.mode = lg.TestMode.PerformanceOnly
-            print(11111)
-            print(args.model_name)
+
             # set logs
             os.makedirs(args.output_log_dir, exist_ok=True)
             log_output_settings = lg.LogOutputSettings()
@@ -413,4 +417,36 @@ def main():
         print('Clean Program')
 
 if __name__ == "__main__":
-    main()
+    # 创建进程控制事件
+    stop_event = Event()
+
+    # 初始化监控进程（示例保存到当前目录下的gpu_logs目录）
+    monitor = GPUMonitorProcess(
+        interval=2,
+        duration=3600,  # 1小时
+        output_file="gpu_logs/monitor.jsonl",
+        stop_event=stop_event
+    )
+
+    try:
+        # 启动监控进程（非阻塞）
+        monitor.start()
+        print(f"启动监控进程，PID: {monitor.pid}")
+
+        # 主程序继续执行其他任务
+        main()
+
+    except KeyboardInterrupt:
+        print("\n收到中断信号，正在停止...")
+    finally:
+        # 设置停止事件
+        stop_event.set()
+        print("等待监控进程退出...")
+
+        # 最多等待5秒
+        monitor.join(timeout=5)
+        if monitor.is_alive():
+            print("警告：监控进程未正常退出，强制终止！")
+            monitor.terminate()
+
+        print("主程序退出")

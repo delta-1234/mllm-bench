@@ -24,13 +24,18 @@ CFLAGS="-std=c++14" python setup.py develop
 ## 运行
 
 ```bash
-export CHECKPOINT_PATH="/home/dt/mllm-bench/model/"
-export DATASET_PATH="/home/dt/mllm-bench/data/"
+export CHECKPOINT_PATH="/data/dengtao/model/"
+export DATASET_PATH="/data/dengtao/data/"
 
-python -u main.py --scenario Offline --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 24576 --batch-size 1 --device cuda
-nohup python -u main.py --scenario Offline --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 24576 --batch-size 1 --device cuda > output.txt 2>&1 &
+python -u main.py --scenario Offline --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 24576 --batch-size 4 --device cuda
+nohup python -u main.py --scenario Offline --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 24576 --batch-size 4 --device cuda > output.txt 2>&1 &
 ```
 
 手动下载[clip-vit-large-patch14-336](https://huggingface.co/openai/clip-vit-large-patch14-336)到~/.cache/huggingface/
 
 设置环境变量强制使用本地模型 export HF_HUB_OFFLINE=1
+
+视觉处理时间: 14.266ms
+文本处理时间: 1.225ms
+文本生成时间: 2919.674ms
+跨模态等待时间: 1.338ms

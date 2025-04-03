@@ -44,7 +44,6 @@ try:
         crop_size=image_size
     )['pixel_values'][0]
     vision_inputs = processed_image.unsqueeze(0).to(device, dtype=torch.float16)
-    print(f"图像输入设备: {vision_inputs.device}")  # 应显示目标设备
 except Exception as e:
     raise RuntimeError(f"图像处理失败: {str(e)}") from e
 
@@ -69,24 +68,19 @@ vision_start, vision_end = create_events()
 cross_start, cross_end = create_events()
 text_start, text_end = create_events()
 
-# 视觉编码（设备验证）
+# 视觉编码
 vision_start.record()
 with torch.inference_mode():
     vision_features = model.model.vision_tower(vision_inputs)
-    print(f"视觉特征设备: {vision_features.device}")  # 设备验证
 vision_end.record()
 
-# 跨模态对齐（设备统一处理）
+# 跨模态对齐
 cross_start.record()
 with torch.inference_mode():
     # 强制投影层输出到目标设备
     projected_vision = model.model.mm_projector(vision_features).to(device)
     # 显式移动文本嵌入到目标设备
     text_embeddings = model.model.embed_tokens(input_ids).to(device)
-    
-    # 动态设备验证
-    print(f"投影视觉设备: {projected_vision.device}")
-    print(f"文本嵌入设备: {text_embeddings.device}")
     
     # 维度对齐
     num_vision_patches = vision_features.shape[1]
@@ -96,7 +90,7 @@ with torch.inference_mode():
     ], dim=1).to(device)  # 最终确认设备
 cross_end.record()
 
-# 文本生成（设备验证）
+# 文本生成
 text_start.record()
 with torch.inference_mode():
     outputs = model(
@@ -113,9 +107,3 @@ print(f"\n=== 推理时间分析 ===")
 print(f"Vision Encoder Time: {vision_start.elapsed_time(vision_end):.2f} ms")
 print(f"Cross-modal Alignment Time: {cross_start.elapsed_time(cross_end):.2f} ms")
 print(f"Text Generation Time: {text_start.elapsed_time(text_end):.2f} ms")
-
-# 最终设备验证
-print("\n=== 设备一致性验证 ===")
-print(f"视觉编码器设备: {next(model.model.vision_tower.parameters()).device}")
-print(f"语言模型设备: {next(model.model.embed_tokens.parameters()).device}")
-print(f"组合嵌入设备: {combined_embeddings.device}")

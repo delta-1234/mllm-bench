@@ -10,119 +10,38 @@ const std::string& LoadgenVersion() {
 }
 
 const std::string& LoadgenBuildDateLocal() {
-  static const std::string str = "2025-03-12T23:38:30.432534";
+  static const std::string str = "2025-04-04T00:00:24.643202";
   return str;
 }
 
 const std::string& LoadgenBuildDateUtc() {
-  static const std::string str = "2025-03-12T15:38:30.432547";
+  static const std::string str = "2025-04-03T16:00:24.643215";
   return str;
 }
 
 const std::string& LoadgenGitRevision() {
-  static const std::string str = "e216af0f8a";
+  static const std::string str = "79c8c5a9f9";
   return str;
 }
 
 const std::string& LoadgenGitCommitDate() {
-  static const std::string str = "2025-03-04T13:31:54-05:00";
+  static const std::string str = "2025-04-03T23:43:38+08:00";
   return str;
 }
 
 const std::string& LoadgenGitStatus() {
-  static const std::string str = R"LGVG_RSLD( M .clang-format
- M CMakeLists.txt
- M MANIFEST.in
- M README.md
- M README_BUILD.md
- M README_FAQ.md
- M VERSION.txt
- M __init__.py
- M benchmark/.gitignore
- M benchmark/README.md
- M benchmark/repro.cpp
- M benchmark/run.sh
- M benchmark/run_debug.sh
- M bindings/c_api.cc
- M bindings/c_api.h
- M bindings/python_api.cc
- M demos/lon/README.md
- M demos/lon/py_demo_server_lon.py
- M demos/lon/sut_over_network_demo.py
- M demos/py_demo_multi_stream.py
- M demos/py_demo_offline.py
- M demos/py_demo_server.py
- M demos/py_demo_single_stream.py
- M demos/token_metrics/py_demo_multi_stream.py
- M demos/token_metrics/py_demo_offline.py
- M demos/token_metrics/py_demo_offline_inferred.py
- M demos/token_metrics/py_demo_server.py
- M demos/token_metrics/py_demo_server_inferred.py
- M demos/token_metrics/py_demo_single_stream.py
- M docs/src/BUILD.gn
- M docs/src/README.md
- M docs/src/doxygen.cfg
- M docs/src/doxygen_footer.html
- M docs/src/doxygen_header.html
- M docs/src/doxygen_html_generator.py
- M docs/src/doxygen_layout.xml
- M docs/src/doxygen_stylesheet.css
- M docs/src/mlperf_logo_horizontal_color.svg
- M early_stopping.cc
- M early_stopping.h
- M issue_query_controller.cc
- M issue_query_controller.h
- M loadgen.cc
- M loadgen.h
- M loadgen_integration_diagram.svg
- M logging.cc
- M logging.h
- M mlperf.conf
- M pyproject.toml
- M query_dispatch_library.h
- M query_sample.h
- M query_sample_library.h
- M requirements.txt
- M results.cc
- M results.h
- M setup.py
- M system_under_test.h
- M test_settings.h
- M test_settings_internal.cc
- M test_settings_internal.h
- M tests/BUILD.gn
- M tests/README.md
- M tests/basic.cc
- M tests/loadgen_test.h
- M tests/loadgen_test_main.cc
- M tests/perftests_null_sut.cc
- M tests/perftests_null_sut.py
- M tools/mlperf-trace.ipynb
- M utils.cc
- M utils.h
- M version.cc
- M version.h
- M version_generator.py)LGVG_RSLD";
+  static const std::string str = R"LGVG_RSLD( M generated/version_generated.cc)LGVG_RSLD";
   return str;
 }
 
 const std::string& LoadgenGitLog() {
-  static const std::string str = R"LGVG_RSLD(e216af0f8a6e725c798c8847d288c4766da9b267 Update submission_checker.py | Fix open model unit in Results (#2144)
-c0b60cdbdaa389c5ff88b12e659fdab650b95948 Final report cosmetic fix (#2141)
-0602e21e0a1732926a66c0a952547cb04c4ff38e Update GitHub Actions bot exception in cla.yml
-bec571495d2001097080549955ad71802889b223 Update CODEOWNERS
-0e72613ad0b8449921b9e65a09491a0be266c7e6 Add exception for github-actions[bot] to cla.yml (#2135)
-9926a70244a91fb5e192b66f4313cf9416f9b1a1 Update loadgen package name in classification_and_detection setup (#2131)
-1873bd76aeedfe589f6260dc29760771ab99f95e Final report cosmetic fix (#2134)
-4bf9fc683b0d52fc046bb227ac210741ec7118ca  synced file(s) with mlcommons/power-dev (#2125)
-f4a195e79b3be6f1e179bb1a3c63340b3e577e66 Update accuracy_igbh.py (#2123)
-cc9a89e94553e0a071fb4a5980e76aa7d0cd2615 Update default version of final report script (#2124)
-2ab7e39e7eaef7a3d85738b7176d176e9566b997 Update verify_performance.py | Fix compliance test for extra percenti (#2120)
-df13693e080de5ac369fed1c5db96dd5438b4199 Update docs (#2118)
-eaace3f41be939e723b5e6f3b4c59e8cf403666f Remove llama3.1 user conf unnecessary and misleading lines (#2114)
-a09ef1116056becc5794009d8ddebc30c55e79c9 Add MLC Automation commands (#2115)
-7bf59976b5f4eb7c5b8f30a88af832e028028446 Docs update, fix download links for llama models  (#2055)
-fa5d4f74abd2ef277bddead8773e26214fddb39b Added information about GitHub tests currently live (#2091))LGVG_RSLD";
+  static const std::string str = R"LGVG_RSLD(79c8c5a9f90edaa6cf8252f02bec43953f8732b5 43
+f30014241e63494fc36d615e728f8841eedcaeaf v1.0
+27ea923c3276619c9f575c0be111ffdd833b8ccb 
+ac3e02c6176138127a106b150cb8fb2463ffb8c9 2025-3-16
+e5f1f9b3780e981448548181452c885a64b16afc init
+44fafadd45628b17d1e8e4af022ae3912a91c45e README
+d54af47f14c974ec4777b2363c5d5fd5dc280137 init)LGVG_RSLD";
   return str;
 }
 
@@ -152,6 +71,7 @@ dce4bda6f6a08e399e2c1181e23392f487b6130c /logging.cc
 0b4b917a61d81dd1de38a830f9f013661b95c9fb /mlperf.conf
 fca712ecaa27e093c1f76dc4beb85741d88eaeb2 /mlperf_conf.h
 bafe359051d428fd473790cd5d89f9db876eea0c /mlperf_loadgen.cpython-310-x86_64-linux-gnu.so
+80a226da7e7427bdfbbab066f35bcc003a96df0e /mlperf_loadgen.cpython-39-x86_64-linux-gnu.so
 0f07d721621eb9a8c90cf90ba47b05a32f9c79d2 /pyproject.toml
 1163e9a19681c7d2dec898f204e3f719a6bee623 /query_dispatch_library.h
 d6f7a65bf34bb3371bfe12eb6ec2714de0b63c46 /query_sample.h

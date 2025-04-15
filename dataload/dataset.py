@@ -952,7 +952,7 @@ class SEEDBench2(Dataset):
     def __init__(self):
         dataset_path = os.getenv('DATASET_PATH',default = None)
         self.image_folder = dataset_path + "SEED-Bench-2/cc3m-image"
-        json_path = dataset_path + "SEED-Bench-2/tiny.json"
+        json_path = dataset_path + "SEED-Bench-2/SEED-Bench_v2_cc3m.json"
         # 加载 JSON 数据
         with open(json_path, "r", encoding="utf-8") as f:
             self.data = json.load(f)["questions"]

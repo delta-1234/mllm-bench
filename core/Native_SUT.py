@@ -242,7 +242,7 @@ class SUT_Native_SingleStream(SUT_native_base):
         total_sample_count,
         device,
         workers,
-        use_cached_outputs,
+        use_cached_outputs=False,
     ):
         SUT_native_base.__init__(
             self,
@@ -269,7 +269,7 @@ class SUT_Native_MultiStream(SUT_native_base):
         total_sample_count,
         device,
         workers,
-        use_cached_outputs,
+        use_cached_outputs=False,
     ):
         SUT_native_base.__init__(
             self,
@@ -323,7 +323,7 @@ class SUT_Native_Server(SUT_native_base):
         total_sample_count,
         device,
         workers,
-        use_cached_outputs,
+        use_cached_outputs=False,
     ):
         SUT_native_base.__init__(
             self,

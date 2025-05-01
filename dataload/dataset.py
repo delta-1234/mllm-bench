@@ -951,11 +951,33 @@ class MMMU(Dataset):
 class SEEDBench2(Dataset):
     def __init__(self):
         dataset_path = os.getenv('DATASET_PATH',default = None)
-        self.image_folder = dataset_path + "SEED-Bench-2/cc3m-image"
-        json_path = dataset_path + "SEED-Bench-2/SEED-Bench_v2_cc3m.json"
+        self.image_folder = dataset_path + "SEED-Bench-2"
+        # json_path = dataset_path + "SEED-Bench-2/SEED-Bench-tiny.json"
+        # with open(json_path, "r", encoding="utf-8") as f:
+        #     self.data = json.load(f)["questions"]
+        mult_path = dataset_path + "SEED-Bench-2/SEED-Bench_v2_level1_2_3.json"
+        text_path = dataset_path + "SEED-Bench-2/processed_open_orca.json"
         # 加载 JSON 数据
-        with open(json_path, "r", encoding="utf-8") as f:
-            self.data = json.load(f)["questions"]
+        with open(mult_path, "r", encoding="utf-8") as f:
+            mult_data = json.load(f)["questions"]
+        with open(text_path, "r", encoding="utf-8") as f:
+            text_data = json.load(f)["questions"]
+        # 合并数据
+        # 设置随机种子（例如42，可自定义）
+        RANDOM_SEED = 42  # 可配置为参数或常量
+        # 修改后的代码
+        random.seed(RANDOM_SEED)  # 设置种子
+        # 打乱 mult_data 的顺序
+        random.shuffle(mult_data) 
+        text_sample_count = int(0.3 * len(mult_data))
+        # 从 text_data 中随机抽取样本（确保不重复）
+        sampled_text = random.sample(text_data, text_sample_count)
+        self.data = mult_data
+        self.data.extend(sampled_text)
+        random.shuffle(self.data)  # 打乱顺序
+        self.mult_data_len = len(mult_data)
+        self.text_data_len = len(sampled_text)
+        
 
     def __len__(self):
         return len(self.data)
@@ -971,16 +993,30 @@ class SEEDBench2(Dataset):
 
         images = []
         # 加载图片
-        if isinstance(d['data_id'], list):
+        if "data_id" not in d:
+            question = "USER:" + d["question"] + "ASSISTANT:"
+            return {
+                "images": images,
+                "question": question,
+                "answer": d["answer"],
+                "question_id": d['question_id'],
+            }
+        elif isinstance(d['data_id'], list):
+            count = 0
             for data_id in d['data_id']:  # 可能最多 7 张图
-                image_path = os.path.join(self.image_folder, f"{data_id}")
+                count += 1
+                if count > 7:
+                    break
+                image_path = os.path.join(self.image_folder, f"{d['data_source'].replace(' ', '-')}")
+                image_path = os.path.join(image_path, f"{data_id}")
                 try:
                     images.append(PILImage.open(image_path).convert("RGB"))
                 except Exception as e:
                     print(f"Error loading image: {image_path}, Error: {e}")
                     images.append(PILImage.new("RGB", (224, 224)))   # 生成空白图像
         else:
-            image_path = os.path.join(self.image_folder, f"{d['data_id']}")
+            image_path = os.path.join(self.image_folder, f"{d['data_source'].replace(' ', '-')}")
+            image_path = os.path.join(image_path, f"{d['data_id']}")
             try:
                 images.append(PILImage.open(image_path).convert("RGB"))
             except Exception as e:
@@ -988,10 +1024,10 @@ class SEEDBench2(Dataset):
                 images.append(PILImage.new("RGB", (224, 224)))   # 生成空白图像
 
         # 构造问题文本
-        question_images = "USER:\n"
+        question_images = "USER:"
         for i in range(0, len(images)):
-            question_images = question_images + "<image>\n"
-        question_text = 'question:' + d["question"] + '\n'
+            question_images = question_images + "<image>"
+        question_text = 'question:' + d["question"] + ''
         choices = "choices:" + f"A.{d['choice_a']} " + f"B.{d['choice_b']} " + f"C.{d['choice_c']} " + f"D.{d['choice_d']} "
         question = f"{question_images}{question_text}{choices}\nASSISTANT:"
 

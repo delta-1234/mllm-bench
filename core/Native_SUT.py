@@ -1,3 +1,4 @@
+from concurrent.futures import ThreadPoolExecutor
 import json
 import os
 import time
@@ -17,11 +18,13 @@ import tqdm
 import queue
 from pathlib import Path
 
+from model_monitor import ModelMonitor
 from modeload import ModelLoader, SUPPORTED_MODELS, SUPPORTED_MODELS_VLM
 from dataset import Datasets
+from transformers.generation.streamers import BaseStreamer
 
 gen_kwargs = {
-    "early_stopping": True,
+    "early_stopping": False,
     "max_new_tokens": 1024,
     "min_new_tokens": 1,
     "num_beams": 1,
@@ -38,6 +41,7 @@ class SUT_native_base:
         total_sample_count=24576,
         device="cuda",
         workers=1,
+        test_mode=lg.TestMode.PerformanceOnly,
         use_cached_outputs=False,
     ):
         # load dataset
@@ -99,6 +103,8 @@ class SUT_native_base:
         self.sample_counter = 0
         self.sample_counter_lock = threading.Lock()
 
+        self.test_mode = test_mode
+
     def start(self):
         # Create worker threads
         for j in range(self.num_workers):
@@ -115,6 +121,9 @@ class SUT_native_base:
 
     def process_queries(self):
         """排队查询的处理器。用户可以选择添加批处理逻辑"""
+        if self.test_mode == lg.TestMode.AccuracyOnly:
+            self.process_queries_acc()
+            return
         while True:
             qitem = self.query_queue.get()
             if qitem is None:
@@ -138,11 +147,15 @@ class SUT_native_base:
                 tik1 = time.time()
                 questions = []
                 images_list = []
+                sample_ids = []
                 for q in qitem:
                     sample = self.data_object.dataset[q.index]
                     questions.append(sample["question"])
                     images_list.extend(sample["images"])
-
+                    sample_ids.append(sample["question_id"])
+                
+                if len(images_list) == 0:
+                    images_list = None
                 # 批输入,原本是tokenizier
                 inputs = self.processor(
                     text=questions,
@@ -186,6 +199,70 @@ class SUT_native_base:
                     print(f"\t==== Total time: {tok - tik1}")
                 else:
                     print(f"\tLoaded from cache: {_p}")
+    
+    def process_queries_acc(self):
+        while True:
+            qitem = self.query_queue.get()
+            if qitem is None:
+                break
+
+            questions = []
+            images_list = []
+            sample_ids = []
+            for q in qitem:
+                sample = self.data_object.dataset[q.index]
+                questions.append(sample["question"])
+                images_list.extend(sample["images"])
+                sample_ids.append(sample["question_id"])
+            
+            if len(images_list) == 0:
+                images_list = None
+            # 批输入,原本是tokenizier
+            tik1 = time.time_ns()
+            inputs = self.processor(
+                text=questions,
+                images=None, # 无图片
+                return_tensors="pt",
+                padding=True
+            ).to(self.device)
+            tik2 = time.time_ns()
+            ModelMonitor.RecordTextProcessTime(tik2-tik1, sample_ids)
+
+            tik1 = time.time_ns()
+            inputs = self.processor(
+                text=questions,
+                images=images_list, # 视频关键帧
+                return_tensors="pt",
+                padding=True
+            ).to(self.device)
+            tik2 = time.time_ns()
+            ModelMonitor.RecordVisionProcessTime(tik2-tik1, sample_ids)
+
+            # 生成模型输出
+            tik1 = time.time_ns()
+            pred_output_tokens = self.model.generate(**inputs)
+
+            # 处理模型输出
+            processed_output = self.processor.batch_decode(
+                pred_output_tokens,
+                skip_special_tokens=True
+            )
+            tik2 = time.time_ns()
+            ModelMonitor.RecordTextGenerationTime(tik2-tik1, sample_ids)
+            print(processed_output)
+
+            # 发送 LoadGen 响应
+            for i in range(len(qitem)):
+                output = processed_output[i]
+                n_tokens = len(output)
+                response_array = array.array("B", output.encode("utf-8"))
+                bi = response_array.buffer_info()
+                response = [lg.QuerySampleResponse(qitem[i].id, bi[0], bi[1], n_tokens)]
+                lg.QuerySamplesComplete(response)
+
+            with self.sample_counter_lock:
+                self.sample_counter += len(qitem)
+                print(f"Samples run: {self.sample_counter}")
 
     def load_model(self):
         self.modelx = ModelLoader.load_model(self.model_name)
@@ -242,6 +319,7 @@ class SUT_Native_SingleStream(SUT_native_base):
         total_sample_count,
         device,
         workers,
+        test_mode,
         use_cached_outputs=False,
     ):
         SUT_native_base.__init__(
@@ -253,6 +331,7 @@ class SUT_Native_SingleStream(SUT_native_base):
             total_sample_count,
             device,
             workers,
+            test_mode,
             use_cached_outputs,
         )
 
@@ -269,6 +348,7 @@ class SUT_Native_MultiStream(SUT_native_base):
         total_sample_count,
         device,
         workers,
+        test_mode,
         use_cached_outputs=False,
     ):
         SUT_native_base.__init__(
@@ -280,6 +360,7 @@ class SUT_Native_MultiStream(SUT_native_base):
             total_sample_count,
             device,
             workers,
+            test_mode,
             use_cached_outputs,
         )
 
@@ -296,6 +377,7 @@ class SUT_Native_Offline(SUT_native_base):
         total_sample_count,
         device,
         workers,
+        test_mode,
         use_cached_outputs=False,
     ):
         SUT_native_base.__init__(
@@ -307,10 +389,59 @@ class SUT_Native_Offline(SUT_native_base):
             total_sample_count,
             device,
             workers,
+            test_mode,
             use_cached_outputs,
         )
 
     """IssueQuery and inference methods implemented in Base class"""
+
+
+class FirstTokenStreamer(BaseStreamer):
+    """Streams first tokens to a 'holder'"""
+
+    def __init__(
+        self, first_token, tokens_cache=[], is_first_token=True, response_ids=[]
+    ):
+        """Response ids added to 'sign' the first token"""
+
+        self.first_token = first_token  # Queue for first token
+        self.is_first_token = is_first_token
+
+        # Cache for subsequent generated tokens
+        self.tokens_cache = tokens_cache
+
+        self.response_ids = response_ids
+
+        self.is_prompt = (
+            True  # The first tokens sent to the streamer are actually the input prompts
+        )
+
+    def put(self, value):
+        """Caches the tokens as they're generated. Assumes bs=1"""
+
+        # Prompts are streamed first so we need to skip the first time value
+        # that arrives
+        if self.is_prompt:
+            self.is_prompt = False
+            return
+
+        value = value.item()
+        if self.is_first_token:
+
+            # Add generated first token together with its query response_id to
+            # first tokens queue
+            self.first_token.put((value, self.response_ids[0]))
+
+            self.is_first_token = False
+            return
+
+        self.tokens_cache.append(value)
+
+    def end(self):
+        pass
+
+    def get_out_tokens(self):
+        return self.tokens_cache
 
 
 class SUT_Native_Server(SUT_native_base):
@@ -323,6 +454,7 @@ class SUT_Native_Server(SUT_native_base):
         total_sample_count,
         device,
         workers,
+        test_mode,
         use_cached_outputs=False,
     ):
         SUT_native_base.__init__(
@@ -334,8 +466,127 @@ class SUT_Native_Server(SUT_native_base):
             total_sample_count,
             device,
             workers,
+            test_mode,
             use_cached_outputs,
         )
+        self.test_mode = test_mode
+        self.first_token_queue = queue.Queue()
+
+    def start(self):
+        if self.test_mode == lg.TestMode.AccuracyOnly:
+            super().start()
+            return
+        
+        # 创建工作线程
+        for j in range(self.num_workers):
+            worker = threading.Thread(target=self.process_queries)
+            worker.start()
+            self.worker_threads[j] = worker
+
+        # 创建第一个令牌响应线程
+        self.ft_response_thread = threading.Thread(
+            target=self.process_first_tokens)
+        self.ft_response_thread.start()
+
+    def process_first_tokens(self):
+        while True:
+            first_token_item = self.first_token_queue.get()
+
+            if first_token_item is None:
+                print("Exiting First token response thread")
+                break
+
+            first_tokens, response_id = first_token_item
+
+            response_data = array.array(
+                "B", np.array(
+                    first_tokens, np.int32).tobytes())
+            bi = response_data.buffer_info()
+            response = [lg.QuerySampleResponse(response_id, bi[0], bi[1])]
+            lg.FirstTokenComplete(response)
+
+    def process_queries(self):
+        if self.test_mode == lg.TestMode.AccuracyOnly:
+            super().process_queries()
+            return
+        """处理请求队列中的查询"""
+        while True:
+            qitem = self.query_queue.get()
+            if qitem is None:
+                break
+            questions = []
+            images_list = []
+            sample_ids = []
+            tokens_cache = []
+            tokens_streamer = FirstTokenStreamer(
+                self.first_token_queue,
+                tokens_cache=tokens_cache,
+                is_first_token=True,
+                response_ids=[qitem.id],
+            )
+            sample = self.data_object.dataset[qitem.index]
+            questions.append(sample["question"])
+            images_list.extend(sample["images"])
+            sample_ids.append(sample["question_id"])
+                
+            if len(images_list) == 0:
+                images_list = None
+
+            inputs = self.processor(
+                text=questions,
+                images=images_list, # 视频关键帧
+                return_tensors="pt",
+                padding=True
+            ).to(self.device)
+
+            # 生成模型输出
+            _ = self.model.generate(
+                **inputs,
+                streamer=tokens_streamer,
+                **gen_kwargs
+                )
+
+            output_tokens = tokens_streamer.get_out_tokens()
+            n_tokens = len(output_tokens)
+            # 处理模型输出
+            # processed_output = self.processor.batch_decode(
+            #     output_tokens,
+            #     skip_special_tokens=True
+            # )
+            # print(processed_output)
+            response_array = array.array(
+                "B", np.array(output_tokens, np.int32).tobytes()
+            )
+            bi = response_array.buffer_info()
+            response = [
+                lg.QuerySampleResponse(
+                    qitem.id,
+                    bi[0],
+                    bi[1],
+                    n_tokens)]
+            lg.QuerySamplesComplete(response)
+            with self.sample_counter_lock:
+                self.sample_counter += 1
+                print(f"Samples run: {self.sample_counter}")
+
+    def issue_queries(self, query_samples):
+        if self.test_mode == lg.TestMode.AccuracyOnly:
+            super().issue_queries(query_samples)
+            return
+        self.query_queue.put(query_samples[0])
+
+    def stop(self):
+        if self.test_mode == lg.TestMode.AccuracyOnly:
+            super().stop()
+            return
+        for _ in range(self.num_workers):
+            self.query_queue.put(None)
+
+        for worker in self.worker_threads:
+            worker.join()
+
+        self.first_token_queue.put(None)
+        self.ft_response_thread.join()        
 
     """IssueQuery and inference methods implemented in Base class"""
 
@@ -722,6 +973,7 @@ def Get_Native_SUT(
     total_sample_count,
     device="cuda",
     workers=1,
+    test_mode=lg.TestMode.PerformanceOnly,
 ):
     if scenario == "Offline":
         return SUT_Native_Offline(
@@ -731,7 +983,8 @@ def Get_Native_SUT(
             dataset_name,
             total_sample_count,
             device,
-            workers
+            workers,
+            test_mode,
         )
     elif scenario == "Server":
         return SUT_Native_Server(
@@ -742,6 +995,7 @@ def Get_Native_SUT(
             total_sample_count,
             device,
             workers,
+            test_mode,
         )
     elif scenario == "SingleStream":
         return SUT_Native_SingleStream(
@@ -752,6 +1006,7 @@ def Get_Native_SUT(
             total_sample_count,
             device,
             workers,
+            test_mode,
         )
     elif scenario == "MultiStream":
         return SUT_Native_MultiStream(
@@ -762,6 +1017,7 @@ def Get_Native_SUT(
             total_sample_count,
             device,
             workers,
+            test_mode,
         )
     else:
         raise NotImplementedError

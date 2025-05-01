@@ -12,6 +12,7 @@ from pprint import pprint
 import time
 from multiprocessing import Event
 
+from model_monitor import ModelMonitor
 from gpu_monitor import GPUMonitorProcess
 
 try:
@@ -242,6 +243,13 @@ def get_args():
         help="Specify an api endpoint call to use api mode",
     )
 
+    parser.add_argument(
+        "--test-mode",
+        choices=["AccuracyOnly", "PerformanceOnly"],
+        default="PerformanceOnly",
+        help="test mode",
+    )
+
     return parser.parse_args()
 
 
@@ -351,8 +359,13 @@ def main():
             print("Run edge mode...")
             settings = lg.TestSettings()
             settings.scenario = SCENARIO_MAP[args.scenario]
+            settings.use_token_latencies = True
             settings.FromConfig(args.user_conf, args.model_name, args.scenario)
-            settings.mode = lg.TestMode.PerformanceOnly
+            if args.test_mode == "AccuracyOnly":
+                settings.mode = lg.TestMode.AccuracyOnly
+            elif args.test_mode == "PerformanceOnly":
+                settings.mode = lg.TestMode.PerformanceOnly
+            print(settings.mode)
 
             # set logs
             os.makedirs(args.output_log_dir, exist_ok=True)
@@ -362,6 +375,8 @@ def main():
             log_settings = lg.LogSettings()
             log_settings.log_output = log_output_settings
             log_settings.enable_trace = args.enable_log_trace
+            if args.test_mode == "AccuracyOnly":
+                ModelMonitor.initialize(args.output_log_dir + "/model_monitor.jsonl")
 
             if args.mode == "native":
                 sut = Get_Native_SUT(
@@ -373,6 +388,7 @@ def main():
                     total_sample_count=args.total_sample_count,
                     device=args.device,
                     workers=args.num_workers,
+                    test_mode=settings.mode,
                 )
             elif args.mode == "remote":
                 sut = Get_Remote_SUT(
@@ -424,7 +440,7 @@ if __name__ == "__main__":
     monitor = GPUMonitorProcess(
         interval=2,
         duration=3600,  # 1小时
-        output_file="gpu_logs/monitor.jsonl",
+        output_file="output-logs/gpu_monitor.jsonl",
         stop_event=stop_event
     )
 

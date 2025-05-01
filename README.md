@@ -7,6 +7,7 @@ pip install -r requirements.txt
 
 ## 下载数据集
 下载[SEED-Bench-2 · 数据集](https://modelscope.cn/datasets/TencentARC/SEED-Bench-2/summary)
+下载[OpenOrca · 数据集](https://huggingface.co/datasets/Open-Orca/OpenOrca)
 
 ## 下载模型
 下载[llava-hf/llava-1.5-7b-hf · Hugging Face](https://huggingface.co/llava-hf/llava-1.5-7b-hf)
@@ -37,8 +38,15 @@ pip install accelerate
 export CHECKPOINT_PATH="/data/dengtao/model/"
 export DATASET_PATH="/data/dengtao/dataset/"
 
-python -u main.py --scenario MultiStream --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 24576 --batch-size 1 --device cuda
-nohup python -u main.py --scenario Server --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 24576 --batch-size 1 --device cuda > output.txt 2>&1 &
+python -u main.py --scenario Offline --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 24576 --batch-size 2 --device cuda --test-mode PerformanceOnly
+
+python -u main.py --scenario Server --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 34576 --batch-size 1 --device cuda --test-mode PerformanceOnly
+
+python -u main.py --scenario SingleStream --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 34576 --batch-size 1 --device cuda --test-mode PerformanceOnly
+
+python -u main.py --scenario MultiStream --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 34576 --batch-size 1 --device cuda --test-mode PerformanceOnly
+
+nohup python -u main.py --scenario MultiStream --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 34576 --batch-size 1 --device cuda --test-mode PerformanceOnly > output.txt 2>&1 &
 ```
 
 手动下载[clip-vit-large-patch14-336](https://huggingface.co/openai/clip-vit-large-patch14-336)到~/.cache/huggingface/

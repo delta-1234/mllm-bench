@@ -359,13 +359,13 @@ def main():
             print("Run edge mode...")
             settings = lg.TestSettings()
             settings.scenario = SCENARIO_MAP[args.scenario]
-            settings.use_token_latencies = True
             settings.FromConfig(args.user_conf, args.model_name, args.scenario)
             if args.test_mode == "AccuracyOnly":
                 settings.mode = lg.TestMode.AccuracyOnly
             elif args.test_mode == "PerformanceOnly":
                 settings.mode = lg.TestMode.PerformanceOnly
             print(settings.mode)
+            # print(settings.use_use_token_latencies)
 
             # set logs
             os.makedirs(args.output_log_dir, exist_ok=True)

@@ -7,7 +7,12 @@ pip install -r requirements.txt
 
 ## 下载数据集
 下载[SEED-Bench-2 · 数据集](https://modelscope.cn/datasets/TencentARC/SEED-Bench-2/summary)
+解压缩完需要重命名
+mv cc3m-image/ cc3m/
+mv SEED-Bench-2-image/ SEED-Bench-v2/
 下载[OpenOrca · 数据集](https://huggingface.co/datasets/Open-Orca/OpenOrca)
+数据处理python processorca.py
+
 
 ## 下载模型
 下载[llava-hf/llava-1.5-7b-hf · Hugging Face](https://huggingface.co/llava-hf/llava-1.5-7b-hf)
@@ -30,15 +35,21 @@ pip install pillow
 pip install tqdm
 pip install datasets
 pip install accelerate
+pip install pybind11
 ```
 
 ## 运行
 
 ```bash
+export CHECKPOINT_PATH="/home/user/buaa/rgzndengtao/model/"
+export DATASET_PATH="/home/user/buaa/rgzndengtao/dataset/"
+
 export CHECKPOINT_PATH="/data/dengtao/model/"
 export DATASET_PATH="/data/dengtao/dataset/"
 
 python -u main.py --scenario Offline --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 24576 --batch-size 2 --device cuda --test-mode PerformanceOnly
+
+nohup python -u main.py --scenario Offline --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 34576 --batch-size 16 --device cuda --test-mode PerformanceOnly > output.txt 2>&1 &
 
 python -u main.py --scenario Server --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 34576 --batch-size 1 --device cuda --test-mode PerformanceOnly
 

@@ -155,7 +155,7 @@ class GPUMonitorProcess(Process):
                         float(record["gpu_utilization"]),
                         int(record["memory_used"]),
                         float(record["power"]),
-                        float(record["timestamp"])
+                        float(record["timestamp"]),
                     ))
                     
                 except (json.JSONDecodeError, ValueError, KeyError) as e:
@@ -163,6 +163,18 @@ class GPUMonitorProcess(Process):
                     continue
 
         # 阶段2: 计算统计指标
+        gpu_dict = {}
+        with open(output_file, "r", encoding="utf-8") as f:
+            for line in f:
+                try:
+                    record = json.loads(line)
+                    gpu_id = record["gpu_id"]
+                    # 保持首次出现的记录，防止后续覆盖
+                    if gpu_id not in gpu_dict:
+                        gpu_dict[gpu_id] = record["gpu_name"]
+                except (json.JSONDecodeError, KeyError) as e:
+                    print(f"跳过异常行: {line.strip()} | 错误: {str(e)}")
+
         result = {}
         for gpu_id, records in gpu_records.items():
             if len(records) < 2:
@@ -197,8 +209,8 @@ class GPUMonitorProcess(Process):
             num_samples = len(sorted_records)
             avg_util = total_util / num_samples
             avg_mem = total_mem // num_samples  # 取整数MB
-            
             result[gpu_id] = {
+                "gpu_name": gpu_dict[gpu_id],
                 "avg_utilization": round(avg_util, 1),
                 "avg_memory_used_mb": avg_mem,
                 "total_energy_j": round(total_energy_j, 2)

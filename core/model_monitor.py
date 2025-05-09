@@ -76,6 +76,7 @@ class ModelMonitor:
 
         sample_data = {}
 
+        sample_count = 0
         # 读取日志文件（假设路径为类内部配置）
         with open(cls._log_file, "r") as f:
             for line in f:
@@ -91,6 +92,8 @@ class ModelMonitor:
                     continue
 
                 # 将事件时间关联到每个独立 sample_id
+                if sample_count == 0:
+                    sample_count = len(sample_ids)
                 for sample_id in sample_ids:
                     sample_str = str(sample_id)  # 统一为字符串标识
                     if sample_str not in sample_data:
@@ -107,10 +110,10 @@ class ModelMonitor:
             if not required_events.issubset(events.keys()):
                 continue
 
-            # 时间转换（微秒 → 毫秒）
-            text_time = events["text_procrss_time"] / 1000
-            vision_time = events["vision_procrss_time"] / 1000
-            text_gen_time = events["text_generation_time"] / 1000
+            # 时间转换(ns → 微s）
+            text_time = events["text_procrss_time"] / sample_count
+            vision_time = events["vision_procrss_time"] / sample_count
+            text_gen_time = events["text_generation_time"] / sample_count
 
             # 计算对齐时间
             align_time = vision_time - text_time

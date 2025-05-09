@@ -49,7 +49,7 @@ export DATASET_PATH="/data/dengtao/dataset/"
 
 python -u main.py --scenario Offline --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 24576 --batch-size 2 --device cuda --test-mode PerformanceOnly
 
-nohup python -u main.py --scenario Offline --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 34576 --batch-size 16 --device cuda --test-mode PerformanceOnly > output.txt 2>&1 &
+nohup python -u main.py --scenario Offline --dataset SEED-Bench-2 --model-name llava-1.5-13b-hf --total-sample-count 34576 --batch-size 2 --device cuda --test-mode PerformanceOnly > output.txt 2>&1 &
 
 python -u main.py --scenario Server --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 34576 --batch-size 1 --device cuda --test-mode PerformanceOnly
 
@@ -60,7 +60,8 @@ python -u main.py --scenario MultiStream --dataset SEED-Bench-2 --model-name lla
 nohup python -u main.py --scenario MultiStream --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 34576 --batch-size 1 --device cuda --test-mode PerformanceOnly > output.txt 2>&1 &
 ```
 
-手动下载[clip-vit-large-patch14-336](https://huggingface.co/openai/clip-vit-large-patch14-336)到~/.cache/huggingface/
+手动下载[clip-vit-large-patch14-336](
+https://huggingface.co/openai/clip-vit-large-patch14-336)到~/.cache/huggingface/
 
 设置环境变量强制使用本地模型 export HF_HUB_OFFLINE=1
 

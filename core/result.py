@@ -11,7 +11,7 @@ result.update(GPUMonitorProcess.calculate_gpu_stats())
 monitor = EventMonitor("./output-logs/mlperf_log_summary.txt")
 result.update(monitor.read_results())
 
-result.update({'Accuracy': 56})
+result.update({'accuracy': 64.91})
 
 model_name = ''
 sample_num = 0

@@ -1,0 +1,485 @@
+nohup: ignoring input
+启动监控进程，PID: 59116
+Run edge mode...
+TestMode.PerformanceOnly
+Dataset Name: SEED-Bench-2
+Model Name:llava-1.5-13b-hf
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:01<00:09,  1.92s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:02<00:05,  1.39s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:03<00:03,  1.21s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:04<00:02,  1.14s/it]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:06<00:01,  1.11s/it]Loading checkpoint shards: 100%|██████████| 6/6 [00:06<00:00,  1.15it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:06<00:00,  1.07s/it]
+Loaded processor
+Constructing QSL
+Loading dataset file
+native start...
+IssueQuery started with 660 samples
+IssueQuery done
+Samples run: 8
+	BatchMaker time: 0.9186744689941406
+	Inference time: 12.248702764511108
+	Postprocess time: 0.004034519195556641
+	==== Total time: 13.171411752700806
+Samples run: 16
+	BatchMaker time: 0.7250468730926514
+	Inference time: 9.9750235080719
+	Postprocess time: 0.0041425228118896484
+	==== Total time: 10.70421290397644
+Samples run: 24
+	BatchMaker time: 0.09106159210205078
+	Inference time: 10.690566539764404
+	Postprocess time: 0.004779815673828125
+	==== Total time: 10.786407947540283
+Samples run: 32
+	BatchMaker time: 0.44863295555114746
+	Inference time: 8.864804029464722
+	Postprocess time: 0.00406193733215332
+	==== Total time: 9.317498922348022
+Samples run: 40
+	BatchMaker time: 0.2617983818054199
+	Inference time: 8.913561344146729
+	Postprocess time: 0.004427909851074219
+	==== Total time: 9.179787635803223
+Samples run: 48
+	BatchMaker time: 0.17929530143737793
+	Inference time: 7.59800386428833
+	Postprocess time: 0.0039958953857421875
+	==== Total time: 7.78129506111145
+Samples run: 56
+	BatchMaker time: 0.6516628265380859
+	Inference time: 9.70040774345398
+	Postprocess time: 0.003922462463378906
+	==== Total time: 10.355993032455444
+Samples run: 64
+	BatchMaker time: 0.8971199989318848
+	Inference time: 9.931828022003174
+	Postprocess time: 0.003986835479736328
+	==== Total time: 10.832934856414795
+Samples run: 72
+	BatchMaker time: 0.5872669219970703
+	Inference time: 9.05344271659851
+	Postprocess time: 0.004079341888427734
+	==== Total time: 9.644788980484009
+Samples run: 80
+	BatchMaker time: 0.8422417640686035
+	Inference time: 9.047639608383179
+	Postprocess time: 0.014676332473754883
+	==== Total time: 9.904557704925537
+Samples run: 88
+	BatchMaker time: 0.09537649154663086
+	Inference time: 8.93816351890564
+	Postprocess time: 0.004126548767089844
+	==== Total time: 9.03766655921936
+Samples run: 96
+	BatchMaker time: 0.5016512870788574
+	Inference time: 8.922517776489258
+	Postprocess time: 0.004588127136230469
+	==== Total time: 9.428757190704346
+Samples run: 104
+	BatchMaker time: 0.15540647506713867
+	Inference time: 9.143005609512329
+	Postprocess time: 0.0036177635192871094
+	==== Total time: 9.302029848098755
+Samples run: 112
+	BatchMaker time: 0.07992029190063477
+	Inference time: 1.6744379997253418
+	Postprocess time: 0.001123666763305664
+	==== Total time: 1.7554819583892822
+Samples run: 120
+	BatchMaker time: 0.21304106712341309
+	Inference time: 1.2254571914672852
+	Postprocess time: 0.0012309551239013672
+	==== Total time: 1.4397292137145996
+Samples run: 128
+	BatchMaker time: 0.173081636428833
+	Inference time: 9.568228244781494
+	Postprocess time: 0.0038099288940429688
+	==== Total time: 9.74511981010437
+Samples run: 136
+	BatchMaker time: 0.11274528503417969
+	Inference time: 5.020155906677246
+	Postprocess time: 0.0024514198303222656
+	==== Total time: 5.135352611541748
+Samples run: 144
+	BatchMaker time: 0.42557382583618164
+	Inference time: 8.968591451644897
+	Postprocess time: 0.004483222961425781
+	==== Total time: 9.398648500442505
+Samples run: 152
+	BatchMaker time: 0.24939966201782227
+	Inference time: 9.157872438430786
+	Postprocess time: 0.0038182735443115234
+	==== Total time: 9.41109037399292
+Samples run: 160
+	BatchMaker time: 0.5627946853637695
+	Inference time: 9.016523361206055
+	Postprocess time: 0.006978273391723633
+	==== Total time: 9.586296319961548
+Samples run: 168
+	BatchMaker time: 0.533409833908081
+	Inference time: 8.984643936157227
+	Postprocess time: 0.0041370391845703125
+	==== Total time: 9.522190809249878
+Samples run: 176
+	BatchMaker time: 0.38865184783935547
+	Inference time: 9.163297653198242
+	Postprocess time: 0.0041697025299072266
+	==== Total time: 9.556119203567505
+Samples run: 184
+	BatchMaker time: 0.47234320640563965
+	Inference time: 9.004175186157227
+	Postprocess time: 0.0036253929138183594
+	==== Total time: 9.480143785476685
+Samples run: 192
+	BatchMaker time: 0.40294361114501953
+	Inference time: 9.031492233276367
+	Postprocess time: 0.0036852359771728516
+	==== Total time: 9.43812108039856
+Samples run: 200
+	BatchMaker time: 0.38715410232543945
+	Inference time: 8.934678077697754
+	Postprocess time: 0.004090547561645508
+	==== Total time: 9.325922727584839
+Samples run: 208
+	BatchMaker time: 0.14322662353515625
+	Inference time: 9.120550394058228
+	Postprocess time: 0.00418853759765625
+	==== Total time: 9.26796555519104
+Samples run: 216
+	BatchMaker time: 0.2236649990081787
+	Inference time: 9.093676567077637
+	Postprocess time: 0.003875732421875
+	==== Total time: 9.32121729850769
+Samples run: 224
+	BatchMaker time: 0.41306543350219727
+	Inference time: 8.985381364822388
+	Postprocess time: 0.003886699676513672
+	==== Total time: 9.402333498001099
+Samples run: 232
+	BatchMaker time: 0.30847787857055664
+	Inference time: 9.194573402404785
+	Postprocess time: 0.004485607147216797
+	==== Total time: 9.507536888122559
+Samples run: 240
+	BatchMaker time: 0.12430953979492188
+	Inference time: 4.756658554077148
+	Postprocess time: 0.002500295639038086
+	==== Total time: 4.883468389511108
+Samples run: 248
+	BatchMaker time: 0.4430408477783203
+	Inference time: 8.956319093704224
+	Postprocess time: 0.0037279129028320312
+	==== Total time: 9.403087854385376
+Samples run: 256
+	BatchMaker time: 0.14429330825805664
+	Inference time: 9.0471351146698
+	Postprocess time: 0.003987789154052734
+	==== Total time: 9.19541621208191
+Samples run: 264
+	BatchMaker time: 0.44444727897644043
+	Inference time: 8.968620538711548
+	Postprocess time: 0.004125118255615234
+	==== Total time: 9.417192935943604
+Samples run: 272
+	BatchMaker time: 0.25919413566589355
+	Inference time: 9.193959712982178
+	Postprocess time: 0.0041294097900390625
+	==== Total time: 9.45728325843811
+Samples run: 280
+	BatchMaker time: 0.09505796432495117
+	Inference time: 9.109054327011108
+	Postprocess time: 0.004183769226074219
+	==== Total time: 9.208296060562134
+Samples run: 288
+	BatchMaker time: 0.47911858558654785
+	Inference time: 8.958460330963135
+	Postprocess time: 0.003807544708251953
+	==== Total time: 9.441386461257935
+Samples run: 296
+	BatchMaker time: 0.9076967239379883
+	Inference time: 9.081912994384766
+	Postprocess time: 0.004149913787841797
+	==== Total time: 9.993759632110596
+Samples run: 304
+	BatchMaker time: 0.4436628818511963
+	Inference time: 9.123712062835693
+	Postprocess time: 0.004229545593261719
+	==== Total time: 9.571604490280151
+Samples run: 312
+	BatchMaker time: 0.6241135597229004
+	Inference time: 9.197354555130005
+	Postprocess time: 0.004071950912475586
+	==== Total time: 9.82554006576538
+Samples run: 320
+	BatchMaker time: 0.09317326545715332
+	Inference time: 9.117238998413086
+	Postprocess time: 0.0040204524993896484
+	==== Total time: 9.214432716369629
+Samples run: 328
+	BatchMaker time: 0.7738234996795654
+	Inference time: 9.079410791397095
+	Postprocess time: 0.004037380218505859
+	==== Total time: 9.857271671295166
+Samples run: 336
+	BatchMaker time: 0.9800693988800049
+	Inference time: 8.96268367767334
+	Postprocess time: 0.0041959285736083984
+	==== Total time: 9.946949005126953
+Samples run: 344
+	BatchMaker time: 0.3760855197906494
+	Inference time: 3.9340038299560547
+	Postprocess time: 0.002322673797607422
+	==== Total time: 4.3124120235443115
+Samples run: 352
+	BatchMaker time: 0.13075494766235352
+	Inference time: 9.151353359222412
+	Postprocess time: 0.003961801528930664
+	==== Total time: 9.286070108413696
+Samples run: 360
+	BatchMaker time: 0.03481793403625488
+	Inference time: 1.6014742851257324
+	Postprocess time: 0.0016932487487792969
+	==== Total time: 1.6379854679107666
+Samples run: 368
+	BatchMaker time: 0.0836799144744873
+	Inference time: 9.080366373062134
+	Postprocess time: 0.003687143325805664
+	==== Total time: 9.167733430862427
+Samples run: 376
+	BatchMaker time: 0.1466212272644043
+	Inference time: 9.153027772903442
+	Postprocess time: 0.004464149475097656
+	==== Total time: 9.304113149642944
+Samples run: 384
+	BatchMaker time: 0.15999698638916016
+	Inference time: 9.21933913230896
+	Postprocess time: 0.0038726329803466797
+	==== Total time: 9.383208751678467
+Samples run: 392
+	BatchMaker time: 0.49498963356018066
+	Inference time: 9.076213836669922
+	Postprocess time: 0.004149913787841797
+	==== Total time: 9.575353384017944
+Samples run: 400
+	BatchMaker time: 0.14078116416931152
+	Inference time: 9.079766273498535
+	Postprocess time: 0.0038928985595703125
+	==== Total time: 9.224440336227417
+Samples run: 408
+	BatchMaker time: 0.1647472381591797
+	Inference time: 9.02075457572937
+	Postprocess time: 0.003832578659057617
+	==== Total time: 9.189334392547607
+Samples run: 416
+	BatchMaker time: 0.14539623260498047
+	Inference time: 9.139654874801636
+	Postprocess time: 0.0039038658142089844
+	==== Total time: 9.288954973220825
+Samples run: 424
+	BatchMaker time: 0.21221351623535156
+	Inference time: 9.062075853347778
+	Postprocess time: 0.0040781497955322266
+	==== Total time: 9.278367519378662
+Samples run: 432
+	BatchMaker time: 0.2591440677642822
+	Inference time: 9.067726373672485
+	Postprocess time: 0.0041162967681884766
+	==== Total time: 9.330986738204956
+Samples run: 440
+	BatchMaker time: 0.0974264144897461
+	Inference time: 5.201584577560425
+	Postprocess time: 0.002763032913208008
+	==== Total time: 5.301774024963379
+Samples run: 448
+	BatchMaker time: 0.8698601722717285
+	Inference time: 9.180103302001953
+	Postprocess time: 0.0038754940032958984
+	==== Total time: 10.053838968276978
+Samples run: 456
+	BatchMaker time: 0.7162220478057861
+	Inference time: 9.04379153251648
+	Postprocess time: 0.003934383392333984
+	==== Total time: 9.7639479637146
+Samples run: 464
+	BatchMaker time: 0.2749454975128174
+	Inference time: 1.6627967357635498
+	Postprocess time: 0.0010852813720703125
+	==== Total time: 1.9388275146484375
+Samples run: 472
+	BatchMaker time: 0.2019197940826416
+	Inference time: 1.4899816513061523
+	Postprocess time: 0.0010912418365478516
+	==== Total time: 1.6929926872253418
+Samples run: 480
+	BatchMaker time: 0.07716727256774902
+	Inference time: 9.073968648910522
+	Postprocess time: 0.004884958267211914
+	==== Total time: 9.156020879745483
+Samples run: 488
+	BatchMaker time: 0.15944147109985352
+	Inference time: 9.144319295883179
+	Postprocess time: 0.003966569900512695
+	==== Total time: 9.307727336883545
+Samples run: 496
+	BatchMaker time: 0.24277520179748535
+	Inference time: 9.152469635009766
+	Postprocess time: 0.003916740417480469
+	==== Total time: 9.399161577224731
+Samples run: 504
+	BatchMaker time: 0.1630082130432129
+	Inference time: 5.0396153926849365
+	Postprocess time: 0.002770662307739258
+	==== Total time: 5.205394268035889
+Samples run: 512
+	BatchMaker time: 0.811530351638794
+	Inference time: 9.066713809967041
+	Postprocess time: 0.0038187503814697266
+	==== Total time: 9.882062911987305
+Samples run: 520
+	BatchMaker time: 0.19208550453186035
+	Inference time: 9.244902849197388
+	Postprocess time: 0.004203081130981445
+	==== Total time: 9.44119143486023
+Samples run: 528
+	BatchMaker time: 0.4190526008605957
+	Inference time: 9.003881692886353
+	Postprocess time: 0.004022359848022461
+	==== Total time: 9.42695665359497
+Samples run: 536
+	BatchMaker time: 0.1586017608642578
+	Inference time: 9.195670366287231
+	Postprocess time: 0.0041806697845458984
+	==== Total time: 9.358452796936035
+Samples run: 544
+	BatchMaker time: 0.08985066413879395
+	Inference time: 9.077535152435303
+	Postprocess time: 0.0036361217498779297
+	==== Total time: 9.171021938323975
+Samples run: 552
+	BatchMaker time: 0.4293670654296875
+	Inference time: 9.198804140090942
+	Postprocess time: 0.004145622253417969
+	==== Total time: 9.632316827774048
+Samples run: 560
+	BatchMaker time: 0.27268385887145996
+	Inference time: 5.078837871551514
+	Postprocess time: 0.0025811195373535156
+	==== Total time: 5.354102849960327
+Samples run: 568
+	BatchMaker time: 0.2542574405670166
+	Inference time: 1.6139240264892578
+	Postprocess time: 0.0010802745819091797
+	==== Total time: 1.8692617416381836
+Samples run: 576
+	BatchMaker time: 0.12955212593078613
+	Inference time: 5.075971603393555
+	Postprocess time: 0.0026845932006835938
+	==== Total time: 5.208208322525024
+Samples run: 584
+	BatchMaker time: 0.09693026542663574
+	Inference time: 5.024965047836304
+	Postprocess time: 0.0030837059020996094
+	==== Total time: 5.124979019165039
+Samples run: 592
+	BatchMaker time: 0.09649252891540527
+	Inference time: 9.075012683868408
+	Postprocess time: 0.00420069694519043
+	==== Total time: 9.175705909729004
+Samples run: 600
+	BatchMaker time: 0.5762078762054443
+	Inference time: 9.175378561019897
+	Postprocess time: 0.0038573741912841797
+	==== Total time: 9.755443811416626
+Samples run: 608
+	BatchMaker time: 0.08508419990539551
+	Inference time: 8.969172239303589
+	Postprocess time: 0.00449824333190918
+	==== Total time: 9.058754682540894
+Samples run: 616
+	BatchMaker time: 0.14293503761291504
+	Inference time: 5.031854629516602
+	Postprocess time: 0.002460479736328125
+	==== Total time: 5.177250146865845
+Samples run: 624
+	BatchMaker time: 0.4898247718811035
+	Inference time: 9.11107873916626
+	Postprocess time: 0.0037834644317626953
+	==== Total time: 9.604686975479126
+Samples run: 632
+	BatchMaker time: 0.16738224029541016
+	Inference time: 9.150712728500366
+	Postprocess time: 0.0040051937103271484
+	==== Total time: 9.322100162506104
+Samples run: 640
+	BatchMaker time: 0.5603382587432861
+	Inference time: 11.197345972061157
+	Postprocess time: 0.004518985748291016
+	==== Total time: 11.762203216552734
+Samples run: 648
+	BatchMaker time: 0.23632001876831055
+	Inference time: 8.979076385498047
+	Postprocess time: 0.003879547119140625
+	==== Total time: 9.219275951385498
+Samples run: 656
+	BatchMaker time: 0.156996488571167
+	Inference time: 9.023772954940796
+	Postprocess time: 0.004064798355102539
+	==== Total time: 9.184834241867065
+Samples run: 660
+	BatchMaker time: 0.11069035530090332
+	Inference time: 4.865828037261963
+	Postprocess time: 0.002272367477416992
+	==== Total time: 4.978790760040283
+================================================
+MLPerf Results Summary
+================================================
+SUT name : PySUT
+Scenario : Offline
+Mode     : PerformanceOnly
+Samples per second: 0.939269
+Result is : VALID
+  Min duration satisfied : Yes
+  Min queries satisfied : Yes
+  Early stopping satisfied: Yes
+
+================================================
+Additional Stats
+================================================
+Min latency (ns)                : 13172037120
+Max latency (ns)                : 702674372965
+Mean latency (ns)               : 365225561815
+50.00 percentile latency (ns)   : 380162875326
+90.00 percentile latency (ns)   : 634365425624
+95.00 percentile latency (ns)   : 667528724563
+97.00 percentile latency (ns)   : 688510479027
+99.00 percentile latency (ns)   : 697695469166
+99.90 percentile latency (ns)   : 702674372965
+
+================================================
+Test Parameters Used
+================================================
+samples_per_query : 660
+target_qps : 1
+target_latency (ns): 0
+max_async_queries : 1
+min_duration (ms): 600000
+max_duration (ms): 0
+min_query_count : 1
+max_query_count : 0
+qsl_rng_seed : 6023615788873153749
+sample_index_rng_seed : 15036839855038426416
+schedule_rng_seed : 9933818062894767841
+accuracy_log_rng_seed : 0
+accuracy_log_probability : 0
+accuracy_log_sampling_target : 0
+print_timestamps : 0
+performance_issue_unique : 0
+performance_issue_same : 0
+performance_issue_same_index : 0
+performance_sample_count : 24576
+
+No warnings encountered during test.
+
+1 ERROR encountered. See detailed log.
+native stop...
+Test Done!
+Clean Program
+Finished destroying QSL.
+等待监控进程退出...
+主程序退出

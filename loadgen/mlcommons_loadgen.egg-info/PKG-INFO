@@ -1,4 +1,4 @@
-Metadata-Version: 2.2
+Metadata-Version: 2.4
 Name: mlcommons_loadgen
 Version: 5.0.15
 Summary: MLPerf Inference LoadGen python bindings

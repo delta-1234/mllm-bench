@@ -10,22 +10,22 @@ const std::string& LoadgenVersion() {
 }
 
 const std::string& LoadgenBuildDateLocal() {
-  static const std::string str = "2025-04-04T00:00:24.643202";
+  static const std::string str = "2025-05-13T21:33:09.472953";
   return str;
 }
 
 const std::string& LoadgenBuildDateUtc() {
-  static const std::string str = "2025-04-03T16:00:24.643215";
+  static const std::string str = "2025-05-13T13:33:09.472966";
   return str;
 }
 
 const std::string& LoadgenGitRevision() {
-  static const std::string str = "79c8c5a9f9";
+  static const std::string str = "4c83066420";
   return str;
 }
 
 const std::string& LoadgenGitCommitDate() {
-  static const std::string str = "2025-04-03T23:43:38+08:00";
+  static const std::string str = "2025-05-09T22:58:06+08:00";
   return str;
 }
 
@@ -35,7 +35,15 @@ const std::string& LoadgenGitStatus() {
 }
 
 const std::string& LoadgenGitLog() {
-  static const std::string str = R"LGVG_RSLD(79c8c5a9f90edaa6cf8252f02bec43953f8732b5 43
+  static const std::string str = R"LGVG_RSLD(4c830664201de806e23752fb67107a7e5ca04878 a800
+65139bde8867bf7c7af36364d54014d7dcbef91e a800
+01929a11c7471803470b479e1d74eb749869daba singlestream
+dfe842b5cf1d4107ada69d8d1aa01a2de2c8c5e1 
+75e3b98843e099c60323701690031166c4d29b19 
+b1da60e6b1af0d263ba4071fc56d8ebb4b7e0637 v2.0+result
+80651e2179adccc2b2fbedacf3152423ebaf9b98 v2.0
+7193069560f91a62da1e63fd32328b9a081688a7 v1.0+result
+79c8c5a9f90edaa6cf8252f02bec43953f8732b5 43
 f30014241e63494fc36d615e728f8841eedcaeaf v1.0
 27ea923c3276619c9f575c0be111ffdd833b8ccb 
 ac3e02c6176138127a106b150cb8fb2463ffb8c9 2025-3-16
@@ -70,7 +78,7 @@ dce4bda6f6a08e399e2c1181e23392f487b6130c /logging.cc
 3710eed6e90d9d462bd6c2c9f69713d8dc77210e /logging.h
 0b4b917a61d81dd1de38a830f9f013661b95c9fb /mlperf.conf
 fca712ecaa27e093c1f76dc4beb85741d88eaeb2 /mlperf_conf.h
-bafe359051d428fd473790cd5d89f9db876eea0c /mlperf_loadgen.cpython-310-x86_64-linux-gnu.so
+9646d97eb51ab9158172a120a0429cd4daee185b /mlperf_loadgen.cpython-310-x86_64-linux-gnu.so
 80a226da7e7427bdfbbab066f35bcc003a96df0e /mlperf_loadgen.cpython-39-x86_64-linux-gnu.so
 0f07d721621eb9a8c90cf90ba47b05a32f9c79d2 /pyproject.toml
 1163e9a19681c7d2dec898f204e3f719a6bee623 /query_dispatch_library.h

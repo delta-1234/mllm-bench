@@ -1,13 +1,17 @@
 # 多模态大模型推理基准测试系统
 ## 环境
 python 3.10
+
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
 pip install transformers
+
 pip install -r requirements.txt
 
 ## 下载数据集
 下载[SEED-Bench-2 · 数据集](https://modelscope.cn/datasets/TencentARC/SEED-Bench-2/summary)
 解压缩完需要重命名
+cat SEED-Bench-2-image.zip.* > SEED-Bench-2-image.zip
 mv cc3m-image/ cc3m/
 mv SEED-Bench-2-image/ SEED-Bench-v2/
 下载[OpenOrca · 数据集](https://huggingface.co/datasets/Open-Orca/OpenOrca)
@@ -44,8 +48,8 @@ pip install pybind11
 export CHECKPOINT_PATH="/home/user/buaa/rgzndengtao/model/"
 export DATASET_PATH="/home/user/buaa/rgzndengtao/dataset/"
 
-export CHECKPOINT_PATH="/data/dengtao/model/"
-export DATASET_PATH="/data/dengtao/dataset/"
+export CHECKPOINT_PATH="/home/buaa/dengtao/model/"
+export DATASET_PATH="/home/buaa/dengtao/dataset/"
 
 python -u main.py --scenario Offline --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 24576 --batch-size 2 --device cuda --test-mode PerformanceOnly
 

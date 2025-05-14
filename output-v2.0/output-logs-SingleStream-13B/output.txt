@@ -1,0 +1,3277 @@
+nohup: ignoring input
+启动监控进程，PID: 137789
+Run edge mode...
+TestMode.PerformanceOnly
+Dataset Name: SEED-Bench-2
+Model Name:llava-1.5-13b-hf
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:01<00:09,  1.86s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:03<00:06,  1.71s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:05<00:04,  1.65s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:06<00:03,  1.63s/it]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:08<00:01,  1.62s/it]Loading checkpoint shards: 100%|██████████| 6/6 [00:08<00:00,  1.29s/it]Loading checkpoint shards: 100%|██████████| 6/6 [00:08<00:00,  1.48s/it]
+Loaded processor
+Constructing QSL
+Loading dataset file
+native start...
+IssueQuery started with 1 samples
+IssueQuery done
+Samples run: 1IssueQuery started with 1 samples
+
+	BatchMaker time: 0.048932552337646484
+	Inference time: 1.4744226932525635
+	Postprocess time: 0.0004305839538574219
+	==== Total time: 1.5237858295440674
+IssueQuery done
+Samples run: 2IssueQuery started with 1 samples
+
+IssueQuery done
+	BatchMaker time: 0.0016722679138183594
+	Inference time: 1.1067981719970703
+	Postprocess time: 0.00040602684020996094
+	==== Total time: 1.1088764667510986
+Samples run: 3
+	BatchMaker time: 0.03128862380981445
+	Inference time: 0.3620302677154541
+	Postprocess time: 0.00035881996154785156IssueQuery started with 1 samples
+
+	==== Total time: 0.3936777114868164
+IssueQuery done
+Samples run: 4IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0008645057678222656
+	Inference time: 0.7274434566497803
+IssueQuery done	Postprocess time: 0.0003044605255126953
+
+	==== Total time: 0.7286124229431152
+Samples run: 5IssueQuery started with 1 samples
+
+	BatchMaker time: 0.004578828811645508
+	Inference time: 0.4683849811553955IssueQuery done
+
+	Postprocess time: 0.00037169456481933594
+	==== Total time: 0.47333550453186035
+Samples run: 6IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0007498264312744141
+	Inference time: 1.1120398044586182IssueQuery done
+
+	Postprocess time: 0.00028514862060546875
+	==== Total time: 1.113074779510498
+Samples run: 7IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0011823177337646484
+	Inference time: 1.1470997333526611
+IssueQuery done	Postprocess time: 0.0004112720489501953
+	==== Total time: 1.148693323135376
+
+Samples run: 8IssueQuery started with 1 samples
+
+	BatchMaker time: 0.07882094383239746
+	Inference time: 1.8455650806427002
+	Postprocess time: 0.0005903244018554688
+IssueQuery done	==== Total time: 1.9249763488769531
+
+Samples run: 9IssueQuery started with 1 samples
+
+	BatchMaker time: 0.004534721374511719
+	Inference time: 0.46896839141845703
+	Postprocess time: 0.0003247261047363281IssueQuery done
+	==== Total time: 0.4738278388977051
+
+Samples run: 10IssueQuery started with 1 samples
+	BatchMaker time: 0.0006966590881347656
+	Inference time: 0.669330358505249
+	Postprocess time: 0.00028133392333984375
+
+	==== Total time: 0.6703083515167236
+IssueQuery done
+Samples run: 11IssueQuery started with 1 samples
+
+	BatchMaker time: 0.008129358291625977
+	Inference time: 0.6525018215179443IssueQuery done
+
+	Postprocess time: 0.0003261566162109375
+	==== Total time: 0.6609573364257812
+Samples run: 12IssueQuery started with 1 samples
+
+	BatchMaker time: 0.018483400344848633
+	Inference time: 1.2973759174346924IssueQuery done
+
+	Postprocess time: 0.00034165382385253906
+	==== Total time: 1.3162009716033936
+Samples run: 13IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0005729198455810547
+	Inference time: 1.1017401218414307
+	Postprocess time: 0.0002474784851074219
+IssueQuery done	==== Total time: 1.1025605201721191
+
+Samples run: 14IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.05988740921020508
+	Inference time: 1.8499109745025635
+
+	Postprocess time: 0.0005977153778076172
+	==== Total time: 1.9103960990905762
+Samples run: 15IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.004677772521972656
+
+	Inference time: 1.3571422100067139
+	Postprocess time: 0.0005166530609130859
+	==== Total time: 1.3623366355895996
+Samples run: 16IssueQuery started with 1 samples
+
+	BatchMaker time: 0.07692575454711914
+	Inference time: 0.6935582160949707
+IssueQuery done	Postprocess time: 0.00035643577575683594
+	==== Total time: 0.7708404064178467
+
+Samples run: 17IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.031838178634643555
+	Inference time: 1.3904144763946533
+
+	Postprocess time: 0.00039505958557128906
+	==== Total time: 1.4226477146148682
+Samples run: 18IssueQuery started with 1 samples
+
+	BatchMaker time: 0.025202274322509766
+	Inference time: 0.4681377410888672IssueQuery done
+
+	Postprocess time: 0.00034236907958984375
+	==== Total time: 0.4936823844909668
+Samples run: 19IssueQuery started with 1 samples
+
+	BatchMaker time: 0.001279592514038086
+	Inference time: 1.1576378345489502
+	Postprocess time: 0.0004248619079589844IssueQuery done
+
+	==== Total time: 1.1593422889709473
+Samples run: 20IssueQuery started with 1 samples
+
+	BatchMaker time: 0.05345892906188965
+	Inference time: 0.886164665222168IssueQuery done
+
+	Postprocess time: 0.0005536079406738281
+	==== Total time: 0.9401772022247314
+Samples run: 21IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0010685920715332031
+	Inference time: 1.1353840827941895IssueQuery done
+
+	Postprocess time: 0.0004024505615234375
+	==== Total time: 1.136855125427246
+Samples run: 22IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0073184967041015625
+	Inference time: 0.9709427356719971IssueQuery done
+
+	Postprocess time: 0.0003490447998046875
+	==== Total time: 0.9786102771759033
+Samples run: 23IssueQuery started with 1 samples
+
+	BatchMaker time: 0.01963639259338379
+IssueQuery done	Inference time: 0.8002119064331055
+	Postprocess time: 0.0003466606140136719
+
+	==== Total time: 0.8201949596405029
+Samples run: 24IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0011680126190185547
+	Inference time: 1.1451663970947266IssueQuery done
+
+	Postprocess time: 0.00044655799865722656
+	==== Total time: 1.1467809677124023
+Samples run: 25IssueQuery started with 1 samples
+
+	BatchMaker time: 0.05853438377380371
+	Inference time: 1.840409755706787IssueQuery done
+
+	Postprocess time: 0.0006794929504394531
+	==== Total time: 1.8996236324310303
+Samples run: 26IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0009050369262695312
+	Inference time: 0.6691956520080566IssueQuery done
+
+	Postprocess time: 0.0003376007080078125
+	==== Total time: 0.670438289642334
+Samples run: 27
+	BatchMaker time: 0.5103368759155273
+	Inference time: 2.8872973918914795
+	Postprocess time: 0.0010056495666503906IssueQuery started with 1 samples
+
+	==== Total time: 3.3986399173736572
+IssueQuery done
+Samples run: 28IssueQuery started with 1 samples
+
+	BatchMaker time: 0.006203174591064453
+	Inference time: 0.8017489910125732IssueQuery done
+
+	Postprocess time: 0.0003380775451660156
+	==== Total time: 0.8082902431488037
+Samples run: 29IssueQuery started with 1 samples
+
+	BatchMaker time: 0.4961209297180176IssueQuery done
+
+	Inference time: 2.8546931743621826
+	Postprocess time: 0.0008580684661865234
+	==== Total time: 3.3516721725463867
+Samples run: 30IssueQuery started with 1 samples
+
+	BatchMaker time: 0.022167444229125977
+	Inference time: 0.4700160026550293IssueQuery done
+
+	Postprocess time: 0.00034117698669433594
+	==== Total time: 0.4925246238708496
+Samples run: 31IssueQuery started with 1 samples
+
+	BatchMaker time: 0.08063912391662598
+	Inference time: 0.6909065246582031
+	Postprocess time: 0.0003554821014404297IssueQuery done
+
+	==== Total time: 0.7719011306762695
+Samples run: 32IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0018181800842285156IssueQuery done
+
+	Inference time: 0.6743791103363037
+	Postprocess time: 0.0004677772521972656
+	==== Total time: 0.6766650676727295
+Samples run: 33IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0005090236663818359
+IssueQuery done	Inference time: 1.0964126586914062
+
+	Postprocess time: 0.00023102760314941406
+	==== Total time: 1.0971527099609375
+Samples run: 34IssueQuery started with 1 samples
+
+	BatchMaker time: 0.011619806289672852
+	Inference time: 0.528527021408081
+IssueQuery done	Postprocess time: 0.00031948089599609375
+	==== Total time: 0.54046630859375
+
+Samples run: 35IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02235722541809082
+	Inference time: 1.0619096755981445
+	Postprocess time: 0.00039649009704589844IssueQuery done
+
+	==== Total time: 1.0846633911132812
+Samples run: 36IssueQuery started with 1 samples
+	BatchMaker time: 0.019169330596923828
+	Inference time: 0.47330236434936523
+
+	Postprocess time: 0.0004096031188964844
+	==== Total time: 0.49288129806518555IssueQuery done
+
+Samples run: 37IssueQuery started with 1 samples
+	BatchMaker time: 0.0149078369140625
+	Inference time: 0.47269368171691895
+
+IssueQuery done	Postprocess time: 0.0003368854522705078
+	==== Total time: 0.48793840408325195
+
+Samples run: 38IssueQuery started with 1 samples
+
+	BatchMaker time: 0.16579771041870117
+	Inference time: 0.6392209529876709IssueQuery done
+	Postprocess time: 0.0003752708435058594
+
+	==== Total time: 0.8053939342498779
+Samples run: 39IssueQuery started with 1 samples
+
+	BatchMaker time: 0.06049370765686035
+	Inference time: 1.8571805953979492
+	Postprocess time: 0.0007274150848388672
+IssueQuery done	==== Total time: 1.9184017181396484
+
+Samples run: 40IssueQuery started with 1 samples
+
+	BatchMaker time: 0.019264936447143555
+	Inference time: 0.8131310939788818IssueQuery done
+	Postprocess time: 0.0003402233123779297
+
+	==== Total time: 0.8327362537384033
+Samples run: 41IssueQuery started with 1 samples
+	BatchMaker time: 0.0010819435119628906
+	Inference time: 0.12388777732849121
+	Postprocess time: 0.0002989768981933594
+
+IssueQuery done	==== Total time: 0.12526869773864746
+
+Samples run: 42
+IssueQuery started with 1 samples	BatchMaker time: 0.012313365936279297
+	Inference time: 1.6371800899505615
+
+	Postprocess time: 0.0005042552947998047IssueQuery done
+
+	==== Total time: 1.6499977111816406
+Samples run: 43IssueQuery started with 1 samples
+
+	BatchMaker time: 0.48340559005737305
+	Inference time: 2.906825065612793
+IssueQuery done	Postprocess time: 0.0008656978607177734
+	==== Total time: 3.391096353530884
+
+Samples run: 44IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0009126663208007812
+	Inference time: 1.1245458126068115IssueQuery done
+
+	Postprocess time: 0.00031113624572753906
+	==== Total time: 1.1257696151733398
+Samples run: 45IssueQuery started with 1 samples
+
+	BatchMaker time: 0.05970287322998047
+	Inference time: 2.6706583499908447IssueQuery done
+
+	Postprocess time: 0.0009160041809082031
+	==== Total time: 2.7312772274017334
+Samples run: 46IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0014183521270751953
+	Inference time: 1.1613335609436035IssueQuery done
+
+	Postprocess time: 0.0004057884216308594
+	==== Total time: 1.1631577014923096
+Samples run: 47IssueQuery started with 1 samples
+
+	BatchMaker time: 0.024435043334960938
+IssueQuery done	Inference time: 0.47686219215393066
+
+	Postprocess time: 0.0003719329833984375
+	==== Total time: 0.50166916847229
+Samples run: 48IssueQuery started with 1 samples
+
+	BatchMaker time: 0.004927396774291992IssueQuery done
+
+	Inference time: 0.8102281093597412
+	Postprocess time: 0.0003476142883300781
+	==== Total time: 0.8155031204223633
+Samples run: 49IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04144692420959473
+	Inference time: 0.5303230285644531IssueQuery done
+
+	Postprocess time: 0.00035190582275390625
+	==== Total time: 0.5721218585968018
+Samples run: 50IssueQuery started with 1 samples
+
+	BatchMaker time: 0.15724658966064453
+	Inference time: 0.648766040802002IssueQuery done
+
+	Postprocess time: 0.0003864765167236328
+	==== Total time: 0.8063991069793701
+Samples run: 51IssueQuery started with 1 samples
+
+	BatchMaker time: 0.020112276077270508
+	Inference time: 1.0718483924865723IssueQuery done
+
+	Postprocess time: 0.0003819465637207031
+	==== Total time: 1.0923426151275635
+Samples run: 52IssueQuery started with 1 samples
+
+	BatchMaker time: 0.21414756774902344
+	Inference time: 2.259237051010132IssueQuery done
+
+	Postprocess time: 0.0008378028869628906
+	==== Total time: 2.474222421646118
+Samples run: 53IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04951071739196777
+	Inference time: 0.9044175148010254
+IssueQuery done	Postprocess time: 0.00038695335388183594
+	==== Total time: 0.954315185546875
+
+Samples run: 54IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0015857219696044922
+	Inference time: 0.39768481254577637IssueQuery done
+
+	Postprocess time: 0.0004649162292480469
+	==== Total time: 0.3997354507446289
+Samples run: 55IssueQuery started with 1 samples
+
+	BatchMaker time: 0.021229028701782227
+	Inference time: 0.6997346878051758
+	Postprocess time: 0.0003426074981689453
+	==== Total time: 0.721306324005127IssueQuery done
+
+Samples run: 56IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0012640953063964844
+	Inference time: 1.1239650249481201IssueQuery done
+	Postprocess time: 0.0004367828369140625
+
+	==== Total time: 1.1256659030914307
+Samples run: 57IssueQuery started with 1 samples
+
+	BatchMaker time: 0.4686903953552246
+	Inference time: 2.902528762817383IssueQuery done
+
+	Postprocess time: 0.0008406639099121094
+	==== Total time: 3.3720598220825195
+Samples run: 58IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0042116641998291016
+	Inference time: 0.47514820098876953IssueQuery done
+	Postprocess time: 0.00033211708068847656
+
+	==== Total time: 0.4796919822692871
+Samples run: 59IssueQuery started with 1 samples
+
+	BatchMaker time: 0.020447969436645508
+	Inference time: 1.0714552402496338IssueQuery done
+
+	Postprocess time: 0.00038051605224609375
+	==== Total time: 1.0922837257385254
+Samples run: 60IssueQuery started with 1 samples
+	BatchMaker time: 0.004050254821777344
+	Inference time: 0.47635674476623535
+	Postprocess time: 0.0004909038543701172
+	==== Total time: 0.4808979034423828
+
+IssueQuery done
+Samples run: 61IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0475924015045166
+	Inference time: 0.9039559364318848
+IssueQuery done	Postprocess time: 0.0003807544708251953
+	==== Total time: 0.9519290924072266
+
+Samples run: 62IssueQuery started with 1 samples
+
+	BatchMaker time: 0.020906448364257812
+	Inference time: 0.3632383346557617
+IssueQuery done	Postprocess time: 0.00033855438232421875
+	==== Total time: 0.38448333740234375
+
+Samples run: 63
+IssueQuery started with 1 samples	BatchMaker time: 0.009973526000976562
+
+IssueQuery done	Inference time: 0.5363492965698242
+	Postprocess time: 0.0004591941833496094
+
+	==== Total time: 0.5467820167541504
+Samples run: 64IssueQuery started with 1 samples
+
+	BatchMaker time: 0.018857955932617188
+	Inference time: 0.8135435581207275
+IssueQuery done	Postprocess time: 0.0003390312194824219
+	==== Total time: 0.8327405452728271
+
+Samples run: 65
+IssueQuery started with 1 samples	BatchMaker time: 0.043202877044677734
+
+	Inference time: 2.958033800125122
+IssueQuery done	Postprocess time: 0.0009360313415527344
+	==== Total time: 3.0021727085113525
+
+Samples run: 66IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.07442951202392578
+	Inference time: 0.7011330127716064
+
+	Postprocess time: 0.0003681182861328125
+	==== Total time: 0.775930643081665
+Samples run: 67IssueQuery started with 1 samples
+	BatchMaker time: 0.0012977123260498047
+	Inference time: 1.1820003986358643
+	Postprocess time: 0.0004863739013671875
+IssueQuery done
+
+	==== Total time: 1.1837844848632812
+Samples run: 68IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.001678466796875
+	Inference time: 0.6860361099243164
+
+	Postprocess time: 0.0004849433898925781
+	==== Total time: 0.688199520111084
+Samples run: 69IssueQuery started with 1 samples
+
+	BatchMaker time: 0.06371903419494629
+	Inference time: 1.8554377555847168
+	Postprocess time: 0.0006144046783447266
+	==== Total time: 1.9197711944580078
+IssueQuery done
+Samples run: 70IssueQuery started with 1 samples
+
+	BatchMaker time: 0.01731705665588379
+	Inference time: 0.5885200500488281IssueQuery done
+
+	Postprocess time: 0.0003407001495361328
+	==== Total time: 0.606177806854248
+Samples run: 71IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.015420198440551758
+	Inference time: 0.47463297843933105
+
+	Postprocess time: 0.0003342628479003906
+	==== Total time: 0.4903874397277832
+Samples run: 72IssueQuery started with 1 samples
+
+	BatchMaker time: 0.022120237350463867
+	Inference time: 0.8146152496337891
+	Postprocess time: 0.0003681182861328125
+	==== Total time: 0.8371036052703857IssueQuery done
+
+Samples run: 73IssueQuery started with 1 samples
+
+	BatchMaker time: 0.043572187423706055
+	Inference time: 2.9586825370788574
+	Postprocess time: 0.0009219646453857422
+	==== Total time: 3.003176689147949IssueQuery done
+
+Samples run: 74IssueQuery started with 1 samples
+
+	BatchMaker time: 0.060323238372802734
+	Inference time: 1.350874662399292
+IssueQuery done	Postprocess time: 0.0006897449493408203
+
+	==== Total time: 1.4118876457214355
+Samples run: 75IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0069501399993896484
+IssueQuery done	Inference time: 0.9848997592926025
+	Postprocess time: 0.0003771781921386719
+
+	==== Total time: 0.9922270774841309
+Samples run: 76IssueQuery started with 1 samples
+
+	BatchMaker time: 0.021740198135375977
+IssueQuery done	Inference time: 2.137850046157837
+
+	Postprocess time: 0.0006597042083740234
+	==== Total time: 2.160249948501587
+Samples run: 77
+IssueQuery started with 1 samples	BatchMaker time: 0.0008232593536376953
+
+IssueQuery done	Inference time: 0.682776927947998
+	Postprocess time: 0.0004334449768066406
+
+	==== Total time: 0.6840336322784424
+Samples run: 78IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02427816390991211
+IssueQuery done	Inference time: 0.47602033615112305
+
+	Postprocess time: 0.0003476142883300781
+	==== Total time: 0.5006461143493652
+Samples run: 79IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0011179447174072266
+IssueQuery done	Inference time: 1.1333949565887451
+
+	Postprocess time: 0.0003383159637451172
+	==== Total time: 1.1348512172698975
+Samples run: 80IssueQuery started with 1 samples
+
+	BatchMaker time: 0.043317317962646484
+IssueQuery done	Inference time: 2.979104995727539
+
+	Postprocess time: 0.0009171962738037109
+	==== Total time: 3.0233395099639893
+Samples run: 81IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04725217819213867IssueQuery done
+
+	Inference time: 0.9070155620574951
+	Postprocess time: 0.0003943443298339844
+	==== Total time: 0.9546620845794678
+Samples run: 82IssueQuery started with 1 samples
+
+	BatchMaker time: 0.03995847702026367
+	Inference time: 0.530893087387085
+IssueQuery done	Postprocess time: 0.00035119056701660156
+
+	==== Total time: 0.5712027549743652
+Samples run: 83IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0170133113861084IssueQuery done
+
+	Inference time: 1.414008378982544
+	Postprocess time: 0.0003905296325683594
+	==== Total time: 1.4314122200012207
+Samples run: 84IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0008022785186767578
+	Inference time: 1.1228327751159668
+	Postprocess time: 0.00027298927307128906IssueQuery done
+
+	==== Total time: 1.1239080429077148
+Samples run: 85IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02237534523010254IssueQuery done
+
+	Inference time: 1.0887596607208252
+	Postprocess time: 0.000400543212890625
+	==== Total time: 1.1115355491638184
+Samples run: 86IssueQuery started with 1 samples
+
+	BatchMaker time: 0.024356365203857422
+	Inference time: 0.36281442642211914IssueQuery done
+	Postprocess time: 0.0003581047058105469
+
+	==== Total time: 0.3875288963317871
+Samples run: 87IssueQuery started with 1 samples
+
+	BatchMaker time: 0.01768660545349121IssueQuery done
+
+	Inference time: 1.3200368881225586
+	Postprocess time: 0.0003643035888671875
+	==== Total time: 1.338087797164917
+Samples run: 88IssueQuery started with 1 samples
+
+	BatchMaker time: 0.024050235748291016
+	Inference time: 0.5873682498931885
+	Postprocess time: 0.00034427642822265625IssueQuery done
+
+	==== Total time: 0.6117627620697021
+Samples run: 89IssueQuery started with 1 samples
+
+	BatchMaker time: 0.024683237075805664
+	Inference time: 0.36300039291381836IssueQuery done
+	Postprocess time: 0.0003294944763183594
+
+	==== Total time: 0.3880131244659424
+Samples run: 90IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0007274150848388672IssueQuery done
+
+	Inference time: 0.6811480522155762
+	Postprocess time: 0.0003223419189453125
+	==== Total time: 0.6821978092193604
+Samples run: 91IssueQuery started with 1 samples
+
+	BatchMaker time: 0.016393661499023438
+	Inference time: 0.5867528915405273IssueQuery done
+
+	Postprocess time: 0.0003402233123779297
+	==== Total time: 0.6034867763519287
+Samples run: 92IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.0005328655242919922
+	Inference time: 1.1279282569885254
+
+	Postprocess time: 0.0003025531768798828
+	==== Total time: 1.1287636756896973
+Samples run: 93IssueQuery started with 1 samples
+
+	BatchMaker time: 0.05476951599121094
+	Inference time: 2.6758055686950684IssueQuery done
+
+	Postprocess time: 0.0008339881896972656
+	==== Total time: 2.7314090728759766
+Samples run: 94IssueQuery started with 1 samples
+
+	BatchMaker time: 0.053049564361572266
+	Inference time: 2.6647145748138428
+IssueQuery done	Postprocess time: 0.0008375644683837891
+	==== Total time: 2.718601703643799
+
+Samples run: 95IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0472865104675293
+	Inference time: 0.9017717838287354
+IssueQuery done	Postprocess time: 0.0005769729614257812
+	==== Total time: 0.9496352672576904
+
+Samples run: 96IssueQuery started with 1 samples
+
+	BatchMaker time: 0.016942739486694336
+	Inference time: 1.4097671508789062IssueQuery done
+
+	Postprocess time: 0.00036716461181640625
+	==== Total time: 1.427077054977417
+Samples run: 97IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02198338508605957
+	Inference time: 0.8172764778137207IssueQuery done
+	Postprocess time: 0.000377655029296875
+
+	==== Total time: 0.8396375179290771
+Samples run: 98IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.006961345672607422
+	Inference time: 0.6638205051422119
+
+	Postprocess time: 0.0003249645233154297
+	==== Total time: 0.6711068153381348
+Samples run: 99IssueQuery started with 1 samples
+
+	BatchMaker time: 0.05679130554199219
+IssueQuery done	Inference time: 2.8995413780212402
+
+	Postprocess time: 0.0009658336639404297
+	==== Total time: 2.957298517227173
+Samples run: 100IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04692411422729492IssueQuery done
+
+	Inference time: 2.9693050384521484
+	Postprocess time: 0.0008921623229980469
+	==== Total time: 3.0171213150024414
+Samples run: 101IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0015895366668701172
+	Inference time: 0.3992149829864502IssueQuery done
+
+	Postprocess time: 0.0004687309265136719
+	==== Total time: 0.401273250579834
+Samples run: 102IssueQuery started with 1 samples
+
+	BatchMaker time: 0.05661892890930176
+	Inference time: 2.903271198272705IssueQuery done
+
+	Postprocess time: 0.0008435249328613281
+	==== Total time: 2.960733652114868
+Samples run: 103IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04871249198913574
+	Inference time: 0.9055633544921875
+	Postprocess time: 0.00038123130798339844IssueQuery done
+
+	==== Total time: 0.9546570777893066
+Samples run: 104IssueQuery started with 1 samples
+
+	BatchMaker time: 0.017847061157226562
+	Inference time: 0.4769766330718994IssueQuery done
+
+	Postprocess time: 0.00035691261291503906
+	==== Total time: 0.495180606842041
+Samples run: 105IssueQuery started with 1 samples
+
+	BatchMaker time: 0.06658482551574707
+	Inference time: 1.352447748184204IssueQuery done
+
+	Postprocess time: 0.0006089210510253906
+	==== Total time: 1.4196414947509766
+Samples run: 106IssueQuery started with 1 samples
+
+	BatchMaker time: 0.046556711196899414
+IssueQuery done	Inference time: 2.974353790283203
+	Postprocess time: 0.0008997917175292969
+	==== Total time: 3.021810293197632
+
+Samples run: 107IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0014696121215820312
+	Inference time: 0.6849806308746338IssueQuery done
+	Postprocess time: 0.00043320655822753906
+
+	==== Total time: 0.6868834495544434
+Samples run: 108IssueQuery started with 1 samples
+
+	BatchMaker time: 0.07250761985778809IssueQuery done
+	Inference time: 0.7020511627197266
+
+	Postprocess time: 0.0003523826599121094
+	==== Total time: 0.7749111652374268
+Samples run: 109IssueQuery started with 1 samples
+
+	BatchMaker time: 0.004215717315673828
+	Inference time: 1.3742778301239014IssueQuery done
+
+	Postprocess time: 0.0003769397735595703
+	==== Total time: 1.3788704872131348
+Samples run: 110IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0301666259765625
+	Inference time: 1.4160308837890625
+	Postprocess time: 0.0003933906555175781IssueQuery done
+
+	==== Total time: 1.4465909004211426
+Samples run: 111IssueQuery started with 1 samples
+
+	BatchMaker time: 0.15898609161376953
+	Inference time: 0.47661542892456055IssueQuery done
+
+	Postprocess time: 0.00033855438232421875
+	==== Total time: 0.6359400749206543
+Samples run: 112IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0013718605041503906
+IssueQuery done
+	Inference time: 0.6839337348937988
+	Postprocess time: 0.0005018711090087891
+	==== Total time: 0.685807466506958
+Samples run: 113IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.05865907669067383
+	Inference time: 2.143829345703125
+	Postprocess time: 0.0006127357482910156
+
+	==== Total time: 2.20310115814209
+Samples run: 114IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04740500450134277
+	Inference time: 0.905712366104126
+	Postprocess time: 0.00036334991455078125IssueQuery done
+	==== Total time: 0.9534807205200195
+
+Samples run: 115IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0455319881439209IssueQuery done
+
+	Inference time: 0.904064416885376
+	Postprocess time: 0.0005841255187988281
+	==== Total time: 0.9501805305480957
+Samples run: 116IssueQuery started with 1 samples
+
+	BatchMaker time: 0.015491485595703125
+	Inference time: 0.4768671989440918IssueQuery done
+
+	Postprocess time: 0.00033283233642578125
+	==== Total time: 0.4926915168762207
+Samples run: 117IssueQuery started with 1 samples
+
+IssueQuery done
+	BatchMaker time: 0.05910038948059082
+	Inference time: 1.3541908264160156
+	Postprocess time: 0.0006430149078369141
+	==== Total time: 1.4139342308044434
+Samples run: 118IssueQuery started with 1 samples
+
+	BatchMaker time: 0.013224363327026367
+	Inference time: 1.361680030822754IssueQuery done
+
+	Postprocess time: 0.0005204677581787109
+	==== Total time: 1.375424861907959
+Samples run: 119IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.04370427131652832
+	Inference time: 2.9904472827911377
+
+	Postprocess time: 0.000934600830078125
+	==== Total time: 3.035086154937744
+Samples run: 120IssueQuery started with 1 samples
+
+	BatchMaker time: 0.01665210723876953
+	Inference time: 0.5349628925323486IssueQuery done
+
+	Postprocess time: 0.0003380775451660156
+	==== Total time: 0.5519530773162842
+Samples run: 121IssueQuery started with 1 samples
+
+	BatchMaker time: 0.001552581787109375
+	Inference time: 0.34862637519836426
+	Postprocess time: 0.000415802001953125IssueQuery done
+
+	==== Total time: 0.35059475898742676
+Samples run: 122IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02032947540283203
+	Inference time: 1.0787489414215088IssueQuery done
+
+	Postprocess time: 0.00039577484130859375
+	==== Total time: 1.0994741916656494
+Samples run: 123IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.0209195613861084
+	Inference time: 0.704017162322998
+
+	Postprocess time: 0.0003616809844970703
+	==== Total time: 0.7252984046936035
+Samples run: 124IssueQuery started with 1 samples
+
+	BatchMaker time: 0.016763687133789062
+	Inference time: 1.41982102394104IssueQuery done
+	Postprocess time: 0.00039768218994140625
+
+	==== Total time: 1.4369823932647705
+Samples run: 125IssueQuery started with 1 samples
+
+	BatchMaker time: 0.004378318786621094
+	Inference time: 0.534733772277832
+	Postprocess time: 0.0003428459167480469
+IssueQuery done	==== Total time: 0.5394549369812012
+
+Samples run: 126IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0007917881011962891
+	Inference time: 1.1305115222930908
+	Postprocess time: 0.00033783912658691406
+	==== Total time: 1.131641149520874
+IssueQuery done
+Samples run: 127IssueQuery started with 1 samples
+
+	BatchMaker time: 0.016967296600341797
+	Inference time: 0.648186445236206IssueQuery done
+
+	Postprocess time: 0.000347137451171875
+	==== Total time: 0.6655008792877197
+Samples run: 128IssueQuery started with 1 samples
+
+	BatchMaker time: 0.161085844039917
+	Inference time: 0.47644925117492676IssueQuery done
+
+	Postprocess time: 0.0003418922424316406
+	==== Total time: 0.6378769874572754
+Samples run: 129IssueQuery started with 1 samples
+
+	BatchMaker time: 0.004155635833740234
+	Inference time: 0.47879457473754883IssueQuery done
+
+	Postprocess time: 0.00039386749267578125
+	==== Total time: 0.48334407806396484
+Samples run: 130IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0013458728790283203
+	Inference time: 0.34841084480285645IssueQuery done
+
+	Postprocess time: 0.00040984153747558594
+	==== Total time: 0.35016655921936035
+Samples run: 131IssueQuery started with 1 samples
+
+	BatchMaker time: 0.059187889099121094
+	Inference time: 1.3531031608581543IssueQuery done
+
+	Postprocess time: 0.0005931854248046875
+	==== Total time: 1.41288423538208
+Samples run: 132IssueQuery started with 1 samples
+
+	BatchMaker time: 0.012118101119995117
+IssueQuery done	Inference time: 1.6421637535095215
+
+	Postprocess time: 0.0004999637603759766
+	==== Total time: 1.6547818183898926
+Samples run: 133IssueQuery started with 1 samples
+
+	BatchMaker time: 0.05356192588806152
+	Inference time: 2.680346727371216IssueQuery done
+
+	Postprocess time: 0.0008633136749267578
+	==== Total time: 2.734771966934204
+Samples run: 134IssueQuery started with 1 samples
+
+	BatchMaker time: 0.029593944549560547IssueQuery done
+
+	Inference time: 1.4171619415283203
+	Postprocess time: 0.000385284423828125
+	==== Total time: 1.447141170501709
+Samples run: 135IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02463078498840332
+	Inference time: 0.4791266918182373IssueQuery done
+
+	Postprocess time: 0.0003516674041748047
+	==== Total time: 0.5041091442108154
+Samples run: 136IssueQuery started with 1 samples
+
+	BatchMaker time: 0.004231452941894531
+	Inference time: 1.379105567932129IssueQuery done
+
+	Postprocess time: 0.00033354759216308594
+	==== Total time: 1.3836705684661865
+Samples run: 137IssueQuery started with 1 samples
+
+	BatchMaker time: 0.052205801010131836
+	Inference time: 2.7412850856781006IssueQuery done
+
+	Postprocess time: 0.0008656978607177734
+	==== Total time: 2.79435658454895
+Samples run: 138IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0008103847503662109IssueQuery done
+
+	Inference time: 1.126420259475708
+	Postprocess time: 0.00028443336486816406
+	==== Total time: 1.1275150775909424
+Samples run: 139IssueQuery started with 1 samples
+
+	BatchMaker time: 0.004351139068603516IssueQuery done
+
+	Inference time: 1.3819239139556885
+	Postprocess time: 0.0003695487976074219
+	==== Total time: 1.3866446018218994
+Samples run: 140IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0048906803131103516
+	Inference time: 0.8136317729949951IssueQuery done
+
+	Postprocess time: 0.0003101825714111328
+	==== Total time: 0.8188326358795166
+Samples run: 141IssueQuery started with 1 samples
+
+	BatchMaker time: 0.043201446533203125
+IssueQuery done	Inference time: 2.9923195838928223
+	Postprocess time: 0.0009801387786865234
+
+	==== Total time: 3.036501169204712
+Samples run: 142IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0007355213165283203
+IssueQuery done
+	Inference time: 1.1197090148925781
+	Postprocess time: 0.0002684593200683594
+	==== Total time: 1.1207129955291748
+Samples run: 143
+IssueQuery started with 1 samples	BatchMaker time: 0.053766727447509766
+
+IssueQuery done	Inference time: 2.69763445854187
+
+	Postprocess time: 0.0009829998016357422
+	==== Total time: 2.7523841857910156
+Samples run: 144IssueQuery started with 1 samples
+
+	BatchMaker time: 0.053437232971191406IssueQuery done
+
+	Inference time: 2.6906964778900146
+	Postprocess time: 0.0008409023284912109
+	==== Total time: 2.7449746131896973
+Samples run: 145IssueQuery started with 1 samples
+
+	BatchMaker time: 0.023507356643676758
+	Inference time: 0.4776186943054199IssueQuery done
+	Postprocess time: 0.00034499168395996094
+
+	==== Total time: 0.5014710426330566
+Samples run: 146IssueQuery started with 1 samples
+
+	BatchMaker time: 0.021870136260986328IssueQuery done
+
+	Inference time: 2.155618190765381
+	Postprocess time: 0.0006659030914306641
+	==== Total time: 2.178154230117798
+Samples run: 147IssueQuery started with 1 samples
+
+	BatchMaker time: 0.4874417781829834
+IssueQuery done	Inference time: 3.1755616664886475
+
+	Postprocess time: 0.0009136199951171875
+	==== Total time: 3.663917064666748
+Samples run: 148IssueQuery started with 1 samples
+
+	BatchMaker time: 0.048178672790527344
+IssueQuery done	Inference time: 3.2707483768463135
+	Postprocess time: 0.0009152889251708984
+	==== Total time: 3.3198423385620117
+
+Samples run: 149IssueQuery started with 1 samples
+
+	BatchMaker time: 0.016143321990966797
+IssueQuery done	Inference time: 1.6549479961395264
+
+	Postprocess time: 0.00040841102600097656
+	==== Total time: 1.6714997291564941
+Samples run: 150IssueQuery started with 1 samples
+
+	BatchMaker time: 0.012560129165649414
+IssueQuery done	Inference time: 1.906541347503662
+
+	Postprocess time: 0.0005221366882324219
+	==== Total time: 1.919623613357544
+Samples run: 151IssueQuery started with 1 samples
+
+	BatchMaker time: 0.024189233779907227
+	Inference time: 0.5238513946533203IssueQuery done
+
+	Postprocess time: 0.0003662109375
+	==== Total time: 0.5484068393707275
+Samples run: 152IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0014955997467041016
+IssueQuery done	Inference time: 0.4029974937438965
+	Postprocess time: 0.00043201446533203125
+
+	==== Total time: 0.4049251079559326
+Samples run: 153IssueQuery started with 1 samples
+
+	BatchMaker time: 0.049639225006103516
+	Inference time: 1.0514883995056152
+	Postprocess time: 0.00039505958557128906
+IssueQuery done	==== Total time: 1.10152268409729
+
+Samples run: 154IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02223372459411621IssueQuery done
+
+	Inference time: 0.9440748691558838
+	Postprocess time: 0.0003750324249267578
+	==== Total time: 0.9666836261749268
+Samples run: 155IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04673194885253906
+IssueQuery done	Inference time: 3.236095905303955
+	Postprocess time: 0.0009145736694335938
+	==== Total time: 3.2837424278259277
+
+Samples run: 156IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02093195915222168
+	Inference time: 0.8122358322143555IssueQuery done
+
+	Postprocess time: 0.00036263465881347656
+	==== Total time: 0.8335304260253906
+Samples run: 157IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0010139942169189453
+	Inference time: 1.417220115661621IssueQuery done
+
+	Postprocess time: 0.00045943260192871094
+	==== Total time: 1.4186935424804688
+Samples run: 158IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0014946460723876953
+	Inference time: 1.3754112720489502IssueQuery done
+
+	Postprocess time: 0.0004723072052001953
+	==== Total time: 1.377378225326538
+Samples run: 159IssueQuery started with 1 samples
+
+	BatchMaker time: 0.012496709823608398
+	Inference time: 1.9272642135620117IssueQuery done
+
+	Postprocess time: 0.0005202293395996094
+	==== Total time: 1.9402811527252197
+Samples run: 160IssueQuery started with 1 samples
+
+	BatchMaker time: 0.017058610916137695IssueQuery done
+
+	Inference time: 1.672715663909912
+	Postprocess time: 0.00043582916259765625
+	==== Total time: 1.6902101039886475
+Samples run: 161IssueQuery started with 1 samples
+
+	BatchMaker time: 0.004428863525390625
+	Inference time: 0.5232915878295898IssueQuery done
+
+	Postprocess time: 0.0003361701965332031
+	==== Total time: 0.5280566215515137
+Samples run: 162IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0008523464202880859
+	Inference time: 0.9002768993377686IssueQuery done
+
+	Postprocess time: 0.00029277801513671875
+	==== Total time: 0.9014220237731934
+Samples run: 163IssueQuery started with 1 samples
+
+	BatchMaker time: 0.012006998062133789IssueQuery done
+
+	Inference time: 1.9023027420043945
+	Postprocess time: 0.0005078315734863281
+	==== Total time: 1.9148175716400146
+Samples run: 164IssueQuery started with 1 samples
+
+	BatchMaker time: 0.004953145980834961
+	Inference time: 0.9427511692047119IssueQuery done
+
+	Postprocess time: 0.0003981590270996094
+	==== Total time: 0.9481024742126465
+Samples run: 165IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.024804353713989258
+	Inference time: 0.38475728034973145
+
+	Postprocess time: 0.00036334991455078125
+	==== Total time: 0.4099249839782715
+Samples run: 166IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0619504451751709
+	Inference time: 1.429445505142212
+	Postprocess time: 0.0006361007690429688
+	==== Total time: 1.4920320510864258
+IssueQuery done
+Samples run: 167IssueQuery started with 1 samples
+	BatchMaker time: 0.0006098747253417969
+	Inference time: 1.3867390155792236
+
+	Postprocess time: 0.0002956390380859375
+	==== Total time: 1.3876445293426514
+IssueQuery done
+Samples run: 168IssueQuery started with 1 samples
+
+	BatchMaker time: 0.017917633056640625
+	Inference time: 1.586418867111206
+	Postprocess time: 0.00038242340087890625IssueQuery done
+	==== Total time: 1.6047189235687256
+
+Samples run: 169IssueQuery started with 1 samples
+
+	BatchMaker time: 0.15015745162963867
+	Inference time: 0.5226438045501709
+IssueQuery done	Postprocess time: 0.00035190582275390625
+	==== Total time: 0.6731531620025635
+
+Samples run: 170IssueQuery started with 1 samples
+
+	BatchMaker time: 0.01781630516052246
+	Inference time: 1.5654044151306152IssueQuery done
+	Postprocess time: 0.0003826618194580078
+
+	==== Total time: 1.5836033821105957
+Samples run: 171IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0737295150756836
+	Inference time: 0.8074629306793213IssueQuery done
+	Postprocess time: 0.0003781318664550781
+
+	==== Total time: 0.88157057762146
+Samples run: 172IssueQuery started with 1 samples
+
+	BatchMaker time: 0.012493133544921875
+	Inference time: 1.904836893081665IssueQuery done
+
+	Postprocess time: 0.0005116462707519531
+	==== Total time: 1.9178416728973389
+Samples run: 173IssueQuery started with 1 samples
+
+	BatchMaker time: 0.016982078552246094
+	Inference time: 1.6766436100006104IssueQuery done
+
+	Postprocess time: 0.0004248619079589844
+	==== Total time: 1.6940505504608154
+Samples run: 174IssueQuery started with 1 samples
+
+	BatchMaker time: 0.004713296890258789
+	Inference time: 1.6422502994537354IssueQuery done
+
+	Postprocess time: 0.0004038810729980469
+	==== Total time: 1.6473674774169922
+Samples run: 175IssueQuery started with 1 samples
+
+	BatchMaker time: 0.020972728729248047
+	Inference time: 0.8044531345367432IssueQuery done
+
+	Postprocess time: 0.0003681182861328125
+	==== Total time: 0.825793981552124
+Samples run: 176IssueQuery started with 1 samples
+
+	BatchMaker time: 0.13881659507751465
+	Inference time: 0.5234649181365967IssueQuery done
+
+	Postprocess time: 0.0003705024719238281
+	==== Total time: 0.6626520156860352
+Samples run: 177IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04763460159301758IssueQuery done
+
+	Inference time: 1.0499792098999023
+	Postprocess time: 0.0003898143768310547
+	==== Total time: 1.098003625869751
+Samples run: 178IssueQuery started with 1 samples
+
+	BatchMaker time: 0.01668834686279297
+	Inference time: 0.6630403995513916IssueQuery done
+
+	Postprocess time: 0.0003712177276611328
+	==== Total time: 0.6800999641418457
+Samples run: 179IssueQuery started with 1 samples
+
+	BatchMaker time: 0.020384550094604492IssueQuery done
+	Inference time: 0.38610124588012695
+
+	Postprocess time: 0.00036025047302246094
+	==== Total time: 0.4068460464477539
+Samples run: 180IssueQuery started with 1 samples
+
+	BatchMaker time: 0.014426469802856445
+	Inference time: 0.5223381519317627IssueQuery done
+
+	Postprocess time: 0.0003447532653808594
+	==== Total time: 0.537109375
+Samples run: 181IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0146942138671875
+	Inference time: 0.7345573902130127IssueQuery done
+
+	Postprocess time: 0.00039005279541015625
+	==== Total time: 0.7496416568756104
+Samples run: 182IssueQuery started with 1 samples
+
+	BatchMaker time: 0.1384291648864746
+IssueQuery done	Inference time: 0.523015022277832
+	Postprocess time: 0.0003750324249267578
+
+	==== Total time: 0.6618192195892334
+Samples run: 183IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0005614757537841797
+	Inference time: 1.3902506828308105IssueQuery done
+
+	Postprocess time: 0.00031948089599609375
+	==== Total time: 1.3911316394805908
+Samples run: 184IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02197408676147461
+	Inference time: 2.4260239601135254IssueQuery done
+
+	Postprocess time: 0.0006535053253173828
+	==== Total time: 2.4486515522003174
+Samples run: 185IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.0015075206756591797
+	Inference time: 0.462740421295166
+
+	Postprocess time: 0.0004591941833496094
+	==== Total time: 0.4647071361541748
+Samples run: 186IssueQuery started with 1 samples
+
+	BatchMaker time: 0.021919965744018555
+	Inference time: 2.404175281524658IssueQuery done
+
+	Postprocess time: 0.0006816387176513672
+	==== Total time: 2.426776885986328
+Samples run: 187
+IssueQuery started with 1 samples	BatchMaker time: 0.043392181396484375
+
+IssueQuery done	Inference time: 3.1831910610198975
+	Postprocess time: 0.0010323524475097656
+	==== Total time: 3.2276155948638916
+
+Samples run: 188IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.0021963119506835938
+	Inference time: 0.4619259834289551
+	Postprocess time: 0.0004947185516357422
+
+	==== Total time: 0.4646170139312744
+Samples run: 189IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0015611648559570312
+	Inference time: 0.8220634460449219IssueQuery done
+	Postprocess time: 0.0004849433898925781
+
+	==== Total time: 0.8241095542907715
+Samples run: 190IssueQuery started with 1 samples
+
+	BatchMaker time: 0.024339675903320312
+	Inference time: 0.6666078567504883
+IssueQuery done	Postprocess time: 0.00037360191345214844
+	==== Total time: 0.6913211345672607
+
+Samples run: 191IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.013627767562866211
+	Inference time: 0.5243537425994873
+
+	Postprocess time: 0.00034427642822265625
+	==== Total time: 0.5383257865905762
+Samples run: 192IssueQuery started with 1 samples
+
+	BatchMaker time: 0.024533748626708984
+	Inference time: 0.5251922607421875
+	Postprocess time: 0.0003657341003417969IssueQuery done
+	==== Total time: 0.5500917434692383
+
+Samples run: 193IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0008890628814697266
+	Inference time: 0.8341231346130371IssueQuery done
+	Postprocess time: 0.00031280517578125
+
+	==== Total time: 0.8353250026702881
+Samples run: 194IssueQuery started with 1 samples
+
+	BatchMaker time: 0.013282299041748047
+	Inference time: 1.6105291843414307IssueQuery done
+	Postprocess time: 0.0004222393035888672
+
+	==== Total time: 1.6242337226867676
+Samples run: 195IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04364132881164551
+	Inference time: 3.2428839206695557IssueQuery done
+	Postprocess time: 0.000972747802734375
+
+	==== Total time: 3.2874979972839355
+Samples run: 196IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.004483938217163086
+	Inference time: 0.6085324287414551
+
+	Postprocess time: 0.00038242340087890625
+	==== Total time: 0.6133987903594971
+Samples run: 197IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02188730239868164
+	Inference time: 2.410367012023926IssueQuery done
+
+	Postprocess time: 0.0006861686706542969
+	==== Total time: 2.4329404830932617
+Samples run: 198IssueQuery started with 1 samples
+
+	BatchMaker time: 0.1692638397216797
+	Inference time: 0.7460486888885498IssueQuery done
+
+	Postprocess time: 0.00042057037353515625
+	==== Total time: 0.9157330989837646
+Samples run: 199IssueQuery started with 1 samples
+
+	BatchMaker time: 0.00529026985168457IssueQuery done
+
+	Inference time: 0.837604284286499
+	Postprocess time: 0.0003437995910644531
+	==== Total time: 0.843238353729248
+Samples run: 200IssueQuery started with 1 samples
+
+	BatchMaker time: 0.015581369400024414
+	Inference time: 0.4738473892211914IssueQuery done
+
+	Postprocess time: 0.00034356117248535156
+	==== Total time: 0.48977231979370117
+Samples run: 201IssueQuery started with 1 samples
+
+	BatchMaker time: 0.016504526138305664
+	Inference time: 0.4730994701385498
+	Postprocess time: 0.0003466606140136719
+	==== Total time: 0.48995065689086914IssueQuery done
+
+Samples run: 202IssueQuery started with 1 samples
+
+	BatchMaker time: 0.15178489685058594IssueQuery done
+	Inference time: 0.47468090057373047
+
+	Postprocess time: 0.00035643577575683594
+	==== Total time: 0.6268222332000732
+Samples run: 203IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0007505416870117188
+	Inference time: 1.1096668243408203IssueQuery done
+
+	Postprocess time: 0.00027942657470703125
+	==== Total time: 1.110696792602539
+Samples run: 204IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.0012655258178710938
+	Inference time: 0.343381404876709
+
+	Postprocess time: 0.0003986358642578125
+	==== Total time: 0.3450455665588379
+Samples run: 205IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0004322528839111328
+	Inference time: 1.1032218933105469IssueQuery done
+
+	Postprocess time: 0.00027680397033691406
+	==== Total time: 1.103930950164795
+Samples run: 206IssueQuery started with 1 samples
+
+	BatchMaker time: 0.014415979385375977
+	Inference time: 1.3431816101074219IssueQuery done
+
+	Postprocess time: 0.0004088878631591797
+	==== Total time: 1.358006477355957
+Samples run: 207IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.0006947517395019531
+	Inference time: 1.1005423069000244
+
+	Postprocess time: 0.0002684593200683594
+	==== Total time: 1.1015055179595947
+Samples run: 208IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02613353729248047
+	Inference time: 0.4853353500366211IssueQuery done
+
+	Postprocess time: 0.0003502368927001953
+	==== Total time: 0.5118191242218018
+Samples run: 209IssueQuery started with 1 samples
+	BatchMaker time: 0.0008492469787597656
+	Inference time: 0.7181334495544434
+
+IssueQuery done	Postprocess time: 0.0003330707550048828
+	==== Total time: 0.719315767288208
+
+Samples run: 210IssueQuery started with 1 samples
+
+	BatchMaker time: 0.025866270065307617
+	Inference time: 0.5845859050750732IssueQuery done
+	Postprocess time: 0.00033855438232421875
+
+	==== Total time: 0.6107907295227051
+Samples run: 211IssueQuery started with 1 samples
+
+	BatchMaker time: 0.06053733825683594
+	Inference time: 1.9829659461975098
+IssueQuery done	Postprocess time: 0.0006189346313476562
+	==== Total time: 2.0441222190856934
+
+Samples run: 212IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.04353833198547363
+	Inference time: 3.1727042198181152
+
+	Postprocess time: 0.0008640289306640625
+	==== Total time: 3.217106580734253
+Samples run: 213IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04582381248474121
+	Inference time: 0.9352002143859863IssueQuery done
+	Postprocess time: 0.0005533695220947266
+
+	==== Total time: 0.9815773963928223
+Samples run: 214IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.021172761917114258
+
+	Inference time: 2.407552719116211
+	Postprocess time: 0.0006692409515380859
+	==== Total time: 2.4293947219848633
+Samples run: 215IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04391598701477051
+	Inference time: 3.196241617202759
+IssueQuery done	Postprocess time: 0.0009438991546630859
+	==== Total time: 3.2411015033721924
+
+Samples run: 216IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.0016512870788574219
+	Inference time: 0.4633674621582031
+
+	Postprocess time: 0.0004787445068359375
+	==== Total time: 0.4654974937438965
+Samples run: 217IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04361295700073242
+	Inference time: 3.166252374649048IssueQuery done
+
+	Postprocess time: 0.0008764266967773438
+	==== Total time: 3.2107417583465576
+Samples run: 218IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.010321855545043945
+	Inference time: 0.6008651256561279
+
+	Postprocess time: 0.0003502368927001953
+	==== Total time: 0.6115372180938721
+Samples run: 219IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02442622184753418
+	Inference time: 0.3863053321838379IssueQuery done
+
+	Postprocess time: 0.0003490447998046875
+	==== Total time: 0.41108059883117676
+Samples run: 220IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02200460433959961
+	Inference time: 0.9492745399475098
+IssueQuery done	Postprocess time: 0.0003910064697265625
+	==== Total time: 0.9716701507568359
+
+Samples run: 221IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.0016658306121826172
+	Inference time: 1.523735761642456
+
+	Postprocess time: 0.0009233951568603516
+	==== Total time: 1.526324987411499
+Samples run: 222IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0019054412841796875IssueQuery done
+	Inference time: 1.362344741821289
+
+	Postprocess time: 0.0004191398620605469
+	==== Total time: 1.3646693229675293
+Samples run: 223IssueQuery started with 1 samples
+
+	BatchMaker time: 0.013324260711669922IssueQuery done
+
+	Inference time: 1.6209049224853516
+	Postprocess time: 0.00043511390686035156
+	==== Total time: 1.6346642971038818
+Samples run: 224IssueQuery started with 1 samples
+
+	BatchMaker time: 0.010301351547241211
+	Inference time: 0.5924720764160156IssueQuery done
+
+	Postprocess time: 0.0003960132598876953
+	==== Total time: 0.6031694412231445
+Samples run: 225IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0006437301635742188
+	Inference time: 1.3947956562042236IssueQuery done
+	Postprocess time: 0.0003104209899902344
+	==== Total time: 1.395749807357788
+
+Samples run: 226IssueQuery started with 1 samples
+
+	BatchMaker time: 0.001230478286743164IssueQuery done
+
+	Inference time: 1.3720622062683105
+	Postprocess time: 0.0004515647888183594
+	==== Total time: 1.373744249343872
+Samples run: 227IssueQuery started with 1 samples
+
+	BatchMaker time: 0.006742000579833984
+	Inference time: 1.1581215858459473IssueQuery done
+
+	Postprocess time: 0.000362396240234375
+	==== Total time: 1.1652259826660156
+Samples run: 228IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0008957386016845703
+IssueQuery done	Inference time: 0.9071071147918701
+	Postprocess time: 0.0003368854522705078
+	==== Total time: 0.9083397388458252
+
+Samples run: 229
+IssueQuery started with 1 samples	BatchMaker time: 0.06116366386413574
+
+IssueQuery done	Inference time: 2.4270427227020264
+	Postprocess time: 0.0006167888641357422
+
+	==== Total time: 2.488823175430298
+Samples run: 230IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0007970333099365234
+IssueQuery done	Inference time: 1.3952691555023193
+	Postprocess time: 0.00031948089599609375
+
+	==== Total time: 1.396385669708252
+Samples run: 231IssueQuery started with 1 samples
+
+	BatchMaker time: 0.001392364501953125
+IssueQuery done	Inference time: 0.41269516944885254
+	Postprocess time: 0.00043582916259765625
+
+	==== Total time: 0.4145233631134033
+Samples run: 232IssueQuery started with 1 samples
+
+	BatchMaker time: 0.05238914489746094IssueQuery done
+
+	Inference time: 2.9500999450683594
+	Postprocess time: 0.0009107589721679688
+	==== Total time: 3.0033998489379883
+Samples run: 233IssueQuery started with 1 samples
+
+	BatchMaker time: 0.22128081321716309
+IssueQuery done	Inference time: 2.4190711975097656
+	Postprocess time: 0.0008602142333984375
+	==== Total time: 2.641212224960327
+
+Samples run: 234IssueQuery started with 1 samples
+
+	BatchMaker time: 0.05383491516113281
+	Inference time: 2.8784844875335693IssueQuery done
+
+	Postprocess time: 0.0008645057678222656
+	==== Total time: 2.9331839084625244
+Samples run: 235IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0013036727905273438
+	Inference time: 0.407956600189209IssueQuery done
+
+	Postprocess time: 0.0004897117614746094
+	==== Total time: 0.40974998474121094
+Samples run: 236IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0005888938903808594
+	Inference time: 1.3845980167388916IssueQuery done
+
+	Postprocess time: 0.00027751922607421875
+	==== Total time: 1.3854644298553467
+Samples run: 237IssueQuery started with 1 samples
+
+	BatchMaker time: 0.023873090744018555IssueQuery done
+
+	Inference time: 0.5445966720581055
+	Postprocess time: 0.0003783702850341797
+	==== Total time: 0.5688481330871582
+Samples run: 238IssueQuery started with 1 samples
+
+	BatchMaker time: 0.017371416091918945
+	Inference time: 0.6628849506378174IssueQuery done
+
+	Postprocess time: 0.000354766845703125
+	==== Total time: 0.6806111335754395
+Samples run: 239IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0011255741119384766
+	Inference time: 1.425766944885254IssueQuery done
+
+	Postprocess time: 0.00044846534729003906
+	==== Total time: 1.4273409843444824
+Samples run: 240IssueQuery started with 1 samples
+
+	BatchMaker time: 0.47827720642089844
+	Inference time: 3.1675949096679688IssueQuery done
+	Postprocess time: 0.0009105205535888672
+
+	==== Total time: 3.646782636642456
+Samples run: 241IssueQuery started with 1 samples
+
+	BatchMaker time: 0.015383243560791016
+	Inference time: 0.533916711807251
+	Postprocess time: 0.0003647804260253906IssueQuery done
+	==== Total time: 0.5496647357940674
+
+Samples run: 242IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0014879703521728516
+	Inference time: 0.8165416717529297IssueQuery done
+	Postprocess time: 0.0004999637603759766
+
+	==== Total time: 0.8185296058654785
+Samples run: 243IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0005247592926025391
+IssueQuery done	Inference time: 1.3895494937896729
+	Postprocess time: 0.0003204345703125
+
+	==== Total time: 1.390394687652588
+Samples run: 244IssueQuery started with 1 samples
+
+	BatchMaker time: 0.013688325881958008
+	Inference time: 0.5416562557220459IssueQuery done
+
+	Postprocess time: 0.00033664703369140625
+	==== Total time: 0.5556812286376953
+Samples run: 245IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0009789466857910156
+IssueQuery done	Inference time: 1.4127166271209717
+	Postprocess time: 0.00040984153747558594
+	==== Total time: 1.4141054153442383
+
+Samples run: 246IssueQuery started with 1 samples
+
+	BatchMaker time: 0.039318084716796875
+IssueQuery done	Inference time: 0.6021132469177246
+	Postprocess time: 0.0003609657287597656
+
+	==== Total time: 0.6417922973632812
+Samples run: 247IssueQuery started with 1 samples
+
+	BatchMaker time: 0.01717090606689453
+	Inference time: 0.5968928337097168IssueQuery done
+
+	Postprocess time: 0.0003497600555419922
+	==== Total time: 0.6144134998321533
+Samples run: 248IssueQuery started with 1 samples
+
+	BatchMaker time: 0.012236595153808594
+	Inference time: 1.901820421218872
+	Postprocess time: 0.0005216598510742188IssueQuery done
+
+	==== Total time: 1.9145786762237549
+Samples run: 249IssueQuery started with 1 samples
+
+	BatchMaker time: 0.014565706253051758
+	Inference time: 0.7362780570983887IssueQuery done
+
+	Postprocess time: 0.0003724098205566406
+	==== Total time: 0.7512161731719971
+Samples run: 250IssueQuery started with 1 samples
+
+	BatchMaker time: 0.057120561599731445
+	Inference time: 3.1531496047973633IssueQuery done
+
+	Postprocess time: 0.0009391307830810547
+	==== Total time: 3.211209297180176
+Samples run: 251IssueQuery started with 1 samples
+
+	BatchMaker time: 0.022427797317504883
+	Inference time: 2.4383811950683594IssueQuery done
+
+	Postprocess time: 0.0006871223449707031
+	==== Total time: 2.461496114730835
+Samples run: 252IssueQuery started with 1 samples
+
+	BatchMaker time: 0.01679062843322754
+IssueQuery done	Inference time: 0.6043915748596191
+	Postprocess time: 0.0003707408905029297
+	==== Total time: 0.6215529441833496
+
+Samples run: 253IssueQuery started with 1 samples
+
+	BatchMaker time: 0.07595992088317871
+	Inference time: 0.801511287689209IssueQuery done
+
+	Postprocess time: 0.00037860870361328125
+	==== Total time: 0.877849817276001
+Samples run: 254IssueQuery started with 1 samples
+
+	BatchMaker time: 0.4854319095611572IssueQuery done
+
+	Inference time: 3.164401054382324
+	Postprocess time: 0.0008599758148193359
+	==== Total time: 3.650692939758301
+Samples run: 255IssueQuery started with 1 samples
+
+	BatchMaker time: 0.015543699264526367
+	Inference time: 0.5337958335876465IssueQuery done
+
+	Postprocess time: 0.00036597251892089844
+	==== Total time: 0.5497055053710938
+Samples run: 256IssueQuery started with 1 samples
+
+	BatchMaker time: 0.05488872528076172IssueQuery done
+
+	Inference time: 2.9490206241607666
+	Postprocess time: 0.0008454322814941406
+	==== Total time: 3.0047547817230225
+Samples run: 257IssueQuery started with 1 samples
+
+	BatchMaker time: 0.013706445693969727IssueQuery done
+
+	Inference time: 1.9112346172332764
+	Postprocess time: 0.0005004405975341797
+	==== Total time: 1.9254415035247803
+Samples run: 258IssueQuery started with 1 samples
+
+	BatchMaker time: 0.053597450256347656IssueQuery done
+	Inference time: 1.0462675094604492
+
+	Postprocess time: 0.00039696693420410156
+	==== Total time: 1.100261926651001
+Samples run: 259IssueQuery started with 1 samples
+
+	BatchMaker time: 0.025611400604248047
+	Inference time: 0.5244364738464355IssueQuery done
+	Postprocess time: 0.0003666877746582031
+
+	==== Total time: 0.5504145622253418
+Samples run: 260IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04954028129577637
+	Inference time: 3.220050811767578IssueQuery done
+	Postprocess time: 0.0008945465087890625
+
+	==== Total time: 3.2704856395721436
+Samples run: 261IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.004853248596191406
+	Inference time: 0.5368313789367676
+
+	Postprocess time: 0.0003669261932373047
+	==== Total time: 0.5420515537261963
+Samples run: 262IssueQuery started with 1 samples
+
+	BatchMaker time: 0.06048393249511719
+	Inference time: 3.1521902084350586IssueQuery done
+	Postprocess time: 0.00086212158203125
+
+	==== Total time: 3.213536262512207
+Samples run: 263IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0014536380767822266
+	Inference time: 0.8255822658538818IssueQuery done
+
+	Postprocess time: 0.0004935264587402344
+	==== Total time: 0.8275294303894043
+Samples run: 264IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02587127685546875
+	Inference time: 0.5246946811676025IssueQuery done
+
+	Postprocess time: 0.0003552436828613281
+	==== Total time: 0.5509212017059326
+Samples run: 265IssueQuery started with 1 samples
+
+	BatchMaker time: 0.019576311111450195
+	Inference time: 0.5247049331665039IssueQuery done
+
+	Postprocess time: 0.0003654956817626953
+	==== Total time: 0.5446467399597168
+Samples run: 266IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04706621170043945
+	Inference time: 0.5940573215484619IssueQuery done
+
+	Postprocess time: 0.0003924369812011719
+	==== Total time: 0.6415159702301025
+Samples run: 267IssueQuery started with 1 samples
+
+	BatchMaker time: 0.07585835456848145
+	Inference time: 0.8024716377258301IssueQuery done
+
+	Postprocess time: 0.0003616809844970703
+	==== Total time: 0.8786916732788086
+Samples run: 268IssueQuery started with 1 samples
+
+	BatchMaker time: 0.023559093475341797
+IssueQuery done	Inference time: 0.94183349609375
+
+	Postprocess time: 0.00037169456481933594
+	==== Total time: 0.9657642841339111
+Samples run: 269IssueQuery started with 1 samples
+
+	BatchMaker time: 0.016002655029296875
+	Inference time: 0.7340447902679443IssueQuery done
+	Postprocess time: 0.00038433074951171875
+
+	==== Total time: 0.7504317760467529
+Samples run: 270IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02375173568725586
+IssueQuery done	Inference time: 0.9404616355895996
+	Postprocess time: 0.0003941059112548828
+	==== Total time: 0.9646074771881104
+
+Samples run: 271IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04615616798400879
+IssueQuery done	Inference time: 0.5957655906677246
+	Postprocess time: 0.0003628730773925781
+	==== Total time: 0.642284631729126
+
+Samples run: 272IssueQuery started with 1 samples
+
+	BatchMaker time: 0.060068368911743164
+IssueQuery done	Inference time: 2.0498275756835938
+
+	Postprocess time: 0.0006375312805175781
+	==== Total time: 2.1105334758758545
+Samples run: 273IssueQuery started with 1 samples
+
+	BatchMaker time: 0.01996588706970215
+	Inference time: 0.5230774879455566IssueQuery done
+
+	Postprocess time: 0.000354766845703125
+	==== Total time: 0.5433981418609619
+Samples run: 274IssueQuery started with 1 samples
+
+	BatchMaker time: 0.03954482078552246
+	Inference time: 0.5927865505218506IssueQuery done
+	Postprocess time: 0.0003554821014404297
+
+	==== Total time: 0.6326868534088135
+Samples run: 275IssueQuery started with 1 samples
+
+	BatchMaker time: 0.018735647201538086
+IssueQuery done	Inference time: 0.6676974296569824
+
+	Postprocess time: 0.0003895759582519531
+	==== Total time: 0.6868226528167725
+Samples run: 276IssueQuery started with 1 samples
+
+	BatchMaker time: 0.016518831253051758
+	Inference time: 1.6338531970977783IssueQuery done
+	Postprocess time: 0.0004119873046875
+
+	==== Total time: 1.6507840156555176
+Samples run: 277IssueQuery started with 1 samples
+
+	BatchMaker time: 0.05575871467590332
+	Inference time: 2.8917744159698486IssueQuery done
+	Postprocess time: 0.0008511543273925781
+
+	==== Total time: 2.9483842849731445
+Samples run: 278IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04840564727783203
+	Inference time: 0.9252896308898926
+	Postprocess time: 0.0005640983581542969
+	==== Total time: 0.9742593765258789IssueQuery done
+
+Samples run: 279IssueQuery started with 1 samples
+
+	BatchMaker time: 0.017394065856933594
+	Inference time: 0.5959491729736328
+IssueQuery done	Postprocess time: 0.00036835670471191406
+	==== Total time: 0.6137115955352783
+
+Samples run: 280IssueQuery started with 1 samples
+
+	BatchMaker time: 0.001117706298828125
+	Inference time: 1.424750804901123IssueQuery done
+	Postprocess time: 0.0003962516784667969
+	==== Total time: 1.426264762878418
+
+Samples run: 281IssueQuery started with 1 samples
+
+	BatchMaker time: 0.14125347137451172
+	Inference time: 0.5440974235534668IssueQuery done
+	Postprocess time: 0.0003657341003417969
+
+	==== Total time: 0.6857166290283203
+Samples run: 282IssueQuery started with 1 samples
+
+	BatchMaker time: 0.4728074073791504
+	Inference time: 3.153858184814453
+	Postprocess time: 0.0008800029754638672
+	==== Total time: 3.6275455951690674IssueQuery done
+
+Samples run: 283IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.020548105239868164
+	Inference time: 0.9508702754974365
+
+	Postprocess time: 0.00035762786865234375
+	==== Total time: 0.971776008605957
+Samples run: 284IssueQuery started with 1 samples
+
+	BatchMaker time: 0.01445770263671875
+	Inference time: 0.5225660800933838IssueQuery done
+
+	Postprocess time: 0.00036025047302246094
+	==== Total time: 0.537384033203125
+Samples run: 285IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.013391971588134766
+	Inference time: 1.8995580673217773
+
+	Postprocess time: 0.0005125999450683594
+	==== Total time: 1.9134626388549805
+Samples run: 286IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0014185905456542969
+	Inference time: 0.8199090957641602IssueQuery done
+	Postprocess time: 0.00048732757568359375
+
+	==== Total time: 0.821815013885498
+Samples run: 287IssueQuery started with 1 samples
+
+	BatchMaker time: 0.07386517524719238
+	Inference time: 0.8117780685424805
+IssueQuery done	Postprocess time: 0.00037097930908203125
+	==== Total time: 0.8860142230987549
+
+Samples run: 288IssueQuery started with 1 samples
+
+	BatchMaker time: 0.011411190032958984
+	Inference time: 0.6027889251708984
+	Postprocess time: 0.00033736228942871094
+	==== Total time: 0.6145374774932861IssueQuery done
+
+Samples run: 289IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.017458677291870117
+	Inference time: 0.5940964221954346
+
+	Postprocess time: 0.00037670135498046875
+	==== Total time: 0.6119318008422852
+Samples run: 290IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02691936492919922
+	Inference time: 0.6666884422302246IssueQuery done
+	Postprocess time: 0.0004024505615234375
+
+	==== Total time: 0.6940102577209473
+Samples run: 291IssueQuery started with 1 samples
+
+	BatchMaker time: 0.049900054931640625
+	Inference time: 1.0487709045410156IssueQuery done
+	Postprocess time: 0.0004143714904785156
+
+	==== Total time: 1.0990853309631348
+Samples run: 292IssueQuery started with 1 samples
+
+	BatchMaker time: 0.060418128967285156
+	Inference time: 1.4223358631134033
+	Postprocess time: 0.0006079673767089844
+	==== Total time: 1.4833619594573975
+IssueQuery done
+Samples run: 293IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.0007708072662353516
+	Inference time: 0.14309239387512207
+
+	Postprocess time: 0.00026416778564453125
+	==== Total time: 0.14412736892700195
+Samples run: 294IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.0006558895111083984
+	Inference time: 1.3879523277282715
+
+	Postprocess time: 0.0003211498260498047
+	==== Total time: 1.3889293670654297
+Samples run: 295IssueQuery started with 1 samples
+
+	BatchMaker time: 0.14777326583862305
+	Inference time: 0.5435163974761963
+	Postprocess time: 0.0003600120544433594IssueQuery done
+
+	==== Total time: 0.6916496753692627
+Samples run: 296IssueQuery started with 1 samples
+
+	BatchMaker time: 0.013582944869995117IssueQuery done
+
+	Inference time: 1.9050285816192627
+	Postprocess time: 0.000507354736328125
+	==== Total time: 1.919118881225586
+Samples run: 297IssueQuery started with 1 samples
+
+	BatchMaker time: 0.027222633361816406IssueQuery done
+
+	Inference time: 0.5234754085540771
+	Postprocess time: 0.00036454200744628906
+	==== Total time: 0.5510625839233398
+Samples run: 298IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0005431175231933594
+	Inference time: 1.3809044361114502IssueQuery done
+
+	Postprocess time: 0.0002720355987548828
+	==== Total time: 1.3817195892333984
+Samples run: 299IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0014460086822509766
+IssueQuery done	Inference time: 0.45601892471313477
+	Postprocess time: 0.0005431175231933594
+
+	==== Total time: 0.4580080509185791
+Samples run: 300IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0023872852325439453IssueQuery done
+
+	Inference time: 1.5849525928497314
+	Postprocess time: 0.0007331371307373047
+	==== Total time: 1.5880730152130127
+Samples run: 301IssueQuery started with 1 samples
+
+	BatchMaker time: 0.05607104301452637
+	Inference time: 2.960829734802246IssueQuery done
+
+	Postprocess time: 0.0008623600006103516
+	==== Total time: 3.017763137817383
+Samples run: 302IssueQuery started with 1 samples
+
+	BatchMaker time: 0.21941208839416504IssueQuery done
+
+	Inference time: 2.415782928466797
+	Postprocess time: 0.0008411407470703125
+	==== Total time: 2.6360361576080322
+Samples run: 303IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0005452632904052734
+	Inference time: 1.388885498046875IssueQuery done
+
+	Postprocess time: 0.00028824806213378906
+	==== Total time: 1.389719009399414
+Samples run: 304IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0012443065643310547
+	Inference time: 1.3770170211791992IssueQuery done
+
+	Postprocess time: 0.00046443939208984375
+	==== Total time: 1.3787257671356201
+Samples run: 305IssueQuery started with 1 samples
+
+	BatchMaker time: 0.015832901000976562
+	Inference time: 0.7477197647094727IssueQuery done
+
+	Postprocess time: 0.0003724098205566406
+	==== Total time: 0.7639250755310059
+Samples run: 306IssueQuery started with 1 samples
+
+	BatchMaker time: 0.007964611053466797
+	Inference time: 0.7493464946746826IssueQuery done
+
+	Postprocess time: 0.00033473968505859375
+	==== Total time: 0.757645845413208
+Samples run: 307IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0005266666412353516
+	Inference time: 1.3857359886169434
+	Postprocess time: 0.0003027915954589844IssueQuery done
+
+	==== Total time: 1.3865654468536377
+Samples run: 308IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0007584095001220703
+IssueQuery done	Inference time: 0.832782506942749
+	Postprocess time: 0.00032901763916015625
+
+	==== Total time: 0.8338699340820312
+Samples run: 309IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0012998580932617188
+	Inference time: 0.4137277603149414IssueQuery done
+
+	Postprocess time: 0.0004904270172119141
+	==== Total time: 0.41551804542541504
+Samples run: 310IssueQuery started with 1 samples
+
+	BatchMaker time: 0.050260305404663086
+	Inference time: 1.0523130893707275
+	Postprocess time: 0.0003864765167236328
+	==== Total time: 1.1029598712921143IssueQuery done
+
+Samples run: 311IssueQuery started with 1 samples
+
+	BatchMaker time: 0.4768979549407959IssueQuery done
+
+	Inference time: 3.156663656234741
+	Postprocess time: 0.0008597373962402344
+	==== Total time: 3.6344213485717773
+Samples run: 312IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0010085105895996094
+	Inference time: 1.4167523384094238IssueQuery done
+
+	Postprocess time: 0.0004067420959472656
+	==== Total time: 1.4181675910949707
+Samples run: 313IssueQuery started with 1 samples
+
+	BatchMaker time: 0.05523514747619629
+	Inference time: 2.958672046661377IssueQuery done
+
+	Postprocess time: 0.0008761882781982422
+	==== Total time: 3.0147833824157715
+Samples run: 314IssueQuery started with 1 samples
+
+	BatchMaker time: 0.001016855239868164IssueQuery done
+	Inference time: 1.4155404567718506
+
+	Postprocess time: 0.0003898143768310547
+	==== Total time: 1.4169471263885498
+Samples run: 315IssueQuery started with 1 samples
+
+	BatchMaker time: 0.014590263366699219
+	Inference time: 1.6342837810516357
+IssueQuery done	Postprocess time: 0.00043272972106933594
+	==== Total time: 1.6493067741394043
+
+Samples run: 316IssueQuery started with 1 samples
+
+	BatchMaker time: 0.055238962173461914
+	Inference time: 2.9523274898529053IssueQuery done
+	Postprocess time: 0.0009002685546875
+
+	==== Total time: 3.0084667205810547
+Samples run: 317IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0508580207824707
+	Inference time: 1.058487892150879
+	Postprocess time: 0.0003960132598876953
+	==== Total time: 1.1097419261932373IssueQuery done
+
+Samples run: 318IssueQuery started with 1 samples
+
+	BatchMaker time: 0.004808664321899414
+	Inference time: 0.5221993923187256
+IssueQuery done	Postprocess time: 0.00032711029052734375
+	==== Total time: 0.5273351669311523
+
+Samples run: 319IssueQuery started with 1 samples
+
+	BatchMaker time: 0.018713951110839844IssueQuery done
+
+	Inference time: 1.6729323863983154
+	Postprocess time: 0.0003933906555175781
+	==== Total time: 1.6920397281646729
+Samples run: 320IssueQuery started with 1 samples
+
+	BatchMaker time: 0.016188621520996094
+	Inference time: 0.7327449321746826IssueQuery done
+
+	Postprocess time: 0.0003712177276611328
+	==== Total time: 0.7493047714233398
+Samples run: 321IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02075481414794922IssueQuery done
+
+	Inference time: 0.9428629875183105
+	Postprocess time: 0.0003674030303955078
+	==== Total time: 0.9639852046966553
+Samples run: 322IssueQuery started with 1 samples
+
+	BatchMaker time: 0.004782199859619141IssueQuery done
+
+	Inference time: 1.6375927925109863
+	Postprocess time: 0.00039386749267578125
+	==== Total time: 1.6427688598632812
+Samples run: 323IssueQuery started with 1 samples
+
+	BatchMaker time: 0.023990154266357422
+	Inference time: 0.9416511058807373IssueQuery done
+
+	Postprocess time: 0.0003676414489746094
+	==== Total time: 0.9660089015960693
+Samples run: 324IssueQuery started with 1 samples
+
+	BatchMaker time: 0.032231807708740234IssueQuery done
+
+	Inference time: 1.6748158931732178
+	Postprocess time: 0.0004134178161621094
+	==== Total time: 1.7074611186981201
+Samples run: 325IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04656648635864258
+	Inference time: 0.5928893089294434IssueQuery done
+
+	Postprocess time: 0.00035190582275390625
+	==== Total time: 0.6398077011108398
+Samples run: 326
+IssueQuery started with 1 samples	BatchMaker time: 0.0005724430084228516
+
+IssueQuery done	Inference time: 1.3911571502685547
+	Postprocess time: 0.00045418739318847656
+
+	==== Total time: 1.392183780670166
+Samples run: 327IssueQuery started with 1 samples
+
+	BatchMaker time: 0.019092798233032227IssueQuery done
+
+	Inference time: 1.588867425918579
+	Postprocess time: 0.0003783702850341797
+	==== Total time: 1.6083385944366455
+Samples run: 328IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02337193489074707
+	Inference time: 0.8014712333679199IssueQuery done
+
+	Postprocess time: 0.0003864765167236328
+	==== Total time: 0.8252296447753906
+Samples run: 329IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0018603801727294922IssueQuery done
+
+	Inference time: 1.3650996685028076
+	Postprocess time: 0.0004553794860839844
+	==== Total time: 1.367415428161621
+Samples run: 330IssueQuery started with 1 samples
+
+	BatchMaker time: 0.01654362678527832
+	Inference time: 0.7427809238433838IssueQuery done
+
+	Postprocess time: 0.0003666877746582031
+	==== Total time: 0.7596912384033203
+Samples run: 331IssueQuery started with 1 samples
+
+	BatchMaker time: 0.016268014907836914
+	Inference time: 0.5253965854644775IssueQuery done
+
+	Postprocess time: 0.00038242340087890625
+	==== Total time: 0.5420470237731934
+Samples run: 332IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0009014606475830078IssueQuery done
+
+	Inference time: 1.3851473331451416
+	Postprocess time: 0.00030350685119628906
+	==== Total time: 1.386352300643921
+Samples run: 333IssueQuery started with 1 samples
+
+	BatchMaker time: 0.07510542869567871
+	Inference time: 0.8247942924499512
+	Postprocess time: 0.0003895759582519531
+	==== Total time: 0.9002892971038818IssueQuery done
+
+Samples run: 334IssueQuery started with 1 samples
+
+	BatchMaker time: 0.05680537223815918
+	Inference time: 2.867405652999878
+IssueQuery done	Postprocess time: 0.0008685588836669922
+	==== Total time: 2.925079584121704
+
+Samples run: 335IssueQuery started with 1 samples
+
+	BatchMaker time: 0.018451452255249023
+	Inference time: 1.6823945045471191IssueQuery done
+
+	Postprocess time: 0.0004024505615234375
+	==== Total time: 1.7012484073638916
+Samples run: 336IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04641270637512207
+	Inference time: 3.2359962463378906IssueQuery done
+
+	Postprocess time: 0.0009279251098632812
+	==== Total time: 3.283336877822876
+Samples run: 337IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0008265972137451172
+	Inference time: 0.8332111835479736
+	Postprocess time: 0.0002849102020263672IssueQuery done
+	==== Total time: 0.8343226909637451
+
+Samples run: 338IssueQuery started with 1 samples
+
+	BatchMaker time: 0.014581680297851562
+	Inference time: 1.6349430084228516IssueQuery done
+	Postprocess time: 0.00043463706970214844
+
+	==== Total time: 1.6499593257904053
+Samples run: 339IssueQuery started with 1 samples
+
+	BatchMaker time: 0.014607667922973633
+	Inference time: 1.6050777435302734IssueQuery done
+
+	Postprocess time: 0.0004267692565917969
+	==== Total time: 1.6201121807098389
+Samples run: 340IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.017572879791259766
+	Inference time: 0.5927667617797852
+
+	Postprocess time: 0.0003497600555419922
+	==== Total time: 0.6106894016265869
+Samples run: 341IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0011262893676757812
+	Inference time: 1.4310660362243652IssueQuery done
+	Postprocess time: 0.00046706199645996094
+
+	==== Total time: 1.432659387588501
+Samples run: 342IssueQuery started with 1 samples
+
+	BatchMaker time: 0.14490985870361328
+	Inference time: 0.5340213775634766IssueQuery done
+	Postprocess time: 0.0003654956817626953
+
+	==== Total time: 0.6792967319488525
+Samples run: 343IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.0616307258605957
+	Inference time: 2.042246103286743
+
+	Postprocess time: 0.0006206035614013672
+	==== Total time: 2.1044974327087402
+Samples run: 344IssueQuery started with 1 samples
+
+	BatchMaker time: 0.015347003936767578
+	Inference time: 0.5213510990142822
+	Postprocess time: 0.00034499168395996094IssueQuery done
+	==== Total time: 0.5370430946350098
+
+Samples run: 345IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0749669075012207
+	Inference time: 0.8023977279663086
+	Postprocess time: 0.0003788471221923828IssueQuery done
+	==== Total time: 0.8777434825897217
+
+Samples run: 346IssueQuery started with 1 samples
+
+	BatchMaker time: 0.022330284118652344
+	Inference time: 1.2520623207092285
+	Postprocess time: 0.0003921985626220703IssueQuery done
+
+	==== Total time: 1.274784803390503
+Samples run: 347IssueQuery started with 1 samples
+
+	BatchMaker time: 0.000766754150390625
+	Inference time: 1.3898241519927979IssueQuery done
+
+	Postprocess time: 0.00033164024353027344
+	==== Total time: 1.3909225463867188
+Samples run: 348IssueQuery started with 1 samples
+
+	BatchMaker time: 0.001478433609008789
+	Inference time: 0.8314223289489746IssueQuery done
+
+	Postprocess time: 0.0004820823669433594
+	==== Total time: 0.8333828449249268
+Samples run: 349IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04653143882751465IssueQuery done
+
+	Inference time: 3.2360053062438965
+	Postprocess time: 0.0009016990661621094
+	==== Total time: 3.2834384441375732
+Samples run: 350IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0025186538696289062IssueQuery done
+
+	Inference time: 1.6028392314910889
+	Postprocess time: 0.0007810592651367188
+	==== Total time: 1.6061389446258545
+Samples run: 351IssueQuery started with 1 samples
+
+	BatchMaker time: 0.020132064819335938
+	Inference time: 0.9388742446899414IssueQuery done
+	Postprocess time: 0.00037288665771484375
+
+	==== Total time: 0.9593791961669922
+Samples run: 352IssueQuery started with 1 samples
+
+	BatchMaker time: 0.062128305435180664
+	Inference time: 1.4227638244628906IssueQuery done
+
+	Postprocess time: 0.0006213188171386719
+	==== Total time: 1.48551344871521
+Samples run: 353IssueQuery started with 1 samples
+
+	BatchMaker time: 0.05809497833251953
+	Inference time: 2.0476691722869873IssueQuery done
+	Postprocess time: 0.0006031990051269531
+
+	==== Total time: 2.106367349624634
+Samples run: 354IssueQuery started with 1 samples
+
+	BatchMaker time: 0.011527061462402344
+	Inference time: 0.5949597358703613
+	Postprocess time: 0.00037598609924316406
+IssueQuery done
+	==== Total time: 0.6068627834320068
+Samples run: 355IssueQuery started with 1 samples
+
+IssueQuery done
+	BatchMaker time: 0.056320905685424805
+	Inference time: 2.8771045207977295
+	Postprocess time: 0.00084686279296875
+	==== Total time: 2.934272289276123
+Samples run: 356IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0008127689361572266
+	Inference time: 0.1432650089263916IssueQuery done
+
+	Postprocess time: 0.0002541542053222656
+	==== Total time: 0.1443319320678711
+Samples run: 357IssueQuery started with 1 samples
+
+	BatchMaker time: 0.001035451889038086
+	Inference time: 1.4241127967834473IssueQuery done
+
+	Postprocess time: 0.0004420280456542969
+	==== Total time: 1.4255902767181396
+Samples run: 358IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0013065338134765625
+	Inference time: 0.4057185649871826IssueQuery done
+	Postprocess time: 0.0004184246063232422
+
+	==== Total time: 0.4074435234069824
+Samples run: 359IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.007527351379394531
+	Inference time: 1.161257266998291
+
+	Postprocess time: 0.0003676414489746094
+	==== Total time: 1.1691522598266602
+Samples run: 360IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0226290225982666
+	Inference time: 0.8011324405670166
+IssueQuery done	Postprocess time: 0.0003485679626464844
+	==== Total time: 0.8241100311279297
+
+Samples run: 361IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0012409687042236328
+	Inference time: 0.3997046947479248IssueQuery done
+
+	Postprocess time: 0.00042700767517089844
+	==== Total time: 0.40137267112731934
+Samples run: 362IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0009932518005371094
+	Inference time: 1.4182202816009521IssueQuery done
+	Postprocess time: 0.00044035911560058594
+
+	==== Total time: 1.4196538925170898
+Samples run: 363IssueQuery started with 1 samples
+
+	BatchMaker time: 0.014379024505615234
+	Inference time: 0.5329210758209229
+IssueQuery done
+	Postprocess time: 0.0003516674041748047
+	==== Total time: 0.5476517677307129
+Samples run: 364IssueQuery started with 1 samples
+
+	BatchMaker time: 0.06145119667053223
+	Inference time: 1.4256360530853271IssueQuery done
+	Postprocess time: 0.0006146430969238281
+
+	==== Total time: 1.4877018928527832
+Samples run: 365IssueQuery started with 1 samples
+
+	BatchMaker time: 0.01435232162475586
+	Inference time: 0.5228192806243896
+	Postprocess time: 0.0003333091735839844
+IssueQuery done
+	==== Total time: 0.5375049114227295
+Samples run: 366IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.0238344669342041
+	Inference time: 2.4031710624694824
+
+	Postprocess time: 0.0006465911865234375
+	==== Total time: 2.42765212059021
+Samples run: 367IssueQuery started with 1 samples
+
+	BatchMaker time: 0.011799812316894531
+	Inference time: 0.6057653427124023
+	Postprocess time: 0.0003731250762939453
+	==== Total time: 0.6179382801055908IssueQuery done
+
+Samples run: 368IssueQuery started with 1 samples
+
+	BatchMaker time: 0.040633201599121094
+	Inference time: 0.5917630195617676
+	Postprocess time: 0.0003485679626464844
+	==== Total time: 0.6327447891235352IssueQuery done
+
+Samples run: 369IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.018718481063842773
+	Inference time: 1.5664525032043457
+	Postprocess time: 0.00038170814514160156
+
+	==== Total time: 1.58555269241333
+Samples run: 370IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0013017654418945312
+	Inference time: 0.4005296230316162IssueQuery done
+
+	Postprocess time: 0.000438690185546875
+	==== Total time: 0.4022700786590576
+Samples run: 371IssueQuery started with 1 samples
+
+	BatchMaker time: 0.058072566986083984
+	Inference time: 2.0556797981262207IssueQuery done
+
+	Postprocess time: 0.0006093978881835938
+	==== Total time: 2.1143617630004883
+Samples run: 372IssueQuery started with 1 samples
+
+	BatchMaker time: 0.05620622634887695IssueQuery done
+
+	Inference time: 2.8905885219573975
+	Postprocess time: 0.0008547306060791016
+	==== Total time: 2.9476494789123535
+Samples run: 373IssueQuery started with 1 samples
+
+	BatchMaker time: 0.059584856033325195
+	Inference time: 3.167578935623169IssueQuery done
+
+	Postprocess time: 0.0008728504180908203
+	==== Total time: 3.228036642074585
+Samples run: 374IssueQuery started with 1 samples
+
+	BatchMaker time: 0.058746337890625
+	Inference time: 2.0732359886169434IssueQuery done
+
+	Postprocess time: 0.0006160736083984375
+	==== Total time: 2.132598400115967
+Samples run: 375IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0740821361541748
+	Inference time: 0.8081879615783691IssueQuery done
+
+	Postprocess time: 0.0004029273986816406
+	==== Total time: 0.8826730251312256
+Samples run: 376IssueQuery started with 1 samples
+
+	BatchMaker time: 0.000823974609375
+	Inference time: 1.3848693370819092IssueQuery done
+
+	Postprocess time: 0.0002894401550292969
+	==== Total time: 1.3859827518463135
+Samples run: 377IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0461573600769043IssueQuery done
+
+	Inference time: 3.249575614929199
+	Postprocess time: 0.0009219646453857422
+	==== Total time: 3.2966549396514893
+Samples run: 378IssueQuery started with 1 samples
+
+	BatchMaker time: 0.004886627197265625
+	Inference time: 0.5324275493621826IssueQuery done
+
+	Postprocess time: 0.00034809112548828125
+	==== Total time: 0.5376622676849365
+Samples run: 379IssueQuery started with 1 samples
+
+	BatchMaker time: 0.017484188079833984IssueQuery done
+
+	Inference time: 0.5958592891693115
+	Postprocess time: 0.00038123130798339844
+	==== Total time: 0.6137247085571289
+Samples run: 380IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0006031990051269531
+	Inference time: 1.3848772048950195IssueQuery done
+
+	Postprocess time: 0.00027942657470703125
+	==== Total time: 1.3857598304748535
+Samples run: 381IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0007953643798828125
+	Inference time: 1.3907568454742432IssueQuery done
+
+	Postprocess time: 0.00033545494079589844
+	==== Total time: 1.3918876647949219
+Samples run: 382IssueQuery started with 1 samples
+
+	BatchMaker time: 0.025612592697143555
+IssueQuery done	Inference time: 0.40514039993286133
+	Postprocess time: 0.00034928321838378906
+
+	==== Total time: 0.43110227584838867
+Samples run: 383IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0008118152618408203
+IssueQuery done	Inference time: 0.9052045345306396
+	Postprocess time: 0.00034499168395996094
+	==== Total time: 0.9063613414764404
+
+Samples run: 384IssueQuery started with 1 samples
+
+	BatchMaker time: 0.01570868492126465
+IssueQuery done	Inference time: 0.7326009273529053
+	Postprocess time: 0.0003859996795654297
+
+	==== Total time: 0.7486956119537354
+Samples run: 385IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0007579326629638672
+	Inference time: 1.3889641761779785
+	Postprocess time: 0.00033020973205566406
+	==== Total time: 1.390052318572998IssueQuery done
+
+Samples run: 386IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0005946159362792969
+	Inference time: 1.3820936679840088
+	Postprocess time: 0.00026535987854003906IssueQuery done
+
+	==== Total time: 1.3829536437988281
+Samples run: 387IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0014414787292480469
+	Inference time: 0.4720590114593506IssueQuery done
+	Postprocess time: 0.0005271434783935547
+
+	==== Total time: 0.4740276336669922
+Samples run: 388IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02229475975036621
+IssueQuery done	Inference time: 0.8064308166503906
+	Postprocess time: 0.0003857612609863281
+
+	==== Total time: 0.8291113376617432
+Samples run: 389IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02023482322692871
+	Inference time: 0.9419286251068115IssueQuery done
+	Postprocess time: 0.0003921985626220703
+
+	==== Total time: 0.9625556468963623
+Samples run: 390IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0011105537414550781
+	Inference time: 1.4292168617248535IssueQuery done
+
+	Postprocess time: 0.0003936290740966797
+	==== Total time: 1.4307210445404053
+Samples run: 391IssueQuery started with 1 samples
+
+	BatchMaker time: 0.031169414520263672
+	Inference time: 1.6817452907562256IssueQuery done
+	Postprocess time: 0.0004000663757324219
+
+	==== Total time: 1.7133147716522217
+Samples run: 392IssueQuery started with 1 samples
+
+	BatchMaker time: 0.06046128273010254IssueQuery done
+
+	Inference time: 2.406583070755005
+	Postprocess time: 0.0006349086761474609
+	==== Total time: 2.467679262161255
+Samples run: 393IssueQuery started with 1 samples
+
+	BatchMaker time: 0.025474071502685547
+	Inference time: 0.5343179702758789IssueQuery done
+
+	Postprocess time: 0.0003714561462402344
+	==== Total time: 0.5601634979248047
+Samples run: 394IssueQuery started with 1 samples
+
+	BatchMaker time: 0.023331165313720703
+	Inference time: 0.9429340362548828IssueQuery done
+
+	Postprocess time: 0.00037288665771484375
+	==== Total time: 0.9666380882263184
+Samples run: 395IssueQuery started with 1 samples
+
+	BatchMaker time: 0.06194448471069336
+IssueQuery done	Inference time: 2.393256902694702
+	Postprocess time: 0.0006203651428222656
+
+	==== Total time: 2.4558217525482178
+Samples run: 396IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04878091812133789
+	Inference time: 0.944779634475708IssueQuery done
+
+	Postprocess time: 0.0005981922149658203
+	==== Total time: 0.9941587448120117
+Samples run: 397IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04092144966125488
+	Inference time: 0.595085620880127IssueQuery done
+
+	Postprocess time: 0.00035262107849121094
+	==== Total time: 0.636359691619873
+Samples run: 398IssueQuery started with 1 samples
+
+	BatchMaker time: 0.05601954460144043
+	Inference time: 2.8763270378112793IssueQuery done
+
+	Postprocess time: 0.0008664131164550781
+	==== Total time: 2.933212995529175
+Samples run: 399IssueQuery started with 1 samples
+
+	BatchMaker time: 0.07359719276428223IssueQuery done
+
+	Inference time: 0.8111422061920166
+	Postprocess time: 0.0003597736358642578
+	==== Total time: 0.8850991725921631
+Samples run: 400IssueQuery started with 1 samples
+
+	BatchMaker time: 0.026008129119873047
+IssueQuery done	Inference time: 0.38478803634643555
+	Postprocess time: 0.00035119056701660156
+
+	==== Total time: 0.4111473560333252
+Samples run: 401IssueQuery started with 1 samples
+
+	BatchMaker time: 0.025262117385864258
+	Inference time: 0.5262348651885986IssueQuery done
+
+	Postprocess time: 0.0004165172576904297
+	==== Total time: 0.5519134998321533
+Samples run: 402IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0011370182037353516
+	Inference time: 1.4177758693695068
+	Postprocess time: 0.0003688335418701172IssueQuery done
+
+	==== Total time: 1.4192817211151123
+Samples run: 403IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0056989192962646484
+IssueQuery done	Inference time: 0.9517509937286377
+	Postprocess time: 0.0003714561462402344
+
+	==== Total time: 0.9578213691711426
+Samples run: 404IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0005831718444824219
+	Inference time: 1.3827104568481445IssueQuery done
+	Postprocess time: 0.00028705596923828125
+
+	==== Total time: 1.3835806846618652
+Samples run: 405IssueQuery started with 1 samples
+
+	BatchMaker time: 0.4841749668121338
+IssueQuery done	Inference time: 3.1618409156799316
+	Postprocess time: 0.0008494853973388672
+
+	==== Total time: 3.6468653678894043
+Samples run: 406IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0413517951965332
+	Inference time: 0.6039252281188965
+	Postprocess time: 0.0003762245178222656
+	==== Total time: 0.645653247833252IssueQuery done
+
+Samples run: 407IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02229166030883789IssueQuery done
+	Inference time: 0.385073184967041
+
+	Postprocess time: 0.00036144256591796875
+	==== Total time: 0.4077262878417969
+Samples run: 408IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0314478874206543
+	Inference time: 1.673086166381836IssueQuery done
+	Postprocess time: 0.00041747093200683594
+
+	==== Total time: 1.704951524734497
+Samples run: 409IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02552008628845215
+	Inference time: 0.5223321914672852IssueQuery done
+
+	Postprocess time: 0.00033473968505859375
+	==== Total time: 0.5481870174407959
+Samples run: 410IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0007219314575195312
+	Inference time: 0.8326926231384277
+	Postprocess time: 0.0002677440643310547
+IssueQuery done
+	==== Total time: 0.8336822986602783
+Samples run: 411IssueQuery started with 1 samples
+
+	BatchMaker time: 0.06112194061279297
+	Inference time: 1.4247429370880127IssueQuery done
+	Postprocess time: 0.0006241798400878906
+
+	==== Total time: 1.4864890575408936
+Samples run: 412IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0005950927734375
+	Inference time: 1.3902671337127686IssueQuery done
+
+	Postprocess time: 0.0003314018249511719
+	==== Total time: 1.3911936283111572
+Samples run: 413IssueQuery started with 1 samples
+
+	BatchMaker time: 0.1406092643737793
+	Inference time: 0.54282546043396
+	Postprocess time: 0.0003485679626464844
+	==== Total time: 0.6837832927703857IssueQuery done
+
+Samples run: 414IssueQuery started with 1 samples
+
+	BatchMaker time: 0.022169113159179688
+	Inference time: 0.3851330280303955
+IssueQuery done
+	Postprocess time: 0.0003497600555419922
+	==== Total time: 0.4076519012451172
+Samples run: 415IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.045758724212646484
+
+	Inference time: 3.149320363998413
+	Postprocess time: 0.0008459091186523438
+	==== Total time: 3.195924997329712
+Samples run: 416IssueQuery started with 1 samples
+
+	BatchMaker time: 0.03108382225036621
+IssueQuery done	Inference time: 1.6850407123565674
+	Postprocess time: 0.0003998279571533203
+
+	==== Total time: 1.716524362564087
+Samples run: 417IssueQuery started with 1 samples
+
+	BatchMaker time: 0.025267601013183594
+	Inference time: 0.5223867893218994IssueQuery done
+	Postprocess time: 0.0003428459167480469
+
+	==== Total time: 0.547997236251831
+Samples run: 418IssueQuery started with 1 samples
+
+	BatchMaker time: 0.013466358184814453
+	Inference time: 1.8998079299926758IssueQuery done
+
+	Postprocess time: 0.0004999637603759766
+	==== Total time: 1.9137742519378662
+Samples run: 419IssueQuery started with 1 samples
+
+	BatchMaker time: 0.01870894432067871
+	Inference time: 0.662182092666626IssueQuery done
+
+	Postprocess time: 0.0003650188446044922
+	==== Total time: 0.6812560558319092
+Samples run: 420IssueQuery started with 1 samples
+
+	BatchMaker time: 0.00806570053100586
+	Inference time: 0.7524993419647217IssueQuery done
+
+	Postprocess time: 0.0003769397735595703
+	==== Total time: 0.7609419822692871
+Samples run: 421IssueQuery started with 1 samples
+
+	BatchMaker time: 0.014657020568847656
+	Inference time: 0.5227851867675781IssueQuery done
+	Postprocess time: 0.0003414154052734375
+
+	==== Total time: 0.5377836227416992
+Samples run: 422IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04600787162780762IssueQuery done
+
+	Inference time: 3.22798752784729
+	Postprocess time: 0.0009145736694335938
+	==== Total time: 3.2749099731445312
+Samples run: 423IssueQuery started with 1 samples
+
+	BatchMaker time: 0.05969524383544922IssueQuery done
+
+	Inference time: 3.1716814041137695
+	Postprocess time: 0.0008635520935058594
+	==== Total time: 3.2322402000427246
+Samples run: 424IssueQuery started with 1 samples
+
+	BatchMaker time: 0.21683812141418457IssueQuery done
+
+	Inference time: 2.4094183444976807
+	Postprocess time: 0.0008566379547119141
+	==== Total time: 2.627113103866577
+Samples run: 425IssueQuery started with 1 samples
+
+	BatchMaker time: 0.008235692977905273
+IssueQuery done	Inference time: 0.7513241767883301
+	Postprocess time: 0.00033974647521972656
+	==== Total time: 0.7598996162414551
+
+Samples run: 426IssueQuery started with 1 samples
+
+	BatchMaker time: 0.014802932739257812
+	Inference time: 0.5233664512634277IssueQuery done
+
+	Postprocess time: 0.0003490447998046875
+	==== Total time: 0.5385184288024902
+Samples run: 427IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0005440711975097656
+	Inference time: 1.39103364944458IssueQuery done
+	Postprocess time: 0.0003337860107421875
+
+	==== Total time: 1.391911506652832
+Samples run: 428IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.02009868621826172
+	Inference time: 0.9592795372009277
+	Postprocess time: 0.0003447532653808594
+	==== Total time: 0.9797229766845703
+
+Samples run: 429IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0009777545928955078
+	Inference time: 1.412236213684082
+	Postprocess time: 0.0003960132598876953
+	==== Total time: 1.4136099815368652
+IssueQuery done
+Samples run: 430IssueQuery started with 1 samples
+	BatchMaker time: 0.0007448196411132812
+
+IssueQuery done
+	Inference time: 0.8338305950164795
+	Postprocess time: 0.0003764629364013672
+	==== Total time: 0.8349518775939941
+Samples run: 431IssueQuery started with 1 samples
+
+	BatchMaker time: 0.014470815658569336
+	Inference time: 0.5435993671417236
+IssueQuery done	Postprocess time: 0.0003535747528076172
+
+	==== Total time: 0.5584237575531006
+Samples run: 432IssueQuery started with 1 samples
+
+IssueQuery done
+	BatchMaker time: 0.014449834823608398
+	Inference time: 0.5222036838531494
+	Postprocess time: 0.00034809112548828125
+	==== Total time: 0.5370016098022461
+Samples run: 433IssueQuery started with 1 samples
+
+	BatchMaker time: 0.04923224449157715
+	Inference time: 3.2209596633911133IssueQuery done
+	Postprocess time: 0.0009038448333740234
+	==== Total time: 3.2710957527160645
+
+Samples run: 434IssueQuery started with 1 samples
+
+	BatchMaker time: 0.001008749008178711IssueQuery done
+	Inference time: 1.4089298248291016
+
+	Postprocess time: 0.0003383159637451172
+	==== Total time: 1.4102768898010254
+Samples run: 435IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.04592180252075195
+	Inference time: 3.1680142879486084
+
+	Postprocess time: 0.0008618831634521484
+	==== Total time: 3.2147979736328125
+Samples run: 436IssueQuery started with 1 samples
+
+	BatchMaker time: 0.022133827209472656
+	Inference time: 1.2715401649475098
+	Postprocess time: 0.0004069805145263672IssueQuery done
+	==== Total time: 1.2940809726715088
+
+Samples run: 437IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0220491886138916
+IssueQuery done	Inference time: 1.25225830078125
+	Postprocess time: 0.0003895759582519531
+	==== Total time: 1.2746970653533936
+
+Samples run: 438IssueQuery started with 1 samples
+
+	BatchMaker time: 0.017998695373535156IssueQuery done
+
+	Inference time: 1.6722581386566162
+	Postprocess time: 0.0004208087921142578
+	==== Total time: 1.6906776428222656
+Samples run: 439IssueQuery started with 1 samples
+
+	BatchMaker time: 0.008176803588867188
+	Inference time: 0.7510232925415039IssueQuery done
+
+	Postprocess time: 0.0003910064697265625
+	==== Total time: 0.7595911026000977
+Samples run: 440IssueQuery started with 1 samples
+
+	BatchMaker time: 0.055052995681762695
+	Inference time: 2.9424901008605957IssueQuery done
+
+	Postprocess time: 0.0008528232574462891
+	==== Total time: 2.9983959197998047
+Samples run: 441IssueQuery started with 1 samples
+
+	BatchMaker time: 0.025770187377929688
+	Inference time: 0.6732985973358154IssueQuery done
+	Postprocess time: 0.0003762245178222656
+
+	==== Total time: 0.6994450092315674
+Samples run: 442IssueQuery started with 1 samples
+
+	BatchMaker time: 0.05511975288391113
+	Inference time: 2.946657419204712IssueQuery done
+
+	Postprocess time: 0.0008466243743896484
+	==== Total time: 3.0026237964630127
+Samples run: 443IssueQuery started with 1 samples
+
+	BatchMaker time: 0.02579021453857422
+IssueQuery done	Inference time: 0.3927931785583496
+
+	Postprocess time: 0.00035119056701660156
+	==== Total time: 0.41893458366394043
+Samples run: 444IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0007016658782958984
+	Inference time: 1.389796495437622IssueQuery done
+
+	Postprocess time: 0.0003457069396972656
+	==== Total time: 1.3908438682556152
+Samples run: 445IssueQuery started with 1 samples
+
+	BatchMaker time: 0.004771232604980469
+	Inference time: 1.6419932842254639
+IssueQuery done	Postprocess time: 0.00040149688720703125
+	==== Total time: 1.6471660137176514
+
+Samples run: 446IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.018062591552734375
+	Inference time: 1.6820173263549805
+
+	Postprocess time: 0.0003981590270996094
+	==== Total time: 1.7004780769348145
+Samples run: 447IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.015312671661376953
+	Inference time: 0.5235481262207031
+	Postprocess time: 0.00035762786865234375
+
+	==== Total time: 0.5392184257507324
+Samples run: 448IssueQuery started with 1 samples
+
+	BatchMaker time: 0.07407474517822266
+	Inference time: 0.8016433715820312IssueQuery done
+	Postprocess time: 0.00038242340087890625
+
+	==== Total time: 0.8761005401611328
+Samples run: 449IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0012578964233398438
+	Inference time: 0.4004676342010498IssueQuery done
+	Postprocess time: 0.0004165172576904297
+
+	==== Total time: 0.4021420478820801
+Samples run: 450IssueQuery started with 1 samples
+
+	BatchMaker time: 0.06195497512817383
+IssueQuery done
+	Inference time: 2.3996634483337402
+	Postprocess time: 0.0006198883056640625
+	==== Total time: 2.462238311767578
+Samples run: 451IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.048932552337646484
+	Inference time: 1.0577263832092285
+
+	Postprocess time: 0.00039076805114746094
+	==== Total time: 1.1070497035980225
+Samples run: 452IssueQuery started with 1 samples
+
+	BatchMaker time: 0.4656412601470947
+	Inference time: 3.1614975929260254
+	Postprocess time: 0.0008492469787597656
+IssueQuery done	==== Total time: 3.62798810005188
+
+Samples run: 453IssueQuery started with 1 samples
+
+	BatchMaker time: 0.0741121768951416
+	Inference time: 0.8129329681396484IssueQuery done
+	Postprocess time: 0.00037288665771484375
+
+	==== Total time: 0.8874180316925049
+Samples run: 454IssueQuery started with 1 samples
+	BatchMaker time: 0.0007326602935791016
+	Inference time: 0.14306259155273438
+
+	Postprocess time: 0.0002524852752685547
+IssueQuery done	==== Total time: 0.14404773712158203
+
+Samples run: 455IssueQuery started with 1 samples
+
+	BatchMaker time: 0.004561424255371094
+	Inference time: 1.635828971862793IssueQuery done
+
+	Postprocess time: 0.0003898143768310547
+	==== Total time: 1.6407802104949951
+Samples run: 456IssueQuery started with 1 samples
+
+IssueQuery done	BatchMaker time: 0.03181910514831543
+	Inference time: 1.687774658203125
+
+	Postprocess time: 0.00041222572326660156
+	==== Total time: 1.720005989074707
+Samples run: 457
+	BatchMaker time: 0.031982421875
+	Inference time: 1.672454595565796
+	Postprocess time: 0.0003955364227294922
+	==== Total time: 1.7048325538635254
+================================================
+MLPerf Results Summary
+================================================
+SUT name : PySUT
+Scenario : SingleStream
+Mode     : PerformanceOnly
+90.0th percentile latency (ns) : 2957481645
+Result is : VALID
+  Min duration satisfied : Yes
+  Min queries satisfied : Yes
+  Early stopping satisfied: Yes
+Early Stopping Result:
+ * Processed at least 64 queries (457).
+ * Would discard 29 highest latency queries.
+ * Early stopping 90.0th percentile estimate: 3196107780
+ * Not enough queries processed for 99.0th percentile
+ early stopping estimate (would need to process at
+ least 662 total queries).
+
+================================================
+Additional Stats
+================================================
+QPS w/ loadgen overhead         : 0.76
+QPS w/o loadgen overhead        : 0.76
+
+Min latency (ns)                : 125455816
+Max latency (ns)                : 3664125886
+Mean latency (ns)               : 1317795083
+50.00 percentile latency (ns)   : 1092457486
+90.00 percentile latency (ns)   : 2957481645
+95.00 percentile latency (ns)   : 3228239766
+97.00 percentile latency (ns)   : 3287735221
+99.00 percentile latency (ns)   : 3634615329
+99.90 percentile latency (ns)   : 3664125886
+
+================================================
+Test Parameters Used
+================================================
+samples_per_query : 1
+target_qps : 100
+target_latency (ns): 0
+max_async_queries : 1
+min_duration (ms): 600000
+max_duration (ms): 0
+min_query_count : 100
+max_query_count : 0
+qsl_rng_seed : 6023615788873153749
+sample_index_rng_seed : 15036839855038426416
+schedule_rng_seed : 9933818062894767841
+accuracy_log_rng_seed : 0
+accuracy_log_probability : 0
+accuracy_log_sampling_target : 0
+print_timestamps : 0
+performance_issue_unique : 0
+performance_issue_same : 0
+performance_issue_same_index : 0
+performance_sample_count : 64
+
+No warnings encountered during test.
+
+1 ERROR encountered. See detailed log.
+native stop...
+Test Done!
+Clean Program
+Finished destroying QSL.
+等待监控进程退出...
+主程序退出

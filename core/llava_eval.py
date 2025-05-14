@@ -12,14 +12,14 @@ from PIL import Image
 # python llava_eval.py --anno_path ~/SEED-Bench-2/SEED-Bench_v2_level1_2_3.json 
 
 # root directory of cc3m
-cc3m_dir = "/home/dt/SEED-Bench-2/cc3m-image"
+cc3m_dir = "/home/buaa/dengtao/dataset/SEED-Bench-2/cc3m"
 # root directory of seed bench v2
 seed_bench_v2_dir = "/home/dt/SEED-Bench-2/seed_bench_image_v2"
 # 选择第二张 GPU
-device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # 模型路径
-MODEL_PATH = "/home/dt/llava-1.5-7b-hf"
+MODEL_PATH = "/home/buaa/dengtao/model/llava-1.5-13b-hf"
 
 seed = 0
 
@@ -67,7 +67,7 @@ def build_model(model_name):
         # 加载模型和 processor
         from transformers import LlavaForConditionalGeneration, LlavaProcessor
         processor = LlavaProcessor.from_pretrained(MODEL_PATH, use_fast=True)
-        model = LlavaForConditionalGeneration.from_pretrained(MODEL_PATH, torch_dtype=torch.float16).to(device)
+        model = LlavaForConditionalGeneration.from_pretrained(MODEL_PATH, torch_dtype=torch.float16, device_map="auto")
         return model, processor
     else:
         raise ValueError(f"Unsupported model: {model_name}")
@@ -139,7 +139,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Arg Parser')
     parser.add_argument('--model', type=str, default='llava_1.5')  # 本地llava模型
-    parser.add_argument('--anno_path', type=str, default='SEED-Bench_v2_level1_2_3.json')
+    parser.add_argument('--anno_path', type=str, default='/home/buaa/dengtao/dataset/SEED-Bench-2/SEED-Bench_v2_level1_2_3.json')
     parser.add_argument('--output_dir', type=str, default='results')
     parser.add_argument('--evaluate_level', type=str, default='L2')
     parser.add_argument('--evaluate_part', type=str, default='all')

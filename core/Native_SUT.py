@@ -176,7 +176,7 @@ class SUT_native_base:
 
                 # 生成模型输出
                 outputs = self.tokenizer.batch_decode(output_ids, skip_special_tokens=True)
-                print(outputs)
+                # print(outputs)
 
                 tik3 = time.time()
 

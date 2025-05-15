@@ -61,7 +61,7 @@ python -u main.py --scenario SingleStream --dataset SEED-Bench-2 --model-name ll
 
 python -u main.py --scenario MultiStream --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 34576 --batch-size 1 --device cuda --test-mode PerformanceOnly
 
-nohup python -u main.py --scenario SingleStream --dataset SEED-Bench-2 --model-name llava-1.5-13b-hf --total-sample-count 34576 --batch-size 1 --device cuda --test-mode PerformanceOnly > output.txt 2>&1 &
+nohup python -u main.py --scenario MultiStream --dataset SEED-Bench-2 --model-name llava-1.5-13b-hf --total-sample-count 34576 --batch-size 1 --device cuda --test-mode PerformanceOnly > output.txt 2>&1 &
 ```
 
 手动下载[clip-vit-large-patch14-336](

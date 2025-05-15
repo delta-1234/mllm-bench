@@ -3,3 +3,4 @@
 /openai
 **/__pycache__/
 /output-v1.0/
+/core/openai

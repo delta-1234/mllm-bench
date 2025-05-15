@@ -6,7 +6,7 @@ from PIL import Image
 
 # 初始化配置（强制使用单一设备）
 torch.set_grad_enabled(False)
-model_path = "/data/dengtao/model/llava-v1.5-7b"
+model_path = "/home/buaa/dengtao/model/llava-v1.5-7b"
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
 # 验证模型

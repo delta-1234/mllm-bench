@@ -672,9 +672,16 @@ class LLaVAModel(VLMBaseModel):
     def __init__(self, model_name, max_new_tokens, temperature, device, dtype):
         model_path = os.environ.get("CHECKPOINT_PATH") + model_name
         super(LLaVAModel, self).__init__(model_name, max_new_tokens, temperature, device)
-        from transformers import AutoProcessor, LlavaForConditionalGeneration
-        self.processor = AutoProcessor.from_pretrained(model_path, device_map=device, trust_remote_code=True, use_fast=True)
-        self.model = LlavaForConditionalGeneration.from_pretrained(model_path, device_map=device, torch_dtype=dtype)
+        from llava.model.builder import load_pretrained_model
+        tokenizer, model, image_processor, context_len = load_pretrained_model(
+            model_path=model_path,
+            model_base=None,
+            model_name=model_name,
+            device_map=None,  # 禁用自动设备映射
+        )
+        self.model = model.to(device)
+        self.processor = image_processor
+        self.tokenizer = tokenizer
         self.enable_multiple_images = True
         self.placeholder = "<image>"  # a specialized placeholder of LLaVA model
 

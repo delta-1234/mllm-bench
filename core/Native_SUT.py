@@ -22,6 +22,7 @@ from model_monitor import ModelMonitor
 from modeload import ModelLoader, SUPPORTED_MODELS, SUPPORTED_MODELS_VLM
 from dataset import Datasets
 from transformers.generation.streamers import BaseStreamer
+from llava.mm_utils import process_images, tokenizer_image_token
 
 gen_kwargs = {
     "early_stopping": False,
@@ -153,34 +154,37 @@ class SUT_native_base:
                     questions.append(sample["question"])
                     images_list.extend(sample["images"])
                     sample_ids.append(sample["question_id"])
-                
+
                 if len(images_list) == 0:
-                    images_list = None
+                    image_tensor = None
+                else:
+                    image_tensor = process_images(images_list, self.processor, self.model.config).to(self.model.device, dtype=torch.float16)
+                input_ids = tokenizer_image_token(questions[0], self.tokenizer, -200, return_tensors='pt').unsqueeze(0).cuda()
+                
                 # 批输入,原本是tokenizier
-                inputs = self.processor(
-                    text=questions,
-                    images=images_list, # 视频关键帧
-                    return_tensors="pt",
-                    padding=True
-                ).to(self.device)
+                output_ids = self.model.generate(
+                    input_ids,
+                    images=image_tensor,
+                    image_sizes=[x.size for x in images_list],
+                    do_sample=True,
+                    # no_repeat_ngram_size=3,
+                    max_new_tokens=512,
+                    use_cache=True
+                )
 
                 tik2 = time.time()
 
                 # 生成模型输出
-                pred_output_tokens = self.model.generate(**inputs)
+                outputs = self.tokenizer.batch_decode(output_ids, skip_special_tokens=True)
+                print(outputs)
 
                 tik3 = time.time()
 
                 # 处理模型输出
-                processed_output = self.processor.batch_decode(
-                    pred_output_tokens,
-                    skip_special_tokens=True
-                )
-                # print(processed_output)
 
             # 发送 LoadGen 响应
             for i in range(len(qitem)):
-                output = processed_output[i]
+                output = outputs[i]
                 n_tokens = len(output)
                 response_array = array.array("B", output.encode("utf-8"))
                 bi = response_array.buffer_info()
@@ -282,6 +286,7 @@ class SUT_native_base:
             pass
 
         self.processor = self.modelx.processor
+        self.tokenizer = self.modelx.tokenizer
         print("Loaded processor")
 
     def get_sut(self):

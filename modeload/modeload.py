@@ -20,7 +20,7 @@ MODEL_LIST = {
 MODEL_LIST_VLM = {
     BLIP2Model: ['Salesforce/blip2-opt-2.7b', 'Salesforce/blip2-opt-6.7b',
                  'Salesforce/blip2-flan-t5-xl', 'Salesforce/blip2-flan-t5-xxl'],
-    LLaVAModel: ['llava-1.5-7b-hf', 'llava-1.5-13b-hf'],
+    LLaVAModel: ['llava-1.5-7b-hf', 'llava-1.5-13b-hf', 'llava-v1.5-7b'],
     GeminiVisionModel: ['gemini-pro-vision'],
     OpenAIVisionModel: ['gpt-4-vision-preview'],
     QwenVLModel: ['Qwen/Qwen-VL', 'Qwen/Qwen-VL-Chat',

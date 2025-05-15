@@ -1,8 +1,7 @@
 # 多模态大模型推理基准测试系统
 ## 环境
 python 3.10
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-pip install transformers
+pip install transformers -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install -r requirements.txt
 
 ## 下载数据集
@@ -15,11 +14,12 @@ mv SEED-Bench-2-image/ SEED-Bench-v2/
 
 
 ## 下载模型
-下载[llava-hf/llava-1.5-7b-hf · Hugging Face](https://huggingface.co/llava-hf/llava-1.5-7b-hf)
+下载[llava-hf/llava-1.5-7b-hf · Hugging Face](https://huggingface.co/llava-hf/llava-1.5-7b-hf)放在core的openai文件夹下
 下载llava套件https://github.com/haotian-liu/LLaVA
 ```bash
 pip install --upgrade pip  # enable PEP 660 support
-pip install -e .
+pip install -e . -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install protobuf -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 ## 构建loadgen
@@ -29,13 +29,13 @@ pip install -e .
 cd loadgen
 CFLAGS="-std=c++14" python setup.py develop
 conda install -c conda-forge libstdcxx-ng
-pip install pynvml
-pip install requests
-pip install pillow
-pip install tqdm
-pip install datasets
-pip install accelerate
-pip install pybind11
+pip install pynvml -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install requests -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install pillow -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install tqdm -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install datasets -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install accelerate -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install pybind11 -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 ## 运行
@@ -44,10 +44,10 @@ pip install pybind11
 export CHECKPOINT_PATH="/home/user/buaa/rgzndengtao/model/"
 export DATASET_PATH="/home/user/buaa/rgzndengtao/dataset/"
 
-export CHECKPOINT_PATH="/data/dengtao/model/"
-export DATASET_PATH="/data/dengtao/dataset/"
+export CHECKPOINT_PATH="/home/buaa/dengtao/model/"
+export DATASET_PATH="/home/buaa/dengtao/dataset/"
 
-python -u main.py --scenario Offline --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 24576 --batch-size 2 --device cuda --test-mode PerformanceOnly
+nohup python -u main.py --scenario Offline --dataset SEED-Bench-2 --model-name llava-v1.5-7b --total-sample-count 24576 --batch-size 1 --device cuda --test-mode PerformanceOnly > output.txt 2>&1 &
 
 nohup python -u main.py --scenario Offline --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 34576 --batch-size 16 --device cuda --test-mode PerformanceOnly > output.txt 2>&1 &
 

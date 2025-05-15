@@ -46,8 +46,9 @@ export DATASET_PATH="/home/user/buaa/rgzndengtao/dataset/"
 
 export CHECKPOINT_PATH="/home/buaa/dengtao/model/"
 export DATASET_PATH="/home/buaa/dengtao/dataset/"
+CUDA_VISIBLE_DEVICES=1
 
-nohup python -u main.py --scenario Offline --dataset SEED-Bench-2 --model-name llava-v1.5-7b --total-sample-count 24576 --batch-size 1 --device cuda --test-mode PerformanceOnly > output.txt 2>&1 &
+nohup python -u main.py --scenario SingleStream --dataset SEED-Bench-2 --model-name llava-v1.5-7b --total-sample-count 24576 --batch-size 1 --device cuda --test-mode PerformanceOnly > output.txt 2>&1 &
 
 nohup python -u main.py --scenario Offline --dataset SEED-Bench-2 --model-name llava-1.5-7b-hf --total-sample-count 34576 --batch-size 16 --device cuda --test-mode PerformanceOnly > output.txt 2>&1 &
 

@@ -219,45 +219,42 @@ class SUT_native_base:
                 images_list.extend(sample["images"])
                 sample_ids.append(sample["question_id"])
             
-            if len(images_list) == 0:
-                images_list = None
             # 批输入,原本是tokenizier
             tik1 = time.time_ns()
-            inputs = self.processor(
-                text=questions,
-                images=None, # 无图片
-                return_tensors="pt",
-                padding=True
-            ).to(self.device)
+            input_ids = tokenizer_image_token(questions[0], self.tokenizer, -200, return_tensors='pt').unsqueeze(0).cuda()
             tik2 = time.time_ns()
             ModelMonitor.RecordTextProcessTime(tik2-tik1, sample_ids)
 
             tik1 = time.time_ns()
-            inputs = self.processor(
-                text=questions,
-                images=images_list, # 视频关键帧
-                return_tensors="pt",
-                padding=True
-            ).to(self.device)
+            if len(images_list) == 0:
+                image_tensor = None
+            else:
+                image_tensor = process_images(images_list, self.processor, self.model.config).to(self.model.device, dtype=torch.float16)
+            input_ids = tokenizer_image_token(questions[0], self.tokenizer, -200, return_tensors='pt').unsqueeze(0).cuda()
             tik2 = time.time_ns()
             ModelMonitor.RecordVisionProcessTime(tik2-tik1, sample_ids)
 
             # 生成模型输出
             tik1 = time.time_ns()
-            pred_output_tokens = self.model.generate(**inputs)
+            output_ids = self.model.generate(
+                    input_ids,
+                    images=image_tensor,
+                    image_sizes=[x.size for x in images_list],
+                    do_sample=True,
+                    # no_repeat_ngram_size=3,
+                    max_new_tokens=512,
+                    use_cache=True
+                )
 
             # 处理模型输出
-            processed_output = self.processor.batch_decode(
-                pred_output_tokens,
-                skip_special_tokens=True
-            )
+            outputs = self.tokenizer.batch_decode(output_ids, skip_special_tokens=True)
             tik2 = time.time_ns()
             ModelMonitor.RecordTextGenerationTime(tik2-tik1, sample_ids)
-            print(processed_output)
+            # print(processed_output)
 
             # 发送 LoadGen 响应
             for i in range(len(qitem)):
-                output = processed_output[i]
+                output = outputs[i]
                 n_tokens = len(output)
                 response_array = array.array("B", output.encode("utf-8"))
                 bi = response_array.buffer_info()

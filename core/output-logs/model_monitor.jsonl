@@ -1,0 +1,3 @@
+{"event": "text_procrss_time", "sample_id": ["22_850"], "time": 3005446}
+{"event": "vision_procrss_time", "sample_id": ["22_850"], "time": 89161905}
+{"event": "text_generation_time", "sample_id": ["22_850"], "time": 2276012441}

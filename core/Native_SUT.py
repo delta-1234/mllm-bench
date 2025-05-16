@@ -532,22 +532,23 @@ class SUT_Native_Server(SUT_native_base):
             sample_ids.append(sample["question_id"])
                 
             if len(images_list) == 0:
-                images_list = None
+                image_tensor = None
+            else:
+                image_tensor = process_images(images_list, self.processor, self.model.config).to(self.model.device, dtype=torch.float16)
+            input_ids = tokenizer_image_token(questions[0], self.tokenizer, -200, return_tensors='pt').unsqueeze(0).cuda()
 
-            inputs = self.processor(
-                text=questions,
-                images=images_list, # 视频关键帧
-                return_tensors="pt",
-                padding=True
-            ).to(self.device)
-
-            # 生成模型输出
+            # print(f"input_ids: {input_ids}")
             _ = self.model.generate(
-                **inputs,
-                streamer=tokens_streamer,
-                **gen_kwargs
+                    input_ids,
+                    images=image_tensor,
+                    image_sizes=[x.size for x in images_list],
+                    # no_repeat_ngram_size=3,
+                    use_cache=True,
+                    streamer=tokens_streamer,
+                    **gen_kwargs,
                 )
 
+            # print(f"tokens_cache: {tokens_cache}")
             output_tokens = tokens_streamer.get_out_tokens()
             n_tokens = len(output_tokens)
             # 处理模型输出

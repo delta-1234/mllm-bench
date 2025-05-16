@@ -5,6 +5,7 @@ SUT name : PySUT
 Scenario : Offline
 Mode     : PerformanceOnly
 Samples per second: 0.725748
+Tokens per second: 243.267
 Result is : VALID
   Min duration satisfied : Yes
   Min queries satisfied : Yes

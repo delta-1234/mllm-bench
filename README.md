@@ -11,11 +11,15 @@ pip install -r requirements.txt
 ## 下载数据集
 下载[SEED-Bench-2 · 数据集](https://modelscope.cn/datasets/TencentARC/SEED-Bench-2/summary)
 解压缩完需要重命名
+
 cat SEED-Bench-2-image.zip.* > SEED-Bench-2-image.zip
+
 mv cc3m-image/ cc3m/
+
 mv SEED-Bench-2-image/ SEED-Bench-v2/
+
 下载[OpenOrca · 数据集](https://huggingface.co/datasets/Open-Orca/OpenOrca)
-数据处理python processorca.py
+
 直接下载处理后的数据集https://gitee.com/delta-1234/processed-open-orca.git
 
 

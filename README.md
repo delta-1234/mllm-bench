@@ -75,3 +75,5 @@ python -u main.py \
 前端https://github.com/delta-1234/diplom_frontend.git
 
 后端https://github.com/delta-1234/diplom_backend.git
+
+数据库https://github.com/delta-1234/diplom_dataset.git
